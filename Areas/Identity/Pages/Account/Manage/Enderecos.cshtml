@@ -1,0 +1,36 @@
+﻿@page
+@model AdasPet.Areas.Identity.Pages.Account.Manage.EnderecosModel
+@{
+    ViewData["Title"] = "Endereços";
+    ViewData["ActivePage"] = ManageNavPages.Enderecos;
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<div class="row">
+    @{
+        foreach (var endereco in Model.Enderecos)
+        {
+            <div class="endereco-box">
+                <div class="col-md-6">
+                    <h3 class="endereco-rua"> @(endereco.Rua + ", " + endereco.NumeroCasa)</h3>
+                    <p>@endereco.Bairro</p>
+                    <p>@(endereco.Cidade + " - " + endereco.Estado)</p>
+                    <h7>@endereco.Complemento </h7>
+                </div>
+                <div class="col-md-6">
+                    <form id="download-data" asp-page="DownloadPersonalData" method="post" class="form-group">
+                        <button class="btn btn-primary" type="submit">Editar</button>
+                    </form>
+                    <form id="delete-data" asp-page="DownloadPersonalData" method="post" class="form-group">
+                        <button class="btn btn-primary" type="submit">Deletar</button>
+                    </form>
+                </div>
+            </div>
+        }
+    }  
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
