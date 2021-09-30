@@ -21,7 +21,6 @@ namespace AdasPet.Areas.Identity.Pages.Account
     [Authorize]
     public class CadastroCompletoModel : PageModel
     {
-        private static readonly HttpClient client = new HttpClient();
 
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
@@ -131,7 +130,8 @@ namespace AdasPet.Areas.Identity.Pages.Account
             {
                 HttpContext.Session.SetString("CadastroCompleto","true");
                 return Redirect("/");
-            } else
+            }
+            else
             {
                 if (!string.IsNullOrEmpty(tipo))
                 {
@@ -142,14 +142,7 @@ namespace AdasPet.Areas.Identity.Pages.Account
             }
         }
 
-        public async Task<Endereco> GetEnderecoAsync(string cep)
-        {
-            var stringTask = client.GetStreamAsync("https://viacep.com.br/ws/"+cep+"/json/");
-
-            var resultado = await JsonSerializer.DeserializeAsync<Endereco>(await stringTask);
-
-            return resultado;
-        }
+        
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -165,7 +158,7 @@ namespace AdasPet.Areas.Identity.Pages.Account
                 };
 
 
-                Endereco endereco = await GetEnderecoAsync(Input.Cep);
+                Endereco endereco = await Endereco.GetEnderecoDeCepAsync(Input.Cep);
                 if (string.IsNullOrEmpty(endereco.Rua))
                 {
                     //return Redirect("~/Identity/Account/CadastroCompleto?Erro=CEP%20Inv%C3%A1lido.%20%20Insira%20novamente%21");
@@ -194,7 +187,7 @@ namespace AdasPet.Areas.Identity.Pages.Account
                 };
 
 
-                Endereco endereco = await GetEnderecoAsync(Input.Cep);
+                Endereco endereco = await Endereco.GetEnderecoDeCepAsync(Input.Cep);
                 if (string.IsNullOrEmpty(endereco.Rua))
                 {
                     return Redirect("~/Identity/Account/CadastroCompleto?Erro=CEP%20Inv%C3%A1lido.%20%20Insira%20novamente%21");

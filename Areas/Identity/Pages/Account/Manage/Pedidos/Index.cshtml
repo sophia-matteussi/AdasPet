@@ -1,0 +1,62 @@
+﻿@page
+@model AdasPet.Areas.Identity.Pages.Account.Manage.Pedidos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido[0].StatusDoPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido[0].DataInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido[0].DataFim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido[0].Pagamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido[0].Troco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido[0].Preco)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Pedido) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusDoPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pagamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Troco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ 

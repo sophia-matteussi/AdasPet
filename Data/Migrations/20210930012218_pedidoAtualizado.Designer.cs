@@ -4,14 +4,16 @@ using AdasPet.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AdasPet.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210930012218_pedidoAtualizado")]
+    partial class pedidoAtualizado
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -201,15 +203,9 @@ namespace AdasPet.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
-                    b.Property<decimal>("Preco")
-                        .HasColumnType("money");
-
                     b.Property<string>("StatusDoPedido")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
-
-                    b.Property<decimal>("Troco")
-                        .HasColumnType("money");
 
                     b.HasKey("ID");
 

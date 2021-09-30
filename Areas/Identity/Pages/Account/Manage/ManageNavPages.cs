@@ -24,7 +24,9 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage
 
         public static string TwoFactorAuthentication => "TwoFactorAuthentication";
 
-        public static string Enderecos => "Endereços";
+        public static string Enderecos => "Enderecos";
+
+        public static string Pedidos => "Pedidos";
 
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
 
@@ -43,6 +45,9 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage
         public static string TwoFactorAuthenticationNavClass(ViewContext viewContext) => PageNavClass(viewContext, TwoFactorAuthentication);
 
         public static string EnderecosNavClass(ViewContext viewContext) => PageNavClass(viewContext, Enderecos);
+
+        public static string PedidosNavClass(ViewContext viewContext) => PageNavClass(viewContext, Pedidos);
+
 
         private static string PageNavClass(ViewContext viewContext, string page)
         {
