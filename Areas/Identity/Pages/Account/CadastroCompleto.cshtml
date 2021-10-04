@@ -12,14 +12,14 @@
     <div class="col-md-2">
         <section>
             <a href="~/Identity/Account/CadastroCompleto?tipo=cliente">
-                <button class="btn btn-primary">Usuário</button>
+                <button class="btn btn-primary">Cliente</button>
             </a>
         </section>
     </div>
     <div class="col-md-2">
         <section>
             <a href="~/Identity/Account/CadastroCompleto?tipo=fornecedor">
-                <button class="btn btn-primary">Fornecedor</button>
+                <button class="btn btn-primary">Lojista</button>
             </a>
         </section>
     </div>
@@ -167,7 +167,7 @@
                 @{ 
                     if (!string.IsNullOrEmpty(Model.erro))
                     {
-                       <h5 style="color: #fe1818 "> @Model.erro</h5>                              
+                       <h5 style="color: #fe1818 "> @Model.erro</h5>   
                     }
                 }
             </form>

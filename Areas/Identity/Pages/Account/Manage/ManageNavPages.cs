@@ -8,6 +8,7 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage
 {
     public static class ManageNavPages
     {
+        public static string CaminhoManage => "~/Identity/Account/Manage";
         public static string Index => "Index";
 
         public static string Email => "Email";
@@ -34,15 +35,7 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage
 
         public static string ChangePasswordNavClass(ViewContext viewContext) => PageNavClass(viewContext, ChangePassword);
 
-        public static string DownloadPersonalDataNavClass(ViewContext viewContext) => PageNavClass(viewContext, DownloadPersonalData);
-
-        public static string DeletePersonalDataNavClass(ViewContext viewContext) => PageNavClass(viewContext, DeletePersonalData);
-
         public static string ExternalLoginsNavClass(ViewContext viewContext) => PageNavClass(viewContext, ExternalLogins);
-
-        public static string PersonalDataNavClass(ViewContext viewContext) => PageNavClass(viewContext, PersonalData);
-
-        public static string TwoFactorAuthenticationNavClass(ViewContext viewContext) => PageNavClass(viewContext, TwoFactorAuthentication);
 
         public static string EnderecosNavClass(ViewContext viewContext) => PageNavClass(viewContext, Enderecos);
 

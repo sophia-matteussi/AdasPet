@@ -41,7 +41,7 @@ namespace AdasPet.Models
         [Required]
         public Endereco Endereco { get; set; }
 
-        [Required]
+        //[Required]
         public List<Produto> Produtos { get; set; }
     }
 }

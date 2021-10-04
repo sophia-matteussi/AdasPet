@@ -22,7 +22,7 @@ namespace AdasPet.Areas.Identity.Pages.Account
         private readonly ILogger<LoginModel> _logger;
 
         public LoginModel(SignInManager<IdentityUser> signInManager, 
-            ILogger<LoginModel> logger,
+            ILogger<LoginModel> logger,       
             UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;

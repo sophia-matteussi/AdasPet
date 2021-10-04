@@ -1,0 +1,76 @@
+﻿@page
+@model AdasPet.Areas.Loja.Pages.CarrinhoModel
+@{
+}
+
+@{
+    if (Model.Produtos.Count == 0)
+    {
+        <h3> Seu carrinho está vazio.</h3>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produtos[0].Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produtos[0].Marca)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produtos[0].TipoDeAnimal)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produtos[0].Categoria)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produtos[0].Preco)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produtos[0].QtdEmEstoque)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produtos[0].PrecisaDeCarro)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produtos[0].Descricao)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Produtos)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Marca)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TipoDeAnimal)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Categoria)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.QtdEmEstoque)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PrecisaDeCarro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
