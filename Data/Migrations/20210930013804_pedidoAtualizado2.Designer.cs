@@ -4,14 +4,16 @@ using AdasPet.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AdasPet.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210930013804_pedidoAtualizado2")]
+    partial class pedidoAtualizado2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -246,6 +248,9 @@ namespace AdasPet.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(200)");
 
+                    b.Property<Guid?>("PedidoID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("PrecisaDeCarro")
                         .HasColumnType("bit");
 
@@ -262,6 +267,8 @@ namespace AdasPet.Data.Migrations
                     b.HasKey("ID");
 
                     b.HasIndex("ContaCadastroId");
+
+                    b.HasIndex("PedidoID");
 
                     b.ToTable("Produto");
                 });
@@ -466,21 +473,6 @@ namespace AdasPet.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("PedidoProduto", b =>
-                {
-                    b.Property<Guid>("PedidosID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ProdutosID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("PedidosID", "ProdutosID");
-
-                    b.HasIndex("ProdutosID");
-
-                    b.ToTable("PedidoProduto");
-                });
-
             modelBuilder.Entity("AdasPet.Models.Cliente", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "ContaCadastro")
@@ -550,6 +542,10 @@ namespace AdasPet.Data.Migrations
                         .WithMany()
                         .HasForeignKey("ContaCadastroId");
 
+                    b.HasOne("AdasPet.Models.Pedido", null)
+                        .WithMany("Produtos")
+                        .HasForeignKey("PedidoID");
+
                     b.Navigation("ContaCadastro");
                 });
 
@@ -604,19 +600,9 @@ namespace AdasPet.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PedidoProduto", b =>
+            modelBuilder.Entity("AdasPet.Models.Pedido", b =>
                 {
-                    b.HasOne("AdasPet.Models.Pedido", null)
-                        .WithMany()
-                        .HasForeignKey("PedidosID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("AdasPet.Models.Produto", null)
-                        .WithMany()
-                        .HasForeignKey("ProdutosID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Produtos");
                 });
 #pragma warning restore 612, 618
         }

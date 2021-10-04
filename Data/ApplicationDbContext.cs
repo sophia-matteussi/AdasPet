@@ -13,13 +13,11 @@ namespace AdasPet.Data
             : base(options)
         {
         }
-
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Endereco> Endereco { get; set; }
         public DbSet<Entregador> Entregador { get; set; }
         public DbSet<Fornecedor> Fornecedor { get; set; }
         public DbSet<Pedido> Pedido { get; set; }
         public DbSet<Produto> Produto { get; set; }
-
     }
 }

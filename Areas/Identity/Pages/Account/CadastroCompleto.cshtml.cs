@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Http;
 using System.Data.Entity;
 using System.Net.Http;
 using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 
 namespace AdasPet.Areas.Identity.Pages.Account
 {
@@ -21,13 +22,13 @@ namespace AdasPet.Areas.Identity.Pages.Account
     [Authorize]
     public class CadastroCompletoModel : PageModel
     {
-        private static readonly HttpClient client = new HttpClient();
 
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
 
         public string erro;
 
+        // O atributo BindProperty quer dizer que a pagina pode acessar essa variavel
         [BindProperty]
         public string TipoCadastro { get; set; } = "cliente";
 
@@ -103,17 +104,29 @@ namespace AdasPet.Areas.Identity.Pages.Account
             _context = context;
         }
 
+        /// <summary>
+        /// Executa quando usuario entra na pagina
+        /// </summary>
+        /// <param name="tipo">Tipo de Cadastro que sera feito. Pode ser cliente, fornecedor ou entregador</param>
+        /// <param name="Erro">Mensagem de erro para ser passada para o usuario</param>
+        /// <returns></returns>
         public IActionResult OnGet(string tipo, string Erro)
         {
+            // Checa a session do usuario para ver se existe a chave CadastroCompleto
             if (!string.IsNullOrEmpty(HttpContext.Session.GetString("CadastroCompleto")))
             {
+                // Se a chave CadastroCompleto existir então sabemos que o usuario ja completou seu cadastro
+                // Então mandamos ele para a pagina inicial
                 return Redirect("/");
             }
 
+            // Pegamos o ID do usuario
             string UserId = _userManager.GetUserId(User);
 
             bool temCadastroCompleto = false;
 
+            // Como não sabemos que tipo de conta o usuario tem
+            // Temos que checar no banco de dados se seu ID esta em qualquer uma das tabelas de Cliente, Fornecedor ou Entregador
             if (_context.Cliente.Where(o => o.ContaCadastro.Id.Equals(UserId)).Any())
             {
                 temCadastroCompleto = true;
@@ -127,32 +140,37 @@ namespace AdasPet.Areas.Identity.Pages.Account
                 temCadastroCompleto = true;
             }
 
+            // Se o usuario estiver em qualqquer uma das tabelas que checamos anteriormente
             if (temCadastroCompleto)
             {
+                // Adicionamos à session a chave CadastroCompleto com o valor true
                 HttpContext.Session.SetString("CadastroCompleto","true");
+                // E então redirecionamos ele de volta para a pagina principal
                 return Redirect("/");
-            } else
+            }
+            else
             {
+                // O padrão da propriedade TipoCadastro é Cliente
+                // Se o parametro tipo não for vazio nos atribuimos ele a propriedade TipoCadastro da classe
                 if (!string.IsNullOrEmpty(tipo))
                 {
                     TipoCadastro = tipo;
                 }
                 erro = Erro;
+                // Se o usuario chegou até aqui então ele não terminou o cadastro, então retornamos a pagina para terminar o cadastro
                 return Page();
             }
         }
 
-        public async Task<Endereco> GetEnderecoAsync(string cep)
-        {
-            var stringTask = client.GetStreamAsync("https://viacep.com.br/ws/"+cep+"/json/");
-
-            var resultado = await JsonSerializer.DeserializeAsync<Endereco>(await stringTask);
-
-            return resultado;
-        }
-
+        
+        /// <summary>
+        /// Executa quando o formulario da pagina é submetido
+        /// </summary>
+        /// <returns></returns>
         public async Task<IActionResult> OnPostAsync()
         {
+
+            // Checamos o tipo de cadastro do usuario e então criamos um objeto de seu tipo e adicionamos no BD
             if (Input.Tipo == "cliente")
             {
                 Cliente cadastro = new Cliente
@@ -165,10 +183,10 @@ namespace AdasPet.Areas.Identity.Pages.Account
                 };
 
 
-                Endereco endereco = await GetEnderecoAsync(Input.Cep);
+                Endereco endereco = await Endereco.GetEnderecoDeCepAsync(Input.Cep);
                 if (string.IsNullOrEmpty(endereco.Rua))
                 {
-                    //return Redirect("~/Identity/Account/CadastroCompleto?Erro=CEP%20Inv%C3%A1lido.%20%20Insira%20novamente%21");
+                    // Se a API de CEP nao retornar uma rua quer dizer que o CEP não existe
                     ModelState.AddModelError("Cep", "CEP Inválido!");
                     return Page();
                 }
@@ -194,10 +212,12 @@ namespace AdasPet.Areas.Identity.Pages.Account
                 };
 
 
-                Endereco endereco = await GetEnderecoAsync(Input.Cep);
+                Endereco endereco = await Endereco.GetEnderecoDeCepAsync(Input.Cep);
                 if (string.IsNullOrEmpty(endereco.Rua))
                 {
-                    return Redirect("~/Identity/Account/CadastroCompleto?Erro=CEP%20Inv%C3%A1lido.%20%20Insira%20novamente%21");
+                    // Se a API de CEP nao retornar uma rua quer dizer que o CEP não existe
+                    ModelState.AddModelError("Cep", "CEP Inválido!");
+                    return Page();
                 }
                 endereco.CEP = Input.Cep;
                 endereco.NumeroCasa = Input.NumeroCasa;
@@ -226,8 +246,10 @@ namespace AdasPet.Areas.Identity.Pages.Account
                 _context.Entregador.Add(cadastro);
             }
             
+            // Salvamos as mudanças para o BD
             await _context.SaveChangesAsync();
 
+            // Adicionamos à session a chave CadastroCompleto com o valor true
             HttpContext.Session.SetString("CadastroCompleto", "true");
 
             return Redirect("/");

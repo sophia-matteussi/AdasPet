@@ -44,5 +44,7 @@ namespace AdasPet.Models
         [Required]
         public Microsoft.AspNetCore.Identity.IdentityUser ContaCadastro { get; set; }
 
+        public List<Pedido> Pedidos { get; set; }
+
     }
 }

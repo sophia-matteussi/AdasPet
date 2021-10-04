@@ -24,7 +24,14 @@ namespace AdasPet.Models
         [Required]
         [Column(TypeName = "varchar(100)")]
         public string Pagamento { get; set; }
-        
+
+        [Column(TypeName = "money")]
+        public double Troco { get; set; }
+
+        [Required]
+        [Column(TypeName = "money")]
+        public double Preco { get; set; }
+
         [Required]
         public Cliente Cliente { get; set; }
 
@@ -34,7 +41,7 @@ namespace AdasPet.Models
         [Required]
         public Endereco Endereco { get; set; }
 
-        [Required]
+        //[Required]
         public List<Produto> Produtos { get; set; }
     }
 }

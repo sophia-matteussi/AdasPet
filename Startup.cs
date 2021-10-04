@@ -26,27 +26,44 @@ namespace AdasPet
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // Configura os serviços do ASPNET
+        // É rodado no começo do programa
         public void ConfigureServices(IServiceCollection services)
         {
+            // Padrão
             services.AddDistributedMemoryCache();
 
+            // Adiciona Session ao contexto, permitindo manter dados entre paginas
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                // Por quanto tempo guardar a session depois que o usuario fecha o browser
+                // Quando expira perde tudo na sessão
+                options.IdleTimeout = TimeSpan.FromHours(2);
+                // Indica se o cookie pode ser acessado pelo browser/cliente
                 options.Cookie.HttpOnly = true;
+                // Indica se o cookie é essencial para o funcionamento do site
                 options.Cookie.IsEssential = true;
             });
 
+            // Adiciona um contexto de Banco de Dados do EF (Entity Framework)
             services.AddDbContext<ApplicationDbContext>(options =>
+                // Indica para o EF que usaremos um SQL Server
                 options.UseSqlServer(
+                    // Pegamos a ConnectionString do arquivo appsettings.json
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            // Adiciona uma pagina para quando operações no banco de dados dão erro
             services.AddDatabaseDeveloperPageExceptionFilter();
 
+            // Adiciona o identity framework para autenticação e autorização
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                // Adicionamos nosso contexto de BD para o identity guardar suas iniformações
+                .AddEntityFrameworkStores<ApplicationDbContext>(); 
+
+            // Adiciona MVC
             services.AddControllersWithViews();
 
+            // Adiciona o Google como forma de login
             services.AddAuthentication()
                 .AddGoogle("Google", options =>
                 {
@@ -54,14 +71,20 @@ namespace AdasPet
                     options.ClientSecret = Configuration["GoogleClientSecret"];
                 });
 
+            // Adiciona nossa classe de mandar email
             services.AddTransient<IEmailSender, EmailSender>();
+
+            // Padrão
             services.Configure<AuthMessageSenderOptions>(Configuration);
+
+            services.AddAntiforgery(option => option.HeaderName = "X-XSRF-TOKEN");
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            // Se rodar pelo Visual studio adiciona paginos com erros explicattivos
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -70,24 +93,28 @@ namespace AdasPet
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            // Ativa HTTPS
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
+            // Ativa Session
             app.UseSession();
 
+            // Ativa o Identity
             app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
-            {
+            {   
                 endpoints.MapControllerRoute(
+                    // Diz qual a rota padrão/pagina inicial
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                // Ativa Razor Pages
                 endpoints.MapRazorPages();
             });
         }

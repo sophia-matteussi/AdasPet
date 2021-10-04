@@ -1,0 +1,69 @@
+﻿@page
+@model AdasPet.Areas.Loja.Pages.Testes.Produtos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Produto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Produto.Nome" class="control-label"></label>
+                <input asp-for="Produto.Nome" class="form-control" />
+                <span asp-validation-for="Produto.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.Marca" class="control-label"></label>
+                <input asp-for="Produto.Marca" class="form-control" />
+                <span asp-validation-for="Produto.Marca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.TipoDeAnimal" class="control-label"></label>
+                <input asp-for="Produto.TipoDeAnimal" class="form-control" />
+                <span asp-validation-for="Produto.TipoDeAnimal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.Categoria" class="control-label"></label>
+                <input asp-for="Produto.Categoria" class="form-control" />
+                <span asp-validation-for="Produto.Categoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.Preco" class="control-label"></label>
+                <input asp-for="Produto.Preco" class="form-control" />
+                <span asp-validation-for="Produto.Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.QtdEmEstoque" class="control-label"></label>
+                <input asp-for="Produto.QtdEmEstoque" class="form-control" />
+                <span asp-validation-for="Produto.QtdEmEstoque" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Produto.PrecisaDeCarro" /> @Html.DisplayNameFor(model => model.Produto.PrecisaDeCarro)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.Descricao" class="control-label"></label>
+                <input asp-for="Produto.Descricao" class="form-control" />
+                <span asp-validation-for="Produto.Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -5,7 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
-
+using System.Text.Json;
+using System.Net.Http;
 
 namespace AdasPet.Models
 {
@@ -51,5 +52,15 @@ namespace AdasPet.Models
 
         public Fornecedor Fornecedor { get; set; }
 
+        public static async Task<Endereco> GetEnderecoDeCepAsync(string cep)
+        {
+            HttpClient client = new HttpClient();
+
+            var stringTask = client.GetStreamAsync("https://viacep.com.br/ws/" + cep + "/json/");
+
+            var resultado = await JsonSerializer.DeserializeAsync<Endereco>(await stringTask);
+
+            return resultado;
+        }
     }
 }

@@ -1,0 +1,55 @@
+﻿@page
+@model AdasPet.Areas.Identity.Pages.Account.Manage.Pedidos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["ActivePage"] = ManageNavPages.Pedidos;
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pedido</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pedido.StatusDoPedido)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pedido.StatusDoPedido)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pedido.DataInicio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pedido.DataInicio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pedido.DataFim)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pedido.DataFim)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pedido.Pagamento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pedido.Pagamento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pedido.Troco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pedido.Troco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pedido.Preco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pedido.Preco)
+        </dd>
+    </dl>
+</div>
+<div>   
+    <a asp-page="./Index">Back to List</a>
+</div>
