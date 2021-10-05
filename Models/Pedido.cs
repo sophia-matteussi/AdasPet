@@ -13,16 +13,20 @@ namespace AdasPet.Models
 
         [Required]
         [Column(TypeName = "varchar(20)")]
+        [Display(Name = "Status do Pedido")]
         public string StatusDoPedido { get; set; }
 
         [Required]
+        [Display(Name = "Data de Início")]
         public DateTime DataInicio { get; set; }
 
         [Required]
+        [Display(Name = "Data Final")]
         public DateTime DataFim { get; set; }        
 
         [Required]
         [Column(TypeName = "varchar(100)")]
+        [Display(Name = "Forma de Pagamento")]
         public string Pagamento { get; set; }
 
         [Column(TypeName = "money")]
@@ -30,6 +34,7 @@ namespace AdasPet.Models
 
         [Required]
         [Column(TypeName = "money")]
+        [Display(Name = "Preço")]
         public double Preco { get; set; }
 
         [Required]

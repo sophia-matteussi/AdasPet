@@ -37,60 +37,61 @@ namespace AdasPet.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [StringLength(200)]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
+            [StringLength(200, ErrorMessage = "Maximo de 200 caracteres")]
             public string Nome { get; set; }
 
-            [Required]
-            [StringLength(11, MinimumLength = 11)]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
+            [StringLength(11, ErrorMessage = "O CPF deve ter 11 caracteres apenas numéricos.", MinimumLength = 11)]
             public string CPF { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
             [DataType(DataType.Date)]
             [Display(Name = "Data de Nascimento")]
             public DateTime DataNascimento { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
             [Phone]
             [DataType(DataType.PhoneNumber)]
-            [StringLength(15, MinimumLength = 9)]
+            [StringLength(15, ErrorMessage = "O telefone precisa ter entre 9 e 15 caracteres", MinimumLength = 9)]
             public string Telefone { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
             [StringLength(200)]
             [Display(Name = "Razão Social")]
             public string RazaoSocial { get; set; }
 
-            [Required]
-            [StringLength(14, MinimumLength = 14)]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
+            [StringLength(14, ErrorMessage = "O CNPJ deve ter 14 caracteres numéricos.", MinimumLength = 14)]
             public string CNPJ { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
             [StringLength(20)]
             public string CNH { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
             [StringLength(5)]
             [Display(Name = "Tipo do Veiculo")]
             public string TipoVeiculo { get; set; }
 
-            [Required]
-            [StringLength(7, MinimumLength = 7)]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
+            [StringLength(7, ErrorMessage = "A Placa do veículo deve ter 7 caracteres, entre letras e numeros.", MinimumLength = 7)]
             public string Placa { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
             [StringLength(30)]
             public string Renavam { get; set; }
 
             [Required]
             public string Tipo { get; set; }
 
-            [Required]
-            [StringLength(8, MinimumLength = 8)]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
+            [StringLength(8, ErrorMessage = "O CEP deve ter 8 caracteres numéricos.", MinimumLength = 8)]
             public string Cep { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Campo obrigatório!!!")]
             [StringLength(5)]
+            [Display(Name = "Numero da Casa")]
             public string NumeroCasa { get; set; }
 
             [StringLength(30)]
