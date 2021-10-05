@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "HigieneCachorros";
+}
+
+<h1>HigieneCachorros</h1>
+
+
+<div>
+    @foreach (var item in AdasPet.Controllers.FrontSupport.Lista("Higiene", "Cachorro"))
+    {
+        <div class="list-group">
+            <label>@item.Nome</label>
+            <label>@item.Preco</label>
+            <label>@item.Categoria</label>
+            <label>@item.TipoDeAnimal</label>
+            <label>@item.QtdEmEstoque</label>
+            @if (item.PrecisaDeCarro)
+            {
+                <label>Sim</label>
+            }
+            else
+            {
+                <label>Não</label>
+            }
+            <form action="/" method="post">
+            </form>
+            <br />
+        </div>
+    }
+</div>

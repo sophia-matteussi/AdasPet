@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Gatos";
+}
+
+<h1>Gatos</h1>
+
+<div>
+    <button type="button" onclick="javascript: AlimentacaoGatos()">Alimentação</button> <!--usa das funções JavaScript no evento de onclick para abrir a tela desejada-->
+</div>
+
+<div>
+    <button type="button" onclick="javascript: AcessoriosEquipamentosGatos()">Acessórios e Equipamentos</button> <!--usa das funções JavaScript no evento de onclick para abrir a tela desejada-->
+</div>
+<div>
+
+    <button type="button" onclick="javascript: BrinquedosGatos()">Brinquedos</button>
+</div>
+<div>
+    <button type="button" onclick="javascript: FarmaciaGatos()">Farmácia</button>
+</div>
+<div>
+    <button type="button" onclick="javascript: HigieneGatos()">Higiene</button>
+</div>
+
+
+<script type="text/javascript">
+    //usar sempre neste formato para criar codigos em javascript
+    function AlimentacaoGatos() { window.location.href = "AlimentacaoGatos" } //função que redireciona para outra pagina
+    function AcessoriosEquipamentosGatos() { window.location.href = "AcessoriosEquipamentosGatos" } //função que redireciona para outra pagina
+    function BrinquedosGatos() { window.location.href = "BrinquedosGatos" } //função que redireciona para outra pagina
+    function FarmáciaGatos() { window.location.href = "FarmaciaGatos" } //função que redireciona para outra pagina
+    function HigieneGatos() { window.location.href = "HigieneGatos" } //função que redireciona para outra pagina
+</script>

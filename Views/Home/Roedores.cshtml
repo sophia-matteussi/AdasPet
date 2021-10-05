@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Roedores";
+}
+
+<h1>Roedores</h1>
+<h6>Hamsters, Porquinhos-da-Índia, Ratos, Chinchilas... </h6>
+
+<div>
+    <button type="button" onclick="javascript: AlimentacaoRoedores()">Alimentação</button> <!--usa das funções JavaScript no evento de onclick para abrir a tela desejada-->
+</div>
+
+<div>
+    <button type="button" onclick="javascript: AcessoriosEquipamentosRoedores()">Acessórios e Equipamentos</button> <!--usa das funções JavaScript no evento de onclick para abrir a tela desejada-->
+</div>
+<div>
+    <button type="button" onclick="javascript: BrinquedosRoedores()">Brinquedos</button>
+</div>
+<div>
+    <button type="button" onclick="javascript: FarmaciaRoedores()">Farmácia</button>
+</div>
+<div>
+    <button type="button" onclick="javascript: HigieneRoedores()">Higiene</button>
+</div>
+
+
+<script type="text/javascript">
+    //usar sempre neste formato para criar codigos em javascript
+    function AlimentacaoRoedores() { window.location.href = "AlimentacaoRoedores" } //função que redireciona para outra pagina
+    function AcessoriosEquipamentosRoedores() { window.location.href = "AcessoriosEquipamentosRoedores" } //função que redireciona para outra pagina
+    function BrinquedosRoedores() { window.location.href = "BrinquedosRoedores" } //função que redireciona para outra pagina
+    function FarmáciaRoedores() { window.location.href = "FarmaciaRoedores" } //função que redireciona para outra pagina
+    function HigieneRoedores() { window.location.href = "HigieneRoedores" } //função que redireciona para outra pagina
+
+
+

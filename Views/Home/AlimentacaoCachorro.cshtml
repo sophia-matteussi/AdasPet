@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewData["Title"] = "AlimentacaoCachorro";
+}
+
+<h1>Alimentação Canina</h1>
+
+@*
+    layout codigo
+*@
+<style>
+    .txt1 {
+        position: absolute;
+        top: 13%;
+        left: 35%;
+        padding: 20px;
+        border-radius: 15px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #7C59B9;
+    }
+</style>
+
+<style>
+    .txt2 {
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        padding: 20px;
+        border-radius: 15px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #7C59B9;
+    }
+</style>
+<style>
+    .QuantidadeDoProduto {
+        position: absolute;
+        top: 13%;
+        left: 85%;
+        padding: 20px;
+        border-radius: 15px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #7C59B9;
+    }
+
+    .btnn {
+        width: 53px;
+    }
+
+    .AlinhaBunito {
+
+
+
+    }
+
+    .AdicionarAoCarrinho {
+        width: 60px;
+        position: absolute;
+        top: 13%;
+        left: 90%;
+    }
+</style>
+
+<div>
+    @foreach (var item in AdasPet.Controllers.FrontSupport.Lista("Alimentacao", "Cachorro"))
+    {
+        <div class="list-group">
+            <label>@item.Nome</label>
+            <label>@item.Preco</label>
+            <label>@item.Categoria</label>
+            <label>@item.TipoDeAnimal</label>
+            <label>@item.QtdEmEstoque</label>
+            @if (item.PrecisaDeCarro)
+            {
+                <label>Sim</label>
+            }
+            else
+            {
+                <label>Não</label>
+            }
+            <form action="/" method="post">
+
+            </form>
+            <br />
+        </div>
+    }
+</div>
+
+<script>
+    function InsereCarrinho() {
+
+    }
+
+
+</script>
+@*
+    código
+*@
+
+<!--<hr />--> @*linha horizontal*@
+<!--<div class="imagem1">
+    <img src="~/Images/instagram-icone-icon-6.png" alt="..." class="img-thumbnail">
+
+</div>
+<div class="imagem2">
+    <img src="~/Images/instagram-icone-icon-6.png" alt="..." class="img-thumbnail">
+</div>
+<div class="imagem3>
+    <img src="~/Images/instagram-icone-icon-6.png" alt="..." class="img-thumbnail">
+</div>
+<div class="txt1">
+    <label>Nome: </label>
+    <br>
+    <label>Preço: </label>
+    <br>
+    <label>Descrição:</label>
+</div>
+<div class="txt2">
+    <label>Nome: </label>
+    <br>
+    <label>Preço: </label>
+    <br>
+    <label>Descrição:</label>
+</div>
+
+<div class="QuantidadeDoProduto">
+    <input class="btnn" type="number" value="button" />
+
+</div>-->
+
+<div class="AdicionarAoCarrinho">
+    @*<form action="~/Home/Index" method="post">*@
+    <button type="submit">
+        <img src="~/Images/pngtree-red-shopping-cart-icon-png-free-image_2284820.jpg" alt="..." class="img-thumbnail">
+    </button>
+    @*</form>*@
+</div>
+
+@* MUDAR O NOME DE TODAS AS IMAGENS E MUDAR AS IMAGENS (ÓBVIO :v) *@

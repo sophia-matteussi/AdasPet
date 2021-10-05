@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Répteis";
+}
+
+<h1>Répteis</h1>
+<h6>Tartarugas, Lagartos, Iguanas, Cobras...</h6>
+
+
+<div>
+    <button type="button" onclick="javascript: AlimentacaoRepteis()">Alimentação</button> <!--usa das funções JavaScript no evento de onclick para abrir a tela desejada-->
+</div>
+
+<div>
+    <button type="button" onclick="javascript: AcessoriosEquipamentosRepteis()">Acessórios e Equipamentos</button> <!--usa das funções JavaScript no evento de onclick para abrir a tela desejada-->
+</div>
+
+<div>
+    <button type="button" onclick="javascript: FarmaciaRepteis()">Farmácia</button>
+</div>
+<div>
+    <button type="button" onclick="javascript: HigieneRepteis()">Higiene</button>
+</div>
+
+
+<script type="text/javascript">
+    //usar sempre neste formato para criar codigos em javascript
+    function AlimentacaoRepteis() { window.location.href = "AlimentacaoRepteis" } //função que redireciona para outra pagina
+    function AcessoriosEquipamentosRepteis() { window.location.href = "AcessoriosEquipamentosRepteis" } //função que redireciona para outra pagina
+    function FarmaciaRepteis() { window.location.href = "FarmaciaRepteis" } //função que redireciona para outra pagina
+    function HigieneRepteis() { window.location.href = "HigieneRepteis" } //função que redireciona para outra pagina
+    </script>
