@@ -58,8 +58,8 @@ namespace AdasPet.Areas.Identity.Pages.Account
 
                 await _emailSender.SendEmailAsync(
                     Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    "Redefinir Senha",
+                    $"Por favor, redefina a sua senha <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicando aqui</a>.");
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }

@@ -24,20 +24,23 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos
         }
 
         [BindProperty]
-        public List<Endereco> Enderecos { get; private set; }
+        public List<Endereco> Enderecos { get; private set; } = new List<Endereco>();
 
-        public Guid clienteID;
         public async Task<IActionResult> OnGetAsync()
         {
             string UserId = _userManager.GetUserId(User);
             
-            clienteID = _context.Cliente.Where(user => user.ContaCadastro.Id == UserId).First().ID;
-            var enderecos = _context.Endereco.Where(end => end.Cliente.ID == clienteID).ToList();
+            var cliente = _context.Cliente.Where(user => user.ContaCadastro.Id == UserId);
+            if (!cliente.Any())
+            {
+                return Page();
+            }
+
+            var enderecos = _context.Endereco.Where(end => end.Cliente.ID == cliente.First().ID).ToList();
 
             Enderecos = enderecos;
 
             return Page();
-            //return NotFound();
         
         }
     }

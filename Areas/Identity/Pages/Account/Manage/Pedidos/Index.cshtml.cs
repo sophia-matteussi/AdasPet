@@ -22,16 +22,20 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage.Pedidos
             _context = context;
         }
 
-        public Guid clienteID;
 
-        public IList<Pedido> Pedido { get;set; }
+        public IList<Pedido> Pedido { get; set; } = new List<Pedido>();
 
         public async Task<IActionResult> OnGetAsync()
         {
             string UserId = _userManager.GetUserId(User);
 
-            clienteID = _context.Cliente.Where(user => user.ContaCadastro.Id == UserId).First().ID;
-            var pedidos = _context.Pedido.Where(end => end.Cliente.ID == clienteID).ToList();
+            var cliente = _context.Cliente.Where(user => user.ContaCadastro.Id == UserId);
+
+            if (!cliente.Any())
+            {
+                return Page();
+            }
+            var pedidos = _context.Pedido.Where(end => end.Cliente.ID == cliente.First().ID).ToList();
 
             Pedido = pedidos;
 

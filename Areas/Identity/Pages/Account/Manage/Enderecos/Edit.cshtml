@@ -49,11 +49,6 @@
                 <input asp-for="Endereco.Estado" class="form-control" />
                 <span asp-validation-for="Endereco.Estado" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Endereco.Principal" /> @Html.DisplayNameFor(model => model.Endereco.Principal)
-                </label>
-            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -64,6 +59,18 @@
 <div>
     <a asp-page="./Index">Back to List</a>
 </div>
+
+<!--
+    asp-page-handler: diz qual a função OnPost que devemos chamar quando damos submit
+    aps-route-id: diz para chamar a função com um parametro id igual a "Model.Endereco.ID"
+-->
+<form method="post" asp-page-handler="TornarPrincipal" asp-route-id="@Model.Endereco.ID">
+    <div class="form-group">
+        <input type="submit" value="Tornar Principal" class="btn btn-primary" />
+    </div>
+</form>
+
+<h3>@Model.Message</h3>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
