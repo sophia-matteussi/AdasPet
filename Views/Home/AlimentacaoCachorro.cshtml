@@ -50,9 +50,6 @@
     }
 
     .AlinhaBunito {
-
-
-
     }
 
     .AdicionarAoCarrinho {
@@ -81,7 +78,6 @@
                 <label>Não</label>
             }
             <form action="/" method="post">
-
             </form>
             <br />
         </div>
@@ -129,13 +125,84 @@
     <input class="btnn" type="number" value="button" />
 
 </div>-->
-
-<div class="AdicionarAoCarrinho">
-    @*<form action="~/Home/Index" method="post">*@
-    <button type="submit">
-        <img src="~/Images/pngtree-red-shopping-cart-icon-png-free-image_2284820.jpg" alt="..." class="img-thumbnail">
-    </button>
-    @*</form>*@
-</div>
-
+<!--<div class="AdicionarAoCarrinho">-->
+@*<form action="~/Home/Index" method="post">*@
+<!--<button type="submit">
+    <img src="~/Images/pngtree-red-shopping-cart-icon-png-free-image_2284820.jpg" alt="..." class="img-thumbnail">
+</button>-->
+@*</form>*@
+<!--</div>-->
 @* MUDAR O NOME DE TODAS AS IMAGENS E MUDAR AS IMAGENS (ÓBVIO :v) *@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-gap: 50px;
+            grid-template-columns: auto auto auto;
+            background-color: mediumpurple;
+            padding: 10px;
+        }
+
+
+
+
+
+        .grid-item {
+            background-color: rgb(193 166 251);
+            border: 1px solid rgb(133 79 187);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    @*<div class="grid-container">
+            <div class="grid-item">
+                <div>
+                    <img src="~/Images/instagram-icone-icon-6.png" alt="Alternate Text" />
+
+                </div>
+                <div>
+                    <label></label>
+                </div>
+            </div>
+
+        </div>*@
+    <div class="grid-container">
+
+        @*@for (int i = 0; i < AdasPet.Controllers.FrontSupport.Lista("Alimentacao", "Cachorro").Count; i++)
+        {
+            <div>
+                <label>@AdasPet.Controllers.FrontSupport.Lista("Alimentacao", "Cachorro")[i].Nome</label>
+            </div>
+       }*@
+        
+
+        @foreach (var item in AdasPet.Controllers.FrontSupport.Lista("Alimentacao","Cachorro"))
+        {
+            <div class="grid-item">
+                <label >@item.Nome</label><br />
+                <label>@item.Marca</label><br />
+                <label>@item.Preco</label><br />
+                <label>@item.QtdEmEstoque</label><br />
+            </div>    
+        }
+
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>

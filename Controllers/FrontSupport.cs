@@ -19,7 +19,7 @@ namespace AdasPet.Controllers
         /// <param name="categoria"></param>
         /// <param name="animal"></param>
         /// <returns></returns>
-        public static List<Produto> Lista(string categoria, string animal)
+        public static List<Produto> Lista(string categoria, string animal/*, int start,int qtd*/)
         {
 
             //Selecionar 
@@ -29,8 +29,10 @@ namespace AdasPet.Controllers
             Connection.Open();
 
             SqlDataReader dr = Cmd.ExecuteReader();
-            while (dr.Read())
+            int actualQtd = 0;
+            while (dr.Read() && actualQtd < 5)
             {
+                actualQtd++;
                 Produto pr = new Produto()
                 {
                     ID = Guid.Parse(dr[0].ToString()),
@@ -44,9 +46,11 @@ namespace AdasPet.Controllers
                     Descricao = dr[8].ToString()
                 };
                 lista.Add(pr);
+
             }
             dr.Close();
             Connection.Close();
+
             return lista;
         }
     }
