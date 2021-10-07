@@ -1,0 +1,170 @@
+﻿@page
+@model AdasPet.Areas.CadastroDeProdutos.CadastrarProdutoModel
+@{
+}
+
+
+@{
+    ViewData["Title"] = "Cadastre seu produto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    .cadastro {
+        background-color: transparent;
+        position: absolute;
+        top: 13%;
+        left: 32%;
+        padding: 50px;
+        border-radius: 15px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #0000FF;
+    }
+
+    .btn {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 10%;
+        text-align: center;
+        width: 200px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin: 20px;
+        height: 55px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+        box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    }
+
+        .btn:hover {
+            background-position: 100% 0;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+    select {
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        border-radius: 5px;
+    }
+
+    textarea {
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        border-radius: 5px;
+        resize: none;
+    }
+
+    input {
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+
+    function maxLength(el) {
+        if (!('maxLength' in el)) {
+            var max = el.attributes.maxLength.value;
+            el.onkeypress = function () {
+                if (this.value.length >= max) return false;
+            };
+        }
+    }
+
+    maxLength(document.getElementById("text"));
+
+</script>
+<body>
+
+    <form action="~/Home/AuthenticCadastroProdutos" method="post">
+        <div class="cadastro">
+            <h1>Cadastrar Produtos</h1>
+            <input type="text" name="nomeProduto" placeholder="Nome do Produto" maxlength="50" />
+            <input type="text" name="preco" placeholder="Preço" maxlength="50" />
+            <br><br>
+            <input type="text" name="marcaProduto" placeholder="Marca" maxlength="50" />
+            <input type="number" name="quantidade" placeholder="Quantidade em estoque" />
+            <br><br><br>
+            <label>Insira abaixo a descrição do produto</label>
+            <br>
+            <textarea name="descrição" maxlength="295" id="txa" rows="5" cols="50"></textarea>
+            <br><br>
+            <label for="animais">Animal:</label>
+            <select name="animal" id="animal">
+                <option value="Cachorro">Cachorros</option>
+                <option value="Gato">Gatos</option>
+                <option value="Passaro">Passáros</option>
+                <option value="Peixe">Peixes</option>
+                <option value="Coelho">Coelhos</option>
+                <option value="Roedores">Roedores</option>
+                <option value="Repteis">Répteis</option>
+                @*<optgroup label="Roedores">
+                        <option value="hamster">Hamsters</option>
+                        <option value="porquinhoDaIndia">Porquinhos-da-Índia</option>
+                        <option value="rato">Ratos</option>
+                        <option value="chinchila">Chinchilas</option>
+                    </optgroup>
+                    <optgroup label="Répteis">
+                        <option value="tartaruga">Tartarugas</option>
+                        <option value="largato">Largatos</option>
+                        <option value="iguana">Iguanas</option>
+                        <option value="cobra">Cobras</option>
+                    </optgroup>*@
+            </select>
+            <label for="categorias">Categoria:</label>
+            <select name="categorias" id="categorias">
+                <option value="Alimentacao">Alimentação</option>
+                <option value="Acessorios&Equipamentos">Acessórios e Equipamentos</option>
+                <option value="Brinquedos">Brinquedos</option>
+                <option value="Farmacia">Farmácia</option>
+                <option value="Higiene">Higiene</option>
+
+            </select>
+            <br><br>
+
+            <input id="Remember" type="checkbox" value="true" name="carro" />
+            <input type="hidden" value="false" name="carro" />
+
+            <label for="carro">A entrega necessita de carro?</label>
+            <br><br>
+            <button type="submit" class="btn" id="adicionar">Adicionar</button>
+        </div>
+    </form>
+</body>
+</html>
