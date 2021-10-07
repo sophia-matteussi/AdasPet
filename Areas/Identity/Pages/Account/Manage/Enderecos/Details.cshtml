@@ -2,14 +2,14 @@
 @model AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
     ViewData["ActivePage"] = ManageNavPages.Enderecos;
 }
 
-<h1>Details</h1>
+<h1>Detalhes</h1>
 
 <div>
-    <h4>Endereco</h4>
+    <h4>Endereço</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -63,6 +63,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Endereco.ID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Endereco.ID">Editar</a> |
+    <a asp-page="./Index">Voltar para a lista</a>
 </div>

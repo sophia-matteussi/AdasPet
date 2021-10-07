@@ -1,0 +1,77 @@
+﻿@page
+@model AdasPet.Areas.Loja.Pages.TelaPagamentoModel
+@{
+    ViewData["Title"] = "Pagamento";
+}
+
+<div class="Pagamento">
+   
+    <p>Lista dos produtos:</p>
+    <table>
+        @foreach (var item in Model.Produtos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+            </tr>
+        }
+    </table>
+    <p>Receber em: </p>
+    <select name="enderecoID" asp-items="Model.Enderecos"></select>
+    <br />
+    <br />
+    <h6>Valor do frete: R$10,00</h6>
+    <h5>Total: </h5>
+    <br />
+
+    <h5>Selecione uma forma de pagamento</h5>
+
+    <div class="TpPagamento" name="TpPagamento">
+        <a href="./TelaPagamento?tipo=Cartao">
+            <button class="btn btn-primary">Cartão</button>
+        </a>
+        <a href="./TelaPagamento?tipo=Dinheiro">
+            <button class="btn btn-primary">Dinheiro</button>
+        </a>
+
+    </div>
+
+    <br />
+
+    @{ if (Model.Tipo == "Cartao")
+        {
+            <select>
+                <option value="depito">Débito</option>
+                <option value="credito">Crédito</option>
+            </select>
+            <select>
+                <option value="mastercard">MASTERCARD</option>
+                <option value="elo">ELO</option>
+                <option value="maestro">MAESTRO</option>
+                <option value="visa">VISA</option>
+            </select> }
+        else if (Model.Tipo == "Dinheiro")
+        {
+            <input id="Checkbox1" type="checkbox" />
+            <label>Precisa de troco?</label>
+            <br />
+            <input class="txtDinheiro" type="text" onFocus="change()" onBlur="changeBack()" name="txtDinheiro" placeholder="Voce precisa de troco para quanto?" required id="txtDinheiro"> 
+        } 
+    }
+
+    <br />
+    <br />
+
+    <button class="btn btn-primary" onclick="alert('Obrigada! Volte sempre!')"> Finalizar compra </button>
+</div>
+
+@section scripts{
+    <script src="https://kit.fontawesome.com/a076d053399.js"></script>
+}
