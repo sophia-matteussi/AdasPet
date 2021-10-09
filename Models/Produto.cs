@@ -29,6 +29,7 @@ namespace AdasPet.Models
 
         [Required]
         [Column(TypeName = "money")]
+        [RegularExpression(@"^\d+\.\d\d$", ErrorMessage = "O Preço precisa ser no formato 0.00")]
         public double Preco { get; set; }
 
         [Required]
@@ -41,7 +42,7 @@ namespace AdasPet.Models
         [Column(TypeName = "varchar(200)")]
         public string Descricao { get; set; }
 
-        [Required]
+        //[Required]
         public Microsoft.AspNetCore.Identity.IdentityUser ContaCadastro { get; set; }
 
         public List<Pedido> Pedidos { get; set; }
