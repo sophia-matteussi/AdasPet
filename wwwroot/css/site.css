@@ -11,7 +11,6 @@ a.navbar-brand {
 a {
     color: #1836b2;
 }
-
 .btn {
     color: rgb(0 0 0);
     background-color: #fff;
@@ -140,17 +139,17 @@ h1 {
     color: #DDA0DD;
 }
 
-media (orientation: landscape) {
-    body;
-
-    {
-        grid-auto-flow: column;
-    }
-}
-
 .navbar {
     font-size: 18px;
     background-color: #dda0dd;
 }
 
 
+.dropdown-toggle::after {
+    content: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}

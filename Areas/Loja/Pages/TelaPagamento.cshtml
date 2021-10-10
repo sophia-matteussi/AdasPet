@@ -6,8 +6,25 @@
 
 <div class="Pagamento">
    
-    <p>Lista dos produtos:</p>
+    <h5>Lista dos produtos:</h5>
     <table>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos[0].Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos[0].Marca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos[0].Preco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos[0].Descricao)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
         @foreach (var item in Model.Produtos)
         {
             <tr>
@@ -23,7 +40,7 @@
             </tr>
         }
     </table>
-    <p>Receber em: </p>
+    <h5>Receber em: </h5>
     <select name="enderecoID" asp-items="Model.Enderecos"></select>
     <br />
     <br />
@@ -31,14 +48,14 @@
     <h5>Total: </h5>
     <br />
 
-    <h5>Selecione uma forma de pagamento</h5>
+    <h5>Selecione uma forma de pagamento:</h5>
 
     <div class="TpPagamento" name="TpPagamento">
         <a href="./TelaPagamento?tipo=Cartao">
-            <button class="btn btn-primary">Cartão</button>
+            <button class="btn">Cartão</button>
         </a>
         <a href="./TelaPagamento?tipo=Dinheiro">
-            <button class="btn btn-primary">Dinheiro</button>
+            <button class="btn">Dinheiro</button>
         </a>
 
     </div>

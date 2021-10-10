@@ -66,6 +66,7 @@ namespace AdasPet.Areas.Loja.Pages.Carrinho
                 if (item == ProdutoId)
                 {
                     Produtos.Remove(item);
+                    break;
                 }
             }
 

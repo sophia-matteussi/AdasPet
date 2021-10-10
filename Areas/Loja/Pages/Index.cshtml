@@ -1,4 +1,65 @@
-﻿@page "{animal}/{categoria}"
+﻿@page "{animal}/{categoria?}"
 @model AdasPet.Areas.Loja.Pages.IndexModel
 @{
 }
+
+
+<h1 asp-for="Animal" class="control-label" ></h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Produtos[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produtos[0].Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produtos[0].Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produtos[0].Descricao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Produtos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>                             
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>                              
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>                  
+                    <form method="post" data-ajax="true" data-ajax-url="@Request.Path" data-ajax-method="post" data-ajax-complete="completed">
+                        <!-- Quando o usuario apertar no botão com type="submit" o ajax vai mandar um requerimento para a pagina atual com os campos do form no corpo -->
+                        <input type="hidden" asp-for="@item.ID" /> <!-- Criamos um campo escondido que vai ter o valor do ID do produto-->
+                        <button type="submit" class="btn btn-primary">Adicionar ao carrinho</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts{
+    <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+    <script>
+        // Script que ira rodar quando o requerimento completar
+        completed = function (xhr) {
+            alert(`Produto adicionado ao carrinho!`);
+        };
+    </script>
+}
+
+

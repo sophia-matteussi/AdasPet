@@ -64,7 +64,7 @@
                     <form method="post" data-ajax="true" data-ajax-url="@Request.Path" data-ajax-method="post" data-ajax-complete="completed">
                         <!-- Quando o usuario apertar no botão com type="submit" o ajax vai mandar um requerimento para a pagina atual com os campos do form no corpo -->
                         <input type="hidden" asp-for="@item.ID" /> <!-- Criamos um campo escondido que vai ter o valor do ID do produto-->
-                        <button type="submit" class="btn btn-primary">Adicionar Ao Carrinho</button>
+                        <button type="submit" class="btn btn-primary">Adicionar ao carrinho</button>
                     </form>
                 </td>
             </tr>
@@ -77,7 +77,7 @@
     <script>
         // Script que ira rodar quando o requerimento completar
         completed = function (xhr) {
-            alert(`Produto Adicionado ao Carrinho!!`);
+            alert(`Produto adicionado ao carrinho!!`);
         };
     </script>
 }

@@ -1,4 +1,26 @@
-﻿<!DOCTYPE html>
+﻿@using AdasPet.Models
+@using System.Collections;
+@{
+    var animaisGramaticalmenteCorretos = new Hashtable()
+    {
+        {"Cachorro","Cachorros" },
+        {"Gato","Gatos" },
+        {"Passaro","Pássaros" },
+        {"Peixe","Peixes" },
+        {"Coelho","Coelhos" },
+        {"Roedores","Roedores" },
+        {"Repteis", "Répteis" }
+    };
+    var categoriasGramaticalmenteCorretos = new Hashtable()
+    {
+        {"Alimentacao","Alimentação"},
+        {"Acessorio", "Acessórios e Equipamentos"},
+        {"Brinquedos", "Brinquedos" },
+        {"Farmacia", "Farmácia" },
+        {"Higiene","Higiene" }
+    };
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -12,7 +34,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="/imagens/Ada's Pet.svg" alt="Ada's Pet'" />
+                    <img src="/imagens/Ada's Pet.svg" alt="Ada's Pet" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -20,13 +42,26 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Sobre nós</a>
-                        </li>
+                        @{
+                            foreach (var animal in Enum.GetNames<ProdutoAnimais>())
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link text-dark dropdown-toggle" href="~/Loja/@animal" aria-haspopup="true" aria-expanded="false">
+                                        @animaisGramaticalmenteCorretos[animal]
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        @foreach (var categoria in Enum.GetNames<ProdutoCategorias>())
+                                        {
+                                            <a class="nav-link text-dark dropdown-item" href="~/Loja/@animal/@categoria">@categoriasGramaticalmenteCorretos[categoria]</a>
+                                        }
+                                    </div>
+                                </li>
+                            }
+                        }
                     </ul>
+                    <a class="navbar-brand" href ="~/Loja/Carrinho">
+                        <img src="/imagens/carrinho.svg" alt="Carrinho" width="70" height="70"/>
+                    </a>
                     <partial name="_LoginPartial" />
                 </div>
             </div>
@@ -40,7 +75,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            <img src="/imagens/Ada's Pet.svg" alt="Ada's Pet'" /> 2021 - Ada's Pet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Sobre nós</a>
+            <img src="/imagens/Ada's Pet.svg" alt="Ada's Pet'" width="40" height="30" /> 2021 - Ada's Pet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Sobre nós</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

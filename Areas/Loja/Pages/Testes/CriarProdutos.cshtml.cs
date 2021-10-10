@@ -27,8 +27,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
             {
                 Nome = "Ração 5Kg",
                 Marca = "Vermelha",
-                TipoDeAnimal = "Cachorro",
-                Categoria = "Alimento",
+                TipoDeAnimal = ProdutoAnimais.Cachorro,
+                Categoria = ProdutoCategorias.Alimentacao,
                 Preco = 100,
                 QtdEmEstoque = 30,
                 PrecisaDeCarro = false,
@@ -40,8 +40,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
             {
                 Nome = "Ração 10Kg",
                 Marca = "Vermelha",
-                TipoDeAnimal = "Cachorro",
-                Categoria = "Alimento",
+                TipoDeAnimal = ProdutoAnimais.Cachorro,
+                Categoria = ProdutoCategorias.Alimentacao,
                 Preco = 200,
                 QtdEmEstoque = 30,
                 PrecisaDeCarro = false,
@@ -53,8 +53,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
             {
                 Nome = "Ração 5Kg",
                 Marca = "Azul",
-                TipoDeAnimal = "Cachorro",
-                Categoria = "Alimento",
+                TipoDeAnimal = ProdutoAnimais.Cachorro,
+                Categoria = ProdutoCategorias.Alimentacao,
                 Preco = 150,
                 QtdEmEstoque = 30,
                 PrecisaDeCarro = false,
@@ -66,8 +66,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
             {
                 Nome = "Ração 10Kg",
                 Marca = "Azul",
-                TipoDeAnimal = "Cachorro",
-                Categoria = "Alimento",
+                TipoDeAnimal = ProdutoAnimais.Cachorro,
+                Categoria = ProdutoCategorias.Alimentacao,
                 Preco = 300,
                 QtdEmEstoque = 30,
                 PrecisaDeCarro = false,

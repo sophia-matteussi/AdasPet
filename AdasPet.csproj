@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Lojista\Pages\teste\" />
     <Folder Include="wwwroot\imagens\" />
   </ItemGroup>
 
