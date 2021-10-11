@@ -33,9 +33,9 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos
         [BindProperty]
         public Endereco Endereco { get; set; }
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
+            //checa se os valores dados pelo usuário estão dentro/de acordo das/com regras das propriedades
             if (!ModelState.IsValid)
             {
                 return Page();

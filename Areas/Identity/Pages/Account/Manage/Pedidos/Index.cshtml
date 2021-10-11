@@ -6,7 +6,7 @@
     ViewData["ActivePage"] = ManageNavPages.Pedidos;
 }
 
-<h1>Meus Pedidos</h1>
+<h4>Meus Pedidos</h4>
 
 <table class="table">
     <thead>
@@ -54,7 +54,7 @@
                 @Html.DisplayFor(modelItem => item.Preco)
             </td>
             <td>
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> 
+                <a asp-page="./Details" asp-route-id="@item.ID">Detalhes</a> 
             </td>
         </tr>
 }

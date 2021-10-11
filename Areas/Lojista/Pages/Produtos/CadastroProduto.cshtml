@@ -1,0 +1,63 @@
+﻿@page
+@using AdasPet.Models;
+@model AdasPet.Areas.Lojista.Pages.Produtos.CadastroProdutoModel
+@{
+}
+
+@{
+    ViewData["Title"] = "Cadastre seu produto";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<form method="post">
+    <div class="cadastro">
+
+        <br />
+        <label asp-for="Produto.Nome" class="control-label"></label>
+        <input asp-for="Produto.Nome" class="form-control" />
+        <span asp-validation-for="Produto.Nome" class="text-danger"></span>
+        <br />
+
+        <label asp-for="Produto.Preco" class="control-label"></label>
+        <input asp-for="Produto.Preco" class="form-control" />
+        <span asp-validation-for="Produto.Preco" class="text-danger"></span>
+        <br />
+
+        <label asp-for="Produto.Marca" class="control-label"></label>
+        <input asp-for="Produto.Marca" class="form-control" />
+        <span asp-validation-for="Produto.Marca" class="text-danger"></span>
+        <br />
+
+        <label asp-for="Produto.QtdEmEstoque" class="control-label"></label>
+        <input asp-for="Produto.QtdEmEstoque" class="form-control" />
+        <span asp-validation-for="Produto.QtdEmEstoque" class="text-danger"></span>
+        <br />
+
+        <label>Insira abaixo a descrição do produto</label>
+        <br>
+        <textarea asp-for="Produto.Descricao" class="form-control" rows="5" cols="50"></textarea>
+        <span asp-validation-for="Produto.Descricao" class="text-danger"></span>
+        <br />
+
+        <label for="animais">Animal:</label>
+        <select asp-for="Produto.TipoDeAnimal" class="form-control" asp-items="Html.GetEnumSelectList<ProdutoAnimais>()">
+        </select>
+        <br />
+
+        <label for="categorias">Categoria:</label>
+        <select asp-for="Produto.Categoria" class="form-control" asp-items="Html.GetEnumSelectList<ProdutoCategorias>()">
+        </select>
+        <br />
+
+        <label class="form-check-label">
+            <input class="form-check-input" asp-for="Produto.PrecisaDeCarro" />
+            A entrega necessita de carro?
+        </label>
+        <br />
+        <button type="submit" class="btn btn-primary" id="adicionar">Adicionar</button>
+    </div>
+</form>
+
+

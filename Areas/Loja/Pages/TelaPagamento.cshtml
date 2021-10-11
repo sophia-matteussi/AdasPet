@@ -1,0 +1,105 @@
+﻿@page
+@model AdasPet.Areas.Loja.Pages.TelaPagamentoModel
+@{
+    ViewData["Title"] = "Pagamento";
+}
+
+<div class="Pagamento">
+   
+    <h5>Lista dos produtos:</h5>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos[0].Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos[0].Marca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos[0].Preco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Produtos[0].Descricao)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.Produtos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+            </tr>
+        }
+    </table>
+    <form method="post">
+        <h5>Receber em: </h5>
+        <select asp-for="Input.Pedido.Endereco" name="enderecoID" asp-items="Model.Enderecos"></select>
+        <br />
+        <br />
+        <h6>Valor do frete: R$10,00</h6>
+        <h5>Total: </h5>
+        <br />
+
+        <h5>Selecione uma forma de pagamento:</h5>
+
+        <div class="TpPagamento" name="TpPagamento">
+            <a href="./TelaPagamento?tipo=Cartao">
+                <button type="button" class="btn btn-primary btn-primary-menor">Cartão</button>
+            </a>
+            <a href="./TelaPagamento?tipo=Dinheiro">
+                <button type="button" class="btn btn-primary btn-primary-menor">Dinheiro</button>
+            </a>
+        </div>
+
+        <br />
+
+        @{
+            if (Model.Tipo == "Cartao")
+            {
+                <input type="hidden" asp-for="Input.FormaPgto" value="Cartao" />
+                <div class="row">
+                    <div class="col-4">
+                        <select asp-for="Input.CartaoTipo" class="form-control">
+                            <option value="depito">Débito</option>
+                            <option value="credito">Crédito</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <select asp-for="Input.Bandeira" class="form-control">
+                            <option value="mastercard">MASTERCARD</option>
+                            <option value="elo">ELO</option>
+                            <option value="maestro">MAESTRO</option>
+                            <option value="visa">VISA</option>
+                        </select>
+                    </div>
+                </div>
+            }
+            else if (Model.Tipo == "Dinheiro")
+            {
+                <input type="hidden" asp-for="Input.FormaPgto" value="Dinheiro" />
+                <input id="PrecisaTroco" onchange="if($(this).is(':checked')){$('#Input_Pedido_Troco').attr('disabled',false)}else{$('#Input_Pedido_Troco').attr('disabled',true)}" type="checkbox" class="form-check-input" />
+                <label>Precisa de troco?</label>
+                <br />
+                <input disabled="disabled" asp-for="Input.Pedido.Troco" class="form-control" type="text" placeholder="Voce precisa de troco para quanto?">
+            }
+        }
+
+        <br />
+        <br />
+
+        <button type="submit" class="btn btn-primary" onclick="alert('Obrigada! Volte sempre!')"> Finalizar compra </button>
+    </form>
+</div>
+
+@section scripts{
+    <script src="https://kit.fontawesome.com/a076d053399.js"></script>
+}

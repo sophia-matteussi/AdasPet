@@ -1,35 +1,31 @@
-﻿@page
-@model AdasPet.Areas.Loja.Pages.Testes.Produtos.IndexModel
-
+﻿@page "{animal}/{categoria?}"
+@model AdasPet.Areas.Loja.Pages.IndexModel
 @{
-    ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
+<h1 asp-for="Animal" class="control-label" ></h1>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Produto[0].Nome)
+                @Html.DisplayNameFor(model => model.Produtos[0].Nome)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Produto[0].Marca)
-            </th>                     
+                @Html.DisplayNameFor(model => model.Produtos[0].Marca)
+            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Produto[0].Preco)
-            </th>           
+                @Html.DisplayNameFor(model => model.Produtos[0].Preco)
+            </th>
             <th>
-                @Html.DisplayNameFor(model => model.Produto[0].Descricao)
+                @Html.DisplayNameFor(model => model.Produtos[0].Descricao)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Produto)
+        @foreach (var item in Model.Produtos)
         {
             <tr>
                 <td>
@@ -37,30 +33,14 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Marca)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TipoDeAnimal)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria)
-                </td>
+                </td>                             
                 <td>
                     @Html.DisplayFor(modelItem => item.Preco)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.QtdEmEstoque)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PrecisaDeCarro)
-                </td>
+                </td>                              
                 <td>
                     @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-
+                <td>                  
                     <form method="post" data-ajax="true" data-ajax-url="@Request.Path" data-ajax-method="post" data-ajax-complete="completed">
                         <!-- Quando o usuario apertar no botão com type="submit" o ajax vai mandar um requerimento para a pagina atual com os campos do form no corpo -->
                         <input type="hidden" asp-for="@item.ID" /> <!-- Criamos um campo escondido que vai ter o valor do ID do produto-->
@@ -77,7 +57,9 @@
     <script>
         // Script que ira rodar quando o requerimento completar
         completed = function (xhr) {
-            alert(`Produto adicionado ao carrinho!!`);
+            alert(`Produto adicionado ao carrinho!`);
         };
     </script>
 }
+
+

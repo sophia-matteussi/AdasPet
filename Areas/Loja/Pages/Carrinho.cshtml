@@ -20,19 +20,7 @@
                         @Html.DisplayNameFor(model => model.Produtos[0].Marca)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Produtos[0].TipoDeAnimal)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Produtos[0].Categoria)
-                    </th>
-                    <th>
                         @Html.DisplayNameFor(model => model.Produtos[0].Preco)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Produtos[0].QtdEmEstoque)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Produtos[0].PrecisaDeCarro)
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Produtos[0].Descricao)
@@ -51,26 +39,26 @@
                             @Html.DisplayFor(modelItem => item.Marca)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.TipoDeAnimal)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Categoria)
-                        </td>
-                        <td>
                             @Html.DisplayFor(modelItem => item.Preco)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.QtdEmEstoque)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.PrecisaDeCarro)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Descricao)
                         </td>
-                    </tr>
+                        <td>
+                            <form method="post">                     
+                                <input type="hidden" asp-for="@item.ID" /> <!-- Criamos um campo escondido que vai ter o valor do ID do produto-->
+                                <button type="submit" class="btn btn-primary">
+                                    Excluir
+                                </button>
+                            </form>
+                        </td>
+                    </tr>                   
                 }
             </tbody>
         </table>
+
+        <a href="~/Loja/TelaPagamento">
+            <input id="Button1" type="button" value="Finalizar Compra" class="btn btn-primary" name="Finalizar Compra" />
+        </a>
     }
 }

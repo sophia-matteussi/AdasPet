@@ -2,13 +2,13 @@
 @model AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos.CreateModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar Novo";
     ViewData["ActivePage"] = ManageNavPages.Enderecos;
 }
 
-<h1>Create</h1>
+<h1>Criar Novo</h1>
 
-<h4>Endereco</h4>
+<h4>Endereço</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -50,14 +50,14 @@
                 <span asp-validation-for="Endereco.Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Voltar para a lista</a>
 </div>
 
 @section Scripts {
