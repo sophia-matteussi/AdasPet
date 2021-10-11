@@ -54,6 +54,11 @@ a {
         outline: none;
     }
 
+.btn-primary-menor {
+    width: 150px;
+    height: 40px;
+}
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     color: #fff;
     background-color: #a066cb;

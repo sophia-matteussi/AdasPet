@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AdasPet.Data;
 using AdasPet.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -12,13 +13,29 @@ namespace AdasPet.Areas.Loja.Pages.Testes
     public class CriarProdutosModel : PageModel
     {
         public ApplicationDbContext _context { get; set; }
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public CriarProdutosModel(ApplicationDbContext context)
+
+        private List<string> Fornecedores { get; } = new List<string>() { 
+            "apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
+        };
+
+        public CriarProdutosModel(ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
         public void OnGet()
         {
+        }
+
+        public async void OnPostCriarFornecedores()
+        {
+            foreach (var item in Fornecedores)
+            {
+                string nome = item + "@adaspet.com.br";
+                await _userManager.CreateAsync(new IdentityUser { UserName = nome, Email = nome }, "1Ad@s2");
+            }
         }
 
         public void OnPost()
@@ -33,7 +50,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                 QtdEmEstoque = 30,
                 PrecisaDeCarro = false,
                 Descricao = "Ração muito gostosa",
-                ContaCadastro = _context.Users.Where(o => o.Id == "4658a4ad-a931-4ae1-8e1b-c5b7fc3eb10f").First()
+                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
             });
 
             _context.Produto.Add(new Produto()
@@ -46,33 +63,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                 QtdEmEstoque = 30,
                 PrecisaDeCarro = false,
                 Descricao = "Ração muito gostosa",
-                ContaCadastro = _context.Users.Where(o => o.Id == "4658a4ad-a931-4ae1-8e1b-c5b7fc3eb10f").First()
-            });
-
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração 5Kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 150,
-                QtdEmEstoque = 30,
-                PrecisaDeCarro = false,
-                Descricao = "Ração muito gostosa",
-                ContaCadastro = _context.Users.Where(o => o.Id == "4658a4ad-a931-4ae1-8e1b-c5b7fc3eb10f").First()
-            });
-
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração 10Kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 300,
-                QtdEmEstoque = 30,
-                PrecisaDeCarro = false,
-                Descricao = "Ração muito gostosa",
-                ContaCadastro = _context.Users.Where(o => o.Id == "4658a4ad-a931-4ae1-8e1b-c5b7fc3eb10f").First()
+                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
             });
 
             _context.SaveChanges();

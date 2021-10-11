@@ -11,24 +11,6 @@
 <h1>@ViewData["Title"]</h1>
 
 
-
-
-<script>
-
-    function maxLength(el) {
-        if (!('maxLength' in el)) {
-            var max = el.attributes.maxLength.value;
-            el.onkeypress = function () {
-                if (this.value.length >= max) return false;
-            };
-        }
-    }
-
-    maxLength(document.getElementById("text"));
-
-</script>
-
-
 <form method="post">
     <div class="cadastro">
 
