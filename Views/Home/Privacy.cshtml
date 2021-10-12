@@ -5,10 +5,6 @@
 
 
 <style>
-    .bgcol {
-        background: grey;
-        height: 300px;
-    }
 
     .testimg {
         width: 15%;
@@ -21,41 +17,132 @@
     }
 
     .card-body {
-        height: 350px;
+        height: 200px;
+    }
+
+    .about-col h2 {
+        color: #000;
+        text-align: center;
+        font-weight: 700;
+        font-size: 30px;
+        padding: 0;
+        margin: 40px 0 12px 0;
+    }
+
+    .about-col h2 a {
+        color: #000;
+    }
+
+        .about-col h2 a:hover {
+            color: #3C5A99;
+        }
+
+    .about-col p {
+        font-size: 20px;
+        line-height: 24px;
+        color: #333;
+        margin-bottom: 0;
+        padding: 0 20px 20px 20px;
+    }
+
+    .Pow{
+        width: 140px;
+    }
+    
+    .dog{
+        width: 500px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    .main{
+        font-size: 20px;
+    }
+
+    h4{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
     }
 </style>
-
 
 <section class="mt-5">
     <div class="container">
         <div class="row">
             <div class="col-md-6 bgcol p-5">
-                <div class="content text-right">
-                    <h1 class="display-4 text-white">
-                        50 years
-                    </h1>
-                    <span class="pl-5 text-white">of experience</span>
-                </div>
+
+                <img class="dog" src="~/Imagens/Dog.jpg" />
             </div>
             <div class="col-md-6 p-5">
-                <h2>Ada's Pet'</h2>
+                <h2>Nosso Produto</h2>
                 <p class="main">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Aplicação de delivery de produtos de Pet Shop para os mais variados tipos de animais de diversas lojas de Blumenau e região, proporcionando ao usuário maior facilidade ao fazer suas compras online ao possibilitar a comparação de preços em um só lugar.
                 </p>
             </div>
         </div>
     <div />
 </section>
+
+<br />
+
+<section id="about">
+    <div class="row about-cols">
+
+        <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+                <div class="img">
+                    <img src="img/about-mission.webp" alt="" class="img-fluid">
+                    <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                </div>
+                <h2 class="title"> Propósito</h2>
+                <p class="text-center">
+                    Oferecer mais praticidade para as compras de produtos para seu Pet.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+                <div class="img">
+                    <img src="img/about-plan.webp" alt="" class="img-fluid">
+                    <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                </div>
+                <h2 class="title">Vantagens</h2>
+                <p class="text-center">
+                    Melhores produtos que há no mercado no conforto de sua residência.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+                <div class="img">
+                    <img src="img/about-vision.webp" alt="" class="img-fluid">
+                    <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                </div>
+                <h2 class="title">Diferencial</h2>
+                <p class="text-center">
+                    Entrega realizada a poucos minutos após aprovação do pedido.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <section class="p-0 p-md-5">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h4>Our team</h4>
+                <img class="Pow" src="~/Imagens/Ada's Pet.svg" />
+                <h4>Nossa Equipe</h4>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit, sed do eiusmod tempor incididunt ut
                     <i class="fas fa-arrow-down d-block pb-5 pt-3"></i>
-                    <img class="img-fluid d-none d-md-block" src="https://source.unsplash.com/1200x400/?team,people">
-                    <img class="img-fluid d-block d-md-none" src="https://source.unsplash.com/600x400/?team,people">
             </div>
         </div>
 
@@ -68,12 +155,12 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="https://source.unsplash.com/400x400/?man,woman" class="testimg" alt="error">
-                            Sophia Matteussi
+                            <img src="~/Imagens/img1.png" class="testimg" alt="error">
+                            Sophia Porto
                         </h5>
                         <hr>
-                        <p class="card-text">Líder</p>
-                        <p class="card-text">Desenvolvimento Back-End</p>
+                        <p class="card-text">"Líder"</p>
+                        <p class="card-text">"Desenvolvimento Back-End"</p>
                     </div>
                 </div>
             </div>
@@ -81,11 +168,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="https://source.unsplash.com/400x400/?man,woman" class="testimg" alt="error">
+                            <img src="~/Imagens/img2.png" class="testimg" alt="error">
                             Franciele Casas
                         </h5>
                         <hr>
-                        <p class="card-text">Desenvolvimento Back-End</p>
+                        <p class="card-text">"Desenvolvimento Back-End"</p>
                     </div>
                 </div>
             </div>
@@ -93,11 +180,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="https://source.unsplash.com/400x400/?man,woman" class="testimg" alt="error">
+                            <img src="~/Imagens/img3.png" class="testimg" alt="error">
                             Jeniffer Steilein
                         </h5>
                         <hr>
-                        <p class="card-text">Desenvolvimento Front-End</p>
+                        <p class="card-text">"Desenvolvimento Front-End"</p>
                     </div>
                 </div>
             </div>
@@ -112,11 +199,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="https://source.unsplash.com/400x400/?man,woman" class="testimg" alt="error">
+                            <img src="~/Imagens/img4.png" class="testimg" alt="error">
                             Kaio Viana
                         </h5>
                         <hr>
-                        <p class="card-text">Desenvolvimento Back-End</p>
+                        <p class="card-text">"Deselvovimento Back-End"</p>
                     </div>
                 </div>
             </div>
@@ -124,11 +211,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="https://source.unsplash.com/400x400/?man,woman" class="testimg" alt="error">
+                            <img src="~/Imagens/img5.png" class="testimg" alt="error">
                             Luiza Salvador
                         </h5>
                         <hr>
-                        <p class="card-text">Desenvolvimento Back-End e Front-End</p>
+                        <p class="card-text">"Desenvolvimento Back-end e Front-End"</p>
                     </div>
                 </div>
             </div>
@@ -136,11 +223,11 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="https://source.unsplash.com/400x400/?man,woman" class="testimg" alt="error">
+                            <img src="~/Imagens/img6.png" class="testimg" alt="error">
                             Sara Machado
                         </h5>
                         <hr>
-                        <p class="card-text">Desenvolvimento Back-End</p>
+                        <p class="card-text">"Desenvolvimento Back-End"</p>
                     </div>
                 </div>
             </div>
