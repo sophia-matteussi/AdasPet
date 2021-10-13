@@ -3,6 +3,7 @@
 }
 <h1>@ViewData["Title"]</h1>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 
@@ -13,11 +14,12 @@
     }
 
     .card {
-        box-shadow: 10px 10px 26px -15px rgba(0, 0, 0, 0.75)
+        box-shadow:  0 0 1em blue;
+        /*10px 10px 26px -15px rgba(0, 0, 205, 0.75)*/
     }
 
     .card-body {
-        height: 200px;
+        height: 255px;
     }
 
     .about-col h2 {
@@ -53,8 +55,40 @@
         width: 500px;
     }
 
-    h2{
-        font-size: 30px;
+    .nossoProd::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+
+    .nossoProd:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .nossoProd::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        inset: 0 0 0 0;
+        background-image: linear-gradient(40deg, #9932CC, #00BFFF);
+        /*background: #EE82EE;*/
+        z-index: -1;
+        transition: transform .3s ease;
+    }
+    
+    .nossoProd {
+        position: relative;
+        font-size: 50px;
+        font-family: Broadway;
+        color: #DDA0DD;
+    }
+
+    media (orientation: landscape) {
+        grid-auto-flow: column;
     }
 
     .main{
@@ -67,6 +101,16 @@
     p{
         font-size: 20px;
     }
+   .in{
+       width: 25px;
+   }
+   a{
+       font-size: 20px;
+   }
+    hr {
+        background-image: linear-gradient(40deg, #9932CC, #00BFFF);
+        height: 5px;
+    }
 </style>
 
 <section class="mt-5">
@@ -74,10 +118,14 @@
         <div class="row">
             <div class="col-md-6 bgcol p-5">
 
-                <img class="dog" src="~/Imagens/Dog.jpg" />
+                <img class="dog" src="~/ImagemSobreNos/Dog.jpg" />
             </div>
             <div class="col-md-6 p-5">
-                <h2>Nosso Produto</h2>
+                <br />
+                <br />
+                <br />
+                <br />
+                <h2 class="nossoProd">Nosso Produto</h2>
                 <p class="main">
                     Aplicação de delivery de produtos de Pet Shop para os mais variados tipos de animais de diversas lojas de Blumenau e região, proporcionando ao usuário maior facilidade ao fazer suas compras online ao possibilitar a comparação de preços em um só lugar.
                 </p>
@@ -138,14 +186,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <img class="Pow" src="~/Imagens/Ada's Pet.svg" />
+                <img class="Pow" src="~/ImagemSobreNos/Ada's Pet.svg" />
                 <h4>Nossa Equipe</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit, sed do eiusmod tempor incididunt ut
-                    <i class="fas fa-arrow-down d-block pb-5 pt-3"></i>
+                    Conheça nossa equipe e visite nossos perfis do LinkedIn
             </div>
         </div>
-
     </div>
 </section>
 <section class="p- p-md-5">
@@ -155,12 +201,17 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="~/Imagens/img1.png" class="testimg" alt="error">
-                            Sophia Porto
+                            <img src="~/ImagemSobreNos/img1.png" class="testimg" alt="error">
+                            Sophia Matteussi
                         </h5>
                         <hr>
-                        <p class="card-text">"Líder"</p>
-                        <p class="card-text">"Desenvolvimento Back-End"</p>
+                        <p class="card-text">Líder</p>
+                        <p class="card-text">Desenvolvimento Front-End e Back-End</p>
+                        <div class="icon">
+                            @*<i class="fa fa-linkedin"></i>*@
+                            <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                            <a href="https://www.linkedin.com/in/sophia-matteussi-0408811b0">Acesse Aqui</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,11 +219,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="~/Imagens/img2.png" class="testimg" alt="error">
+                            <img src="~/ImagemSobreNos/img2.png" class="testimg" alt="error">
                             Franciele Casas
                         </h5>
                         <hr>
-                        <p class="card-text">"Desenvolvimento Back-End"</p>
+                        <p class="card-text">Desenvolvimento Back-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/franciele-casas-28aaaa191/">Acesse Aqui</a>
                     </div>
                 </div>
             </div>
@@ -180,11 +233,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="~/Imagens/img3.png" class="testimg" alt="error">
+                            <img src="~/ImagemSobreNos/img3.png" class="testimg" alt="error">
                             Jeniffer Steilein
                         </h5>
                         <hr>
-                        <p class="card-text">"Desenvolvimento Front-End"</p>
+                        <p class="card-text">Desenvolvimento Front-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/jeniffer-steilein-8b551721b">Acesse Aqui</a>
                     </div>
                 </div>
             </div>
@@ -199,11 +254,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="~/Imagens/img4.png" class="testimg" alt="error">
+                            <img src="~/ImagemSobreNos/img4.png" class="testimg" alt="error">
                             Kaio Viana
                         </h5>
                         <hr>
-                        <p class="card-text">"Deselvovimento Back-End"</p>
+                        <p class="card-text">Deselvovimento Back-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/kaio-vin%C3%ADcius-de-freitas-viana-8881b6202/">Acesse Aqui</a>
                     </div>
                 </div>
             </div>
@@ -211,11 +268,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="~/Imagens/img5.png" class="testimg" alt="error">
-                            Luiza Salvador
+                            <img src="~/ImagemSobreNos/img5.png" class="testimg" alt="error">
+                            Luiza SalvadorSS
                         </h5>
                         <hr>
-                        <p class="card-text">"Desenvolvimento Back-end e Front-End"</p>
+                        <p class="card-text">Desenvolvimento Back-end e Front-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/luiza-salvador-machado-37683a1a4/">Acesse Aqui</a>
                     </div>
                 </div>
             </div>
@@ -223,11 +282,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <img src="~/Imagens/img6.png" class="testimg" alt="error">
+                            <img src="~/ImagemSobreNos/img6.png" class="testimg" alt="error">
                             Sara Machado
                         </h5>
                         <hr>
-                        <p class="card-text">"Desenvolvimento Back-End"</p>
+                        <p class="card-text">Desenvolvimento Back-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/sara-machado-7ab585209/">Acesse Aqui</a>
                     </div>
                 </div>
             </div>
