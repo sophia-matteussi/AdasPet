@@ -14,30 +14,51 @@ namespace AdasPet.Areas.Loja.Pages.Testes
     {
         public ApplicationDbContext _context { get; set; }
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-
-        private List<string> Fornecedores { get; } = new List<string>() { 
+        //Lista de fornecedores cadastrados
+        private List<string> Fornecedores { get; } = new List<string>() 
+        { 
             "apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
         };
 
-        public CriarProdutosModel(ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        private List<string> Roles { get; } = new List<string>
+        {
+            "fornecedor","cliente","entregador"
+        };
+
+        public CriarProdutosModel(ApplicationDbContext context, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
         public void OnGet()
         {
         }
 
-        public async void OnPostCriarFornecedores()
+        public async Task OnPostCriarRolesAsync()
+        {
+            foreach (var item in Roles)
+            {
+                await _roleManager.CreateAsync(new IdentityRole(item));
+            }
+        }
+
+        //Cria fornecedores
+        public async Task OnPostCriarFornecedoresAsync()
         {
             foreach (var item in Fornecedores)
             {
                 string nome = item + "@adaspet.com.br";
                 await _userManager.CreateAsync(new IdentityUser { UserName = nome, Email = nome }, "1Ad@s2");
+                var user = await _userManager.FindByNameAsync(nome);
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                await _userManager.ConfirmEmailAsync(user, code);
             }
         }
 
+        //Cria produtos
         public void OnPost()
         {
             _context.Produto.Add(new Produto()

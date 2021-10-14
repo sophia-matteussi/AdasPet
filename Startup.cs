@@ -57,8 +57,10 @@ namespace AdasPet
 
             // Adiciona o identity framework para autenticação e autorização
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                //Adiciona Roles para autorização
+                .AddRoles<IdentityRole>()
                 // Adicionamos nosso contexto de BD para o identity guardar suas iniformações
-                .AddEntityFrameworkStores<ApplicationDbContext>(); 
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             // Adiciona MVC
             services.AddControllersWithViews();
@@ -78,6 +80,8 @@ namespace AdasPet
             services.Configure<AuthMessageSenderOptions>(Configuration);
 
             services.AddAntiforgery(option => option.HeaderName = "X-XSRF-TOKEN");
+
+            
 
         }
 
@@ -109,7 +113,7 @@ namespace AdasPet
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
-            {   
+            {
                 endpoints.MapControllerRoute(
                     // Diz qual a rota padrão/pagina inicial
                     name: "default",
@@ -118,5 +122,7 @@ namespace AdasPet
                 endpoints.MapRazorPages();
             });
         }
+
+       
     }
 }

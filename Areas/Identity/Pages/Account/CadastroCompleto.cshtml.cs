@@ -171,6 +171,8 @@ namespace AdasPet.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync()
         {
 
+            var user = await _userManager.GetUserAsync(User);
+
             // Checamos o tipo de cadastro do usuario e então criamos um objeto de seu tipo e adicionamos no BD
             if (Input.Tipo == "cliente")
             {
@@ -180,7 +182,7 @@ namespace AdasPet.Areas.Identity.Pages.Account
                     CPF = Input.CPF.Replace("-", ""),
                     DataNascimento = Input.DataNascimento,
                     Telefone = Input.Telefone,
-                    ContaCadastro = await _userManager.GetUserAsync(User)
+                    ContaCadastro = user
                 };
 
 
@@ -198,6 +200,8 @@ namespace AdasPet.Areas.Identity.Pages.Account
                 endereco.Principal = true;
                 endereco.Cliente = cadastro;
 
+                await _userManager.AddToRoleAsync(user, "cliente");
+
                 _context.Cliente.Add(cadastro);
                 _context.Endereco.Add(endereco);
 
@@ -209,7 +213,7 @@ namespace AdasPet.Areas.Identity.Pages.Account
                     RazaoSocial = Input.RazaoSocial,
                     CNPJ = Input.CNPJ.Replace("-", ""),
                     Telefone = Input.Telefone,
-                    ContaCadastro = await _userManager.GetUserAsync(User)
+                    ContaCadastro = user
                 };
 
 
@@ -226,6 +230,8 @@ namespace AdasPet.Areas.Identity.Pages.Account
                 endereco.Principal = true;
                 endereco.Fornecedor = cadastro;
 
+                await _userManager.AddToRoleAsync(user, "fornecedor");
+
                 _context.Fornecedor.Add(cadastro);
                 _context.Endereco.Add(endereco);
             }
@@ -241,8 +247,10 @@ namespace AdasPet.Areas.Identity.Pages.Account
                     TipoVeiculo = Input.TipoVeiculo,
                     Placa = Input.Placa,
                     Renavam = Input.Renavam,
-                    ContaCadastro = await _userManager.GetUserAsync(User)
+                    ContaCadastro = user
                 };
+
+                await _userManager.AddToRoleAsync(user, "entregador");
 
                 _context.Entregador.Add(cadastro);
             }
@@ -253,6 +261,7 @@ namespace AdasPet.Areas.Identity.Pages.Account
             // Adicionamos à session a chave CadastroCompleto com o valor true
             HttpContext.Session.SetString("CadastroCompleto", "true");
 
+            //retorna p/ pag. inicial
             return Redirect("/");
         }
 

@@ -1,4 +1,4 @@
-﻿@using AdasPet.Models
+@using AdasPet.Models
 @using System.Collections;
 @{
     var animaisGramaticalmenteCorretos = new Hashtable()
@@ -58,9 +58,31 @@
                                 </li>
                             }
                         }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("fornecedor"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/Lojista/Produtos/CadastroProduto">
+                                    Cadastrar Produto
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/Lojista/Vendas">
+                                    Vendas
+                                </a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("entregador"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/Lojista/Entregas">
+                                    Entregas
+                                </a>
+                            </li>
+                            
+                        }
                     </ul>
-                    <a class="navbar-brand" href ="~/Loja/Carrinho">
-                        <img src="/imagens/carrinho.svg" alt="Carrinho" width="70" height="70"/>
+                    <a class="navbar-brand" href="~/Loja/Carrinho">
+                        <img src="/imagens/carrinho.svg" alt="Carrinho" width="70" height="70" />
                     </a>
                     <partial name="_LoginPartial" />
                 </div>

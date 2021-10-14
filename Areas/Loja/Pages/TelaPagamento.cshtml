@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model AdasPet.Areas.Loja.Pages.TelaPagamentoModel
 @{
     ViewData["Title"] = "Pagamento";
@@ -6,8 +6,8 @@
 
 <div class="Pagamento">
    
-    <h5>Lista dos produtos:</h5>
-    <table>
+    <h3>Lista dos produtos:</h3>
+    <table class="table">
         <thead>
             <tr>
                 <th>
@@ -18,9 +18,6 @@
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Produtos[0].Preco)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Produtos[0].Descricao)
                 </th>
                 <th></th>
             </tr>
@@ -41,15 +38,17 @@
         }
     </table>
     <form method="post">
-        <h5>Receber em: </h5>
+        <br />
+        <h3>Receber em: </h3>
         <select asp-for="Input.Pedido.Endereco" name="enderecoID" asp-items="Model.Enderecos"></select>
         <br />
         <br />
-        <h6>Valor do frete: R$10,00</h6>
-        <h5>Total: </h5>
+        
+        <h4>Valor do frete: R$@Model.Frete </h4>
+        <h3>Total: R$@Model.Preco </h3>
         <br />
-
-        <h5>Selecione uma forma de pagamento:</h5>
+        <br />
+        <h3>Selecione uma forma de pagamento:</h3>
 
         <div class="TpPagamento" name="TpPagamento">
             <a href="./TelaPagamento?tipo=Cartao">
@@ -69,7 +68,7 @@
                 <div class="row">
                     <div class="col-4">
                         <select asp-for="Input.CartaoTipo" class="form-control">
-                            <option value="depito">Débito</option>
+                            <option value="debito">Débito</option>
                             <option value="credito">Crédito</option>
                         </select>
                     </div>

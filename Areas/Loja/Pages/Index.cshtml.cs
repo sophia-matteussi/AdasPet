@@ -64,7 +64,7 @@ namespace AdasPet.Areas.Loja.Pages
             }
 
             //seleciona os produtos no DB
-            Produtos = _context.Produto.Where(p => p.TipoDeAnimal == animalEnum).ToList();
+            Produtos = _context.Produto.Where(p => p.TipoDeAnimal == animalEnum && p.QtdEmEstoque > 0).ToList();
 
             return Page();
         }
@@ -91,7 +91,7 @@ namespace AdasPet.Areas.Loja.Pages
             }
 
             //seleciona os produtos no DB
-            Produtos = _context.Produto.Where(p => p.TipoDeAnimal == animalEnum && p.Categoria == categoriaEnum).ToList();
+            Produtos = _context.Produto.Where(p => p.TipoDeAnimal == animalEnum && p.Categoria == categoriaEnum && p.QtdEmEstoque > 0).ToList();
 
             return Page();
         }
