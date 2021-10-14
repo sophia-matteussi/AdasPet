@@ -28,6 +28,7 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage
         public static string Enderecos => "Enderecos";
 
         public static string Pedidos => "Pedidos";
+        public static string MeusProdutos => "MeusProdutos";
 
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
 
@@ -40,6 +41,7 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage
         public static string EnderecosNavClass(ViewContext viewContext) => PageNavClass(viewContext, Enderecos);
 
         public static string PedidosNavClass(ViewContext viewContext) => PageNavClass(viewContext, Pedidos);
+        public static string MeusProdutosNavClass(ViewContext viewContext) => PageNavClass(viewContext, MeusProdutos);
 
 
         private static string PageNavClass(ViewContext viewContext, string page)

@@ -18,6 +18,8 @@
         if (User.IsInRole("fornecedor"))
         {
             <li class="nav-item"><a class="nav-link @ManageNavPages.EnderecosNavClass(ViewContext)" id="enderecos" asp-area="Identity" asp-page="/Account/Manage/Enderecos/Index">Endereços</a></li>
+            <li class="nav-item"><a class="nav-link @ManageNavPages.MeusProdutosNavClass(ViewContext)" id="produtos" asp-area="Lojista" asp-page="/MeusProdutos/Index">Meus Produtos</a></li>
+
         }
     }
 

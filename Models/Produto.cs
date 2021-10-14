@@ -58,6 +58,7 @@ namespace AdasPet.Models
 
         [Required]
         //[Column(TypeName = "varchar(20)")]
+        [Display(Name = "Tipo de animal")]
         public ProdutoAnimais TipoDeAnimal { get; set; }
 
         [Required]
