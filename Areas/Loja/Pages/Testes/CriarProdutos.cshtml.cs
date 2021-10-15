@@ -40,7 +40,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
         public void OnPost()
         {
-            {
+            
                 //*********************************** MARCA AMARELO - FRAN ***********************************
 
                 _context.Produto.Add(new Produto()
@@ -52,7 +52,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 15,
                     QtdEmEstoque = 150,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes",
+                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -65,7 +65,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 13.5,
                     QtdEmEstoque = 160,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes",
+                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -78,7 +78,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 14,
                     QtdEmEstoque = 175,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes",
+                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -91,7 +91,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 23.5,
                     QtdEmEstoque = 250,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade e premiun",
+                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade e premiun.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
                 });
 
@@ -104,7 +104,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25,
                     QtdEmEstoque = 259,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade e premiun",
+                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade e premiun.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -117,7 +117,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.9,
                     QtdEmEstoque = 300,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração gold premiun, sem adição de corante e aromatizantes",
+                    Descricao = "Ração gold premiun, sem adição de corante e aromatizantes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -130,7 +130,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 28.9,
                     QtdEmEstoque = 265,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração gold premiun, sem adição de corante e aromatizantes",
+                    Descricao = "Ração gold premiun, sem adição de corante e aromatizantes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -143,7 +143,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 27.9,
                     QtdEmEstoque = 278,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração gold premiun, sem adição de corante e aromatizantes",
+                    Descricao = "Ração gold premiun, sem adição de corante e aromatizantes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -156,7 +156,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.5,
                     QtdEmEstoque = 242,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração premiun sabor salmão",
+                    Descricao = "Ração premiun sabor salmão.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
                 });
 
@@ -169,7 +169,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 24.5,
                     QtdEmEstoque = 246,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração premiun sabor salmão",
+                    Descricao = "Ração premiun sabor salmão.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -195,7 +195,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 1.7,
                     QtdEmEstoque = 354,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação completa e saborosa",
+                    Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -208,7 +208,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 2.5,
                     QtdEmEstoque = 327,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação completa e saborosa",
+                    Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -221,7 +221,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 230,
                     PrecisaDeCarro = false,
-                    Descricao = "Mistura de sementes completa para sua calopsita",
+                    Descricao = "Mistura de sementes completa para sua calopsita.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
                 });
 
@@ -234,7 +234,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 28.9,
                     QtdEmEstoque = 215,
                     PrecisaDeCarro = false,
-                    Descricao = "Mistura de sementes completa para sua calopsita",
+                    Descricao = "Mistura de sementes completa para sua calopsita.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -247,7 +247,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20.5,
                     QtdEmEstoque = 230,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração natural equilibrada para qualquer roedor",
+                    Descricao = "Ração natural equilibrada para qualquer Roedor.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -260,7 +260,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.5,
                     QtdEmEstoque = 225,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração natural equilibrada para qualquer roedor",
+                    Descricao = "Ração natural equilibrada para qualquer Roedor.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -273,7 +273,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 21.9,
                     QtdEmEstoque = 215,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração natural equilibrada para qualquer roedor",
+                    Descricao = "Ração natural equilibrada para qualquer Roedor.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -286,7 +286,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5.99,
                     QtdEmEstoque = 230,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimento complementar e necessario para seu coelho",
+                    Descricao = "Alimento complementar e necessário para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -299,7 +299,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5.45,
                     QtdEmEstoque = 212,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimento complementar e necessario para seu coelho",
+                    Descricao = "Alimento complementar e necessário para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -312,7 +312,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 6.59,
                     QtdEmEstoque = 189,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimento complementar e necessario para seu coelho",
+                    Descricao = "Alimento complementar e necessário para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -325,7 +325,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20.0,
                     QtdEmEstoque = 412,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação para peixes de fundo",
+                    Descricao = "Alimentação para peixes de fundo.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -351,7 +351,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 4.0,
                     QtdEmEstoque = 369,
                     PrecisaDeCarro = false,
-                    Descricao = "Refeição completa e balanceada com ração",
+                    Descricao = "Refeição completa e balanceada com ração.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -364,7 +364,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 4.9,
                     QtdEmEstoque = 335,
                     PrecisaDeCarro = false,
-                    Descricao = "Refeição completa e balanceada com ração",
+                    Descricao = "Refeição completa e balanceada com ração.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -390,7 +390,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 66.9,
                     QtdEmEstoque = 175,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência",
+                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -403,7 +403,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 68.49,
                     QtdEmEstoque = 168,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência",
+                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -416,7 +416,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 73.5,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência",
+                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -429,7 +429,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 75.9,
                     QtdEmEstoque = 216,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência",
+                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -442,7 +442,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 27.5,
                     QtdEmEstoque = 185,
                     PrecisaDeCarro = false,
-                    Descricao = "Vermífugo ideal no tratamento contra vermes chatos e redondos",
+                    Descricao = "Vermífugo ideal no tratamento contra vermes chatos e redondos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -455,7 +455,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.5,
                     QtdEmEstoque = 198,
                     PrecisaDeCarro = false,
-                    Descricao = "Vermífugo ideal no tratamento contra vermes chatos e redondos",
+                    Descricao = "Vermífugo ideal no tratamento contra vermes chatos e redondos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -468,7 +468,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.9,
                     QtdEmEstoque = 208,
                     PrecisaDeCarro = false,
-                    Descricao = "Vermífugo ideal no tratamento contra vermes chatos e redondos",
+                    Descricao = "Vermífugo ideal no tratamento contra vermes chatos e redondos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -481,7 +481,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 23.49,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Vermífugo ideal para tratamento de vermes do seu cãozinho",
+                    Descricao = "Vermífugo ideal para tratamento de vermes do seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -494,7 +494,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.9,
                     QtdEmEstoque = 210,
                     PrecisaDeCarro = false,
-                    Descricao = "Vermífugo ideal para tratamento de vermes do seu cãozinho",
+                    Descricao = "Vermífugo ideal para tratamento de vermes do seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -507,7 +507,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 15,
                     QtdEmEstoque = 180,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para intoxicações de cães, gatos",
+                    Descricao = "Ideal para intoxicações de cães, gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -520,7 +520,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 17.9,
                     QtdEmEstoque = 160,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para intoxicações de cães, gatos",
+                    Descricao = "Ideal para intoxicações de cães, gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -533,7 +533,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.9,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para intoxicações de cães, gatos",
+                    Descricao = "Ideal para intoxicações de cães, gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -546,7 +546,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.9,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para intoxicações de cães, gatos",
+                    Descricao = "Ideal para intoxicações de cães, gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -559,7 +559,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 18.9,
                     QtdEmEstoque = 135,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para intoxicações de cães, gatos",
+                    Descricao = "Ideal para intoxicações de cães, gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -572,7 +572,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 85,
                     QtdEmEstoque = 159,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal",
+                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -585,7 +585,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 86.49,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal",
+                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -598,7 +598,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 83.49,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal",
+                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -611,7 +611,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 86.9,
                     QtdEmEstoque = 120,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal",
+                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -624,10 +624,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 83.5,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal",
+                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -638,7 +637,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30.5,
                     QtdEmEstoque = 203,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, previne as doenças e infecções cutâneas transmissíveis ao homem",
+                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, Previnir as doenças e infecções cutâneas transmissíveis ao homem.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -651,7 +650,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 32.5,
                     QtdEmEstoque = 206,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, previne as doenças e infecções cutâneas transmissíveis ao homem",
+                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, Previnir as doenças e infecções cutâneas transmissíveis ao homem",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -664,7 +663,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33.9,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, previne as doenças e infecções cutâneas transmissíveis ao homem",
+                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, Previnir as doenças e infecções cutâneas transmissíveis ao homem.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
                 });
 
@@ -677,7 +676,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 32.9,
                     QtdEmEstoque = 198,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, previne as doenças e infecções cutâneas transmissíveis ao homem",
+                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, Previnir as doenças e infecções cutâneas transmissíveis ao homem.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -690,7 +689,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36.9,
                     QtdEmEstoque = 195,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, previne as doenças e infecções cutâneas transmissíveis ao homem",
+                    Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, Previnir as doenças e infecções cutâneas transmissíveis ao homem.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -703,7 +702,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 31.9,
                     QtdEmEstoque = 150,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento da sarna dos pés dos pássaros",
+                    Descricao = "Ideal para tratamento da sarna dos pés dos pássaros.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -716,7 +715,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33.5,
                     QtdEmEstoque = 165,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento da sarna dos pés dos pássaros",
+                    Descricao = "Ideal para tratamento da sarna dos pés dos pássaros.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -729,7 +728,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 38.9,
                     QtdEmEstoque = 105,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de feridas nas patas dos coelhos",
+                    Descricao = "Ideal para tratamento de feridas nas patas dos coelhos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -755,7 +754,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37.9,
                     QtdEmEstoque = 105,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de feridas nas patas dos coelhos",
+                    Descricao = "Ideal para tratamento de feridas nas patas dos coelhos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -768,7 +767,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.9,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de feridas nas patas dos seus roedores",
+                    Descricao = "Ideal para tratamento de feridas nas patas dos seus Roedores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -781,7 +780,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 43.5,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de feridas nas patas dos seus roedores",
+                    Descricao = "Ideal para tratamento de feridas nas patas dos seus Roedores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -794,7 +793,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33.5,
                     QtdEmEstoque = 89,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de feridas nas patas dos seus roedores répteis",
+                    Descricao = "Ideal para tratamento de feridas nas patas dos seus Roedores répteis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -807,7 +806,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 32.5,
                     QtdEmEstoque = 99,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de feridas nas patas dos seus roedores répteis",
+                    Descricao = "Ideal para tratamento de feridas nas patas dos seus Roedores répteis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -820,241 +819,241 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 32.9,
                     QtdEmEstoque = 102,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para tratamento de feridas nas patas dos seus roedores répteis",
+                    Descricao = "Ideal para tratamento de feridas nas patas dos seus Roedores répteis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 26,
                     QtdEmEstoque = 204,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para deixar seu cão mais forte e disposto",
+                    Descricao = "Ideal para deixar seu cão mais forte e disposto.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 28.9,
                     QtdEmEstoque = 208,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para deixar seu cão mais forte e disposto",
+                    Descricao = "Ideal para deixar seu cão mais forte e disposto.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 27.9,
                     QtdEmEstoque = 206,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para fortalecer a imunidade do seu gato",
+                    Descricao = "Ideal para fortalecer a imunidade do seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 25.9,
                     QtdEmEstoque = 202,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para fortalecer a imunidade do seu gato",
+                    Descricao = "Ideal para fortalecer a imunidade do seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 24.49,
                     QtdEmEstoque = 199,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para fortalecer a imunidade do seu gato",
+                    Descricao = "Ideal para fortalecer a imunidade do seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 23.49,
                     QtdEmEstoque = 185,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitaminas e Suplementos para pássaros com os mais variados nutrientes",
+                    Descricao = "Vitaminas e Suplementos para pássaros com os mais variados nutrientes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 22.99,
                     QtdEmEstoque = 195,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitaminas e Suplementos para pássaros com os mais variados nutrientes",
+                    Descricao = "Vitaminas e Suplementos para pássaros com os mais variados nutrientes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 45.9,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Fertilizante à base de Potássio, indicado para aquários",
+                    Descricao = "Fertilizante à base de Potássio, indicado para aquários.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 43.49,
                     QtdEmEstoque = 208,
                     PrecisaDeCarro = false,
-                    Descricao = "Fertilizante à base de Potássio, indicado para aquários",
+                    Descricao = "Fertilizante à base de Potássio, indicado para aquários.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 46.9,
                     QtdEmEstoque = 203,
                     PrecisaDeCarro = false,
-                    Descricao = "Fertilizante à base de Potássio, indicado para aquários",
+                    Descricao = "Fertilizante à base de Potássio, indicado para aquários.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 17.9,
                     QtdEmEstoque = 149,
                     PrecisaDeCarro = false,
-                    Descricao = "Fabricado com ingredientes naturais para suprir as necessidades de minerais de seu coelho",
+                    Descricao = "Fabricado com ingredientes naturais para suprir as necessidades de minerais de seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 19.9,
                     QtdEmEstoque = 146,
                     PrecisaDeCarro = false,
-                    Descricao = "Fabricado com ingredientes naturais para suprir as necessidades de minerais de seu coelho",
+                    Descricao = "Fabricado com ingredientes naturais para suprir as necessidades de minerais de seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 16.49,
                     QtdEmEstoque = 122,
                     PrecisaDeCarro = false,
-                    Descricao = "Proporciona mais aporte nutricional e vitamínico aos seus roedores",
+                    Descricao = "Proporciona mais aporte nutricional e vitamínico aos seus Roedores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 17.9,
                     QtdEmEstoque = 130,
                     PrecisaDeCarro = false,
-                    Descricao = "Proporciona mais aporte nutricional e vitamínico aos seus roedores",
+                    Descricao = "Proporciona mais aporte nutricional e vitamínico aos seus Roedores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 15.5,
                     QtdEmEstoque = 116,
                     PrecisaDeCarro = false,
-                    Descricao = "Proporciona mais aporte nutricional e vitamínico aos seus roedores",
+                    Descricao = "Proporciona mais aporte nutricional e vitamínico aos seus Roedores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Repteis,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 13.99,
                     QtdEmEstoque = 115,
                     PrecisaDeCarro = false,
-                    Descricao = "Complexo vitamínico completo para seus répteis",
+                    Descricao = "Complexo vitamínico completo para seus répteis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Repteis,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 14.99,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Complexo vitamínico completo para seus répteis",
+                    Descricao = "Complexo vitamínico completo para seus répteis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e Suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Repteis,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 14.99,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Complexo vitamínico completo para seus répteis",
+                    Descricao = "Complexo vitamínico completo para seus répteis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -1067,7 +1066,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 40,
                     QtdEmEstoque = 152,
                     PrecisaDeCarro = false,
-                    Descricao = "Proteção contra vazamentos, super macio",
+                    Descricao = "Proteção contra vazamentos, super macio.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -1080,7 +1079,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 42.9,
                     QtdEmEstoque = 164,
                     PrecisaDeCarro = false,
-                    Descricao = "Proteção contra vazamentos, super macio",
+                    Descricao = "Proteção contra vazamentos, super macio.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -1094,7 +1093,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 41.59,
                     QtdEmEstoque = 189,
                     PrecisaDeCarro = false,
-                    Descricao = "Proteção contra vazamentos, super macio",
+                    Descricao = "Proteção contra vazamentos, super macio.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -1107,7 +1106,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 70,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para manter a higiene do seu pet e da sua casa",
+                    Descricao = "Ideal para manter a higiene do seu pet e da sua casa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -1120,7 +1119,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 73.9,
                     QtdEmEstoque = 115,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para manter a higiene do seu pet e da sua casa",
+                    Descricao = "Ideal para manter a higiene do seu pet e da sua casa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -1133,7 +1132,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 116,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para coletar as fezes de seu pet",
+                    Descricao = "Ideal para coletar as fezes de seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -1146,7 +1145,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 17.9,
                     QtdEmEstoque = 135,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para coletar as fezes de seu pet",
+                    Descricao = "Ideal para coletar as fezes de seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -1159,7 +1158,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 21.5,
                     QtdEmEstoque = 122,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para coletar as fezes de seu pet",
+                    Descricao = "Ideal para coletar as fezes de seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -1199,7 +1198,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 40.9,
                     QtdEmEstoque = 102,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo ideal para pêlos claros, previne manchas e evita que os fios fiquem amarelados..",
+                    Descricao = "Shampoo ideal para pêlos claros, Previnir manchas e evita que os fios fiquem amarelados.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -1212,7 +1211,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 42.9,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo ideal para pêlos claros, previne manchas e evita que os fios fiquem amarelados..",
+                    Descricao = "Shampoo ideal para pêlos claros, Previnir manchas e evita que os fios fiquem amarelados.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -1225,7 +1224,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 39.9,
                     QtdEmEstoque = 117,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo ideal para pêlos claros, previne manchas e evita que os fios fiquem amarelados..",
+                    Descricao = "Shampoo ideal para pêlos claros, Previnir manchas e evita que os fios fiquem amarelados.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -1238,7 +1237,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35.99,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Alicate de unha tipo guilhotina para cuidados especiais de higiene do seu amigo",
+                    Descricao = "Alicate de unha tipo guilhotina para cuidados especiais de higiene do seu amigo.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -1251,7 +1250,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 38.5,
                     QtdEmEstoque = 135,
                     PrecisaDeCarro = false,
-                    Descricao = "Alicate de unha tipo guilhotina para cuidados especiais de higiene do seu amigo",
+                    Descricao = "Alicate de unha tipo guilhotina para cuidados especiais de higiene do seu amigo.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -1264,7 +1263,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35.5,
                     QtdEmEstoque = 168,
                     PrecisaDeCarro = false,
-                    Descricao = "Alicate de unha para cuidados especiais de higiene do seu gato",
+                    Descricao = "Alicate de unha para cuidados especiais de higiene do seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -1277,7 +1276,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36.9,
                     QtdEmEstoque = 139,
                     PrecisaDeCarro = false,
-                    Descricao = "Alicate de unha para cuidados especiais de higiene do seu gato",
+                    Descricao = "Alicate de unha para cuidados especiais de higiene do seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -1290,7 +1289,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 34.5,
                     QtdEmEstoque = 122,
                     PrecisaDeCarro = false,
-                    Descricao = "Alicate de unha para cuidados especiais de higiene do seu gato",
+                    Descricao = "Alicate de unha para cuidados especiais de higiene do seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
                 });
 
@@ -1303,7 +1302,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 21,
                     QtdEmEstoque = 140,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete líquido ideal para limpeza da pelagem",
+                    Descricao = "Sabonete líquido ideal para limpeza da pelagem.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -1316,7 +1315,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 22.9,
                     QtdEmEstoque = 165,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete líquido ideal para limpeza da pelagem",
+                    Descricao = "Sabonete líquido ideal para limpeza da pelagem.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -1329,7 +1328,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 28.9,
                     QtdEmEstoque = 174,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete líquido ideal para limpeza da pelagem de gatos",
+                    Descricao = "Sabonete líquido ideal para limpeza da pelagem de gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -1342,7 +1341,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.5,
                     QtdEmEstoque = 168,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete líquido ideal para limpeza da pelagem de gatos",
+                    Descricao = "Sabonete líquido ideal para limpeza da pelagem de gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -1355,7 +1354,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.49,
                     QtdEmEstoque = 166,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete líquido ideal para limpeza da pelagem de gatos",
+                    Descricao = "Sabonete líquido ideal para limpeza da pelagem de gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
                 });
 
@@ -1368,7 +1367,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.99,
                     QtdEmEstoque = 135,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeirinhas",
+                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeiras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -1381,7 +1380,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.5,
                     QtdEmEstoque = 148,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeirinhas",
+                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeiras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -1394,7 +1393,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.99,
                     QtdEmEstoque = 154,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeirinhas",
+                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeiras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -1407,7 +1406,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 27.99,
                     QtdEmEstoque = 152,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeirinhas",
+                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeiras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -1420,7 +1419,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.9,
                     QtdEmEstoque = 164,
                     PrecisaDeCarro = false,
-                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeirinhas",
+                    Descricao = "Ideal para desembaraçar os pelos, desfazer emaranhados e nós, remover fios soltos, pele morta e outras sujeiras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -1524,7 +1523,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Pó de banho a seco para manter seus roedores limpinhos.",
+                    Descricao = "Pó de Banho a seco para manter seus Roedores limpos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -1537,7 +1536,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 18.9,
                     QtdEmEstoque = 80,
                     PrecisaDeCarro = false,
-                    Descricao = "Pó de banho a seco para manter seus roedores limpinhos.",
+                    Descricao = "Pó de Banho a seco para manter seus Roedores limpos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -1550,7 +1549,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.9,
                     QtdEmEstoque = 75,
                     PrecisaDeCarro = false,
-                    Descricao = "Pó de banho a seco para manter seus roedores limpinhos.",
+                    Descricao = "Pó de Banho a seco para manter seus Roedores limpos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -1563,7 +1562,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 13,
                     QtdEmEstoque = 152,
                     PrecisaDeCarro = false,
-                    Descricao = "Produto é de altíssima qualidade, formato anatômico, brinquedo que entretêm o animalzinho.",
+                    Descricao = "Produto é de altíssima qualidade, formato anatômico, brinquedo que entretêm o pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -1576,13 +1575,13 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 11.9,
                     QtdEmEstoque = 167,
                     PrecisaDeCarro = false,
-                    Descricao = "Produto é de altíssima qualidade, formato anatômico, brinquedo que entretêm o animalzinho.",
+                    Descricao = "Produto é de altíssima qualidade, formato anatômico, brinquedo que entretêm o pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1595,7 +1594,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1608,7 +1607,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhos",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1660,72 +1659,72 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Varinhas",
+                    Nome = "Varinhass",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 18.45,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Varinhas são excelentes para distração, gastar energia, e fazer com que seu pet se exercite.",
+                    Descricao = "Varinhass são excelentes para distração, gastar energia, e fazer com que seu pet se exercite.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Varinhas",
+                    Nome = "Varinhass",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 16.95,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Varinhas são excelentes para distração, gastar energia, e fazer com que seu pet se exercite.",
+                    Descricao = "Varinhass são excelentes para distração, gastar energia, e fazer com que seu pet se exercite.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhadores",
+                    Nome = "Arranhadoreses",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 69,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Previne o estrago de móveis e utensílios de sua casa.",
+                    Descricao = "Previnir o estrago de móveis e utensílios de sua casa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhadores",
+                    Nome = "Arranhadoreses",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 72.5,
                     QtdEmEstoque = 124,
                     PrecisaDeCarro = false,
-                    Descricao = "Previne o estrago de móveis e utensílios de sua casa.",
+                    Descricao = "Previnir o estrago de móveis e utensílios de sua casa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhadores",
+                    Nome = "Arranhadoreses",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 72.9,
                     QtdEmEstoque = 114,
                     PrecisaDeCarro = false,
-                    Descricao = "Previne o estrago de móveis e utensílios de sua casa.",
+                    Descricao = "Previnir o estrago de móveis e utensílios de sua casa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bichinhos de Pelúcia",
+                    Nome = "pets de Pelúcia",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1738,7 +1737,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bichinhos de Pelúcia",
+                    Nome = "pets de Pelúcia",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1751,7 +1750,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bichinhos de Pelúcia",
+                    Nome = "pets de Pelúcia",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1764,7 +1763,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bichinhos de Pelúcia",
+                    Nome = "pets de Pelúcia",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1784,7 +1783,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 22,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Estimula a mastigação. Sua textura promove o desenvolvimento e fortalecimento da gengiva, ajuda a eliminar o tártaro;",
+                    Descricao = "Estimula a mastigação. Sua textura promove o desenvolvimento e fortalecimento da gengiva, ajuda a eliminar o tártaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -1816,7 +1815,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Balanços",
+                    Nome = "Balançoss",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1829,7 +1828,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Balanços",
+                    Nome = "Balançoss",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1842,7 +1841,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapézios",
+                    Nome = "Trapézioss",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1855,7 +1854,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapézios",
+                    Nome = "Trapézioss",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1868,7 +1867,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapézios",
+                    Nome = "Trapézioss",
                     Marca = "Amarelo",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -1878,7 +1877,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Indicado para pássaros. Estimula e exercita as aves.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -1945,7 +1943,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Cabanas",
@@ -1959,7 +1956,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Cabanas",
@@ -1972,7 +1968,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Cabana macia e aconchegante, desenvolvida para proteção da sua ave.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2000,7 +1995,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Espiral",
@@ -2023,10 +2017,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30.5,
                     QtdEmEstoque = 36,
                     PrecisaDeCarro = false,
-                    Descricao = "A roda de exercícios mantém seu roedor sempre disposto, feliz e com ótima saúde.",
+                    Descricao = "A roda de exercícios mantém seu Roedor sempre disposto, feliz e com ótima saúde.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2037,10 +2030,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29,
                     QtdEmEstoque = 30,
                     PrecisaDeCarro = false,
-                    Descricao = "A roda de exercícios mantém seu roedor sempre disposto, feliz e com ótima saúde.",
+                    Descricao = "A roda de exercícios mantém seu Roedor sempre disposto, feliz e com ótima saúde.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2051,10 +2043,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 31.9,
                     QtdEmEstoque = 41,
                     PrecisaDeCarro = false,
-                    Descricao = "A roda de exercícios mantém seu roedor sempre disposto, feliz e com ótima saúde.",
+                    Descricao = "A roda de exercícios mantém seu Roedor sempre disposto, feliz e com ótima saúde.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2069,7 +2060,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra Mineral para Roedores",
@@ -2082,7 +2072,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Ajuda no fortalecimento dos ossos, manutenção dos dentes limpos e embelezamento dos pelos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2097,8 +2086,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
-
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra Mineral para Coelhos",
@@ -2111,8 +2098,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Fabricada especialmente para atender a necessidade dos coelhos de roer para desgastar os dentes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
-
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2127,7 +2112,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel para Roedores",
@@ -2140,7 +2124,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Toca para abrigo e proteção de coelhos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2155,7 +2138,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel para Roedores",
@@ -2165,10 +2147,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 24.9,
                     QtdEmEstoque = 62,
                     PrecisaDeCarro = false,
-                    Descricao = "Toca para abrigo e proteção de roedores e pequenos animais em geral. É feita de madeira pinus, com ganchos de ferro.",
+                    Descricao = "Toca para abrigo e proteção de Roedores e pequenos animais em geral. É feita de madeira pinus, com ganchos de ferro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2179,10 +2160,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 23.5,
                     QtdEmEstoque = 69,
                     PrecisaDeCarro = false,
-                    Descricao = "Toca para abrigo e proteção de roedores e pequenos animais em geral. É feita de madeira pinus, com ganchos de ferro.",
+                    Descricao = "Toca para abrigo e proteção de Roedores e pequenos animais em geral. É feita de madeira pinus, com ganchos de ferro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2193,10 +2173,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.9,
                     QtdEmEstoque = 67,
                     PrecisaDeCarro = false,
-                    Descricao = "Toca para abrigo e proteção de roedores e pequenos animais em geral. É feita de madeira pinus, com ganchos de ferro.",
+                    Descricao = "Toca para abrigo e proteção de Roedores e pequenos animais em geral. É feita de madeira pinus, com ganchos de ferro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2207,10 +2186,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 13.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Tubos para seus roedores se divertirem no labirinto na Gaiola.",
+                    Descricao = "Tubos para seus Roedores se divertirem no labirinto na Gaiola.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2221,7 +2199,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12,
                     QtdEmEstoque = 70,
                     PrecisaDeCarro = false,
-                    Descricao = "Tubos para seus roedores se divertirem no labirinto na Gaiola.",
+                    Descricao = "Tubos para seus Roedores se divertirem no labirinto na Gaiola.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -2507,7 +2485,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.9,
                     QtdEmEstoque = 352,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu cachorro dormir/descansar confortavelmente.",
+                    Descricao = "Para seu cachorro dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -2520,10 +2498,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 31.9,
                     QtdEmEstoque = 350,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu cachorro dormir/descansar confortavelmente.",
+                    Descricao = "Para seu cachorro dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2534,7 +2511,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 32.5,
                     QtdEmEstoque = 348,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu cachorro dormir/descansar confortavelmente.",
+                    Descricao = "Para seu cachorro dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
                 });
 
@@ -2547,7 +2524,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 53,
                     QtdEmEstoque = 236,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu cachorro dormir/descansar confortavelmente.",
+                    Descricao = "Para seu cachorro dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -2560,10 +2537,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 55.9,
                     QtdEmEstoque = 240,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu cachorro dormir/descansar confortavelmente.",
+                    Descricao = "Para seu cachorro dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2574,7 +2550,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 213,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu gato dormir/descansar confortavelmente.",
+                    Descricao = "Para seu gato dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -2587,7 +2563,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35.9,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu gato dormir/descansar confortavelmente.",
+                    Descricao = "Para seu gato dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -2600,7 +2576,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 32.49,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu gato dormir/descansar confortavelmente.",
+                    Descricao = "Para seu gato dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -2613,7 +2589,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 50.9,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu gato dormir/descansar confortavelmente.",
+                    Descricao = "Para seu gato dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -2626,10 +2602,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 51.99,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu gato dormir/descansar confortavelmente.",
+                    Descricao = "Para seu gato dormir/descansar confortávelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2709,7 +2684,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Aquário 500ml",
@@ -2722,8 +2696,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Aquário feito em vidro e silicone. Pode ser usado para peixes de água salgada e doce.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
-
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -2854,7 +2826,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Aquecer seu aquário e manter uma temperatura estável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -3145,7 +3116,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 14,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Indicado para roedores, prático e fácil de limpar.",
+                    Descricao = "Indicado para Roedores, prático e fácil de limpar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -3158,7 +3129,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.9,
                     QtdEmEstoque = 71,
                     PrecisaDeCarro = false,
-                    Descricao = "Indicado para roedores, prático e fácil de limpar.",
+                    Descricao = "Indicado para Roedores, prático e fácil de limpar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3357,9 +3328,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Gaiola desmontável com aramado em epoxi branco.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
-            }
-
-            {
+            
                 //*********************************** MARCA VERMELHA - SARA ***********************************
                 _context.Produto.Add(new Produto()
                 {
@@ -3370,7 +3339,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25,
                     QtdEmEstoque = 412,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração de ótima qualidade",
+                    Descricao = "Ração de ótima qualidade.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -3383,7 +3352,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 30,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração para fortalecer os ossos",
+                    Descricao = "Ração para fortalecer os ossos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3395,8 +3364,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Categoria = ProdutoCategorias.Alimentacao,
                     Preco = 65.50,
                     QtdEmEstoque = 100,
-                    PrecisaDeCarro = false,
-                    Descricao = "Ração super premiun",
+                    PrecisaDeCarro = true,
+                    Descricao = "Ração super premiun.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3408,8 +3377,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Categoria = ProdutoCategorias.Alimentacao,
                     Preco = 70,
                     QtdEmEstoque = 110,
-                    PrecisaDeCarro = false,
-                    Descricao = "Ração para cães agiatados",
+                    PrecisaDeCarro = true,
+                    Descricao = "Ração super premiun para seu cachorro. Ajuda nos ossos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -3422,7 +3391,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 23.50,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração super premiun para gatos",
+                    Descricao = "Ração super premiun para gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -3435,7 +3404,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 24,
                     QtdEmEstoque = 150,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração natural para gatos",
+                    Descricao = "Ração natural para gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3448,7 +3417,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.30,
                     QtdEmEstoque = 251,
                     PrecisaDeCarro = false,
-                    Descricao = "Mistura de sementes para seu roedor ficar feliz",
+                    Descricao = "Mistura de sementes para seu Roedor ficar feliz.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -3461,7 +3430,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 326,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração extrusada para lagartos diversos",
+                    Descricao = "Ração extrusada para lagartos diversos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -3474,7 +3443,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.99,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração completa e equilibrada para seu coelho",
+                    Descricao = "Ração completa e equilibrada para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3487,7 +3456,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.39,
                     QtdEmEstoque = 230,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimento para peixes carnívoros",
+                    Descricao = "Alimento para peixes carnívoros.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -3500,7 +3469,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5,
                     QtdEmEstoque = 412,
                     PrecisaDeCarro = false,
-                    Descricao = "Petisco delicioso para seu cão",
+                    Descricao = "Petisco delicioso para seu cão.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -3513,7 +3482,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 6,
                     QtdEmEstoque = 400,
                     PrecisaDeCarro = false,
-                    Descricao = "Petisco delicioso para seu gato",
+                    Descricao = "Petisco delicioso para seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3526,7 +3495,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 86,
                     QtdEmEstoque = 185,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para deixar os carrapatos longe do seu pet",
+                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3539,59 +3508,59 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 80,
                     QtdEmEstoque = 187,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para deixar as pulgas longe do seu pet",
+                    Descricao = "Remédio para pulga e carrapato de alta qualidade e eficiência.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 45,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Feito para eliminar os vermes do seu pet",
+                    Descricao = "Vermífugo ideal no tratamento contra vermes chatos e redondos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Feito para acabar os vermes do seu pet",
+                    Descricao = "Vermífugo ideal no tratamento contra vermes chatos e redondos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Antitoxico",
+                    Nome = "Antitóxico",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 20,
                     QtdEmEstoque = 185,
                     PrecisaDeCarro = false,
-                    Descricao = "Usado contra veneno",
+                    Descricao = "Ideal para intoxicações de cães, gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Antitoxico",
+                    Nome = "Antitóxico",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 22,
                     QtdEmEstoque = 180,
                     PrecisaDeCarro = false,
-                    Descricao = "Usado contra venenos que seu pet possa ter ingerido",
+                    Descricao = "Ideal para intoxicações de cães, gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3604,7 +3573,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 79.8,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Usado para melhorar a absorção de nutrientes",
+                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3617,7 +3586,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 80,
                     QtdEmEstoque = 220,
                     PrecisaDeCarro = false,
-                    Descricao = "Usado para auxiliar na síntese de proteínas",
+                    Descricao = "Ideal para auxiliar no equilíbrio da microbiota intestinal.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3630,7 +3599,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 31.5,
                     QtdEmEstoque = 196,
                     PrecisaDeCarro = false,
-                    Descricao = "Usado para eliminar a sarna do seu pet",
+                    Descricao = "Usado para eliminar a sarna do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -3643,7 +3612,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 32,
                     QtdEmEstoque = 190,
                     PrecisaDeCarro = false,
-                    Descricao = "Usado para combater queimaduras",
+                    Descricao = "Usado para combater queimaduras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3656,7 +3625,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Usado para acabar com as assuduras do seu pet ",
+                    Descricao = "Usado para acabar com as assaduras do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -3669,7 +3638,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 24,
                     QtdEmEstoque = 50,
                     PrecisaDeCarro = false,
-                    Descricao = "Usado para tirar a sarna",
+                    Descricao = "Usado para tirar a sarna.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3682,7 +3651,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12,
                     QtdEmEstoque = 150,
                     PrecisaDeCarro = false,
-                    Descricao = "Ameniza as dores e as inflamações",
+                    Descricao = "Ameniza as dores e as inflamações.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -3708,7 +3677,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 50,
                     QtdEmEstoque = 121,
                     PrecisaDeCarro = false,
-                    Descricao = "Combate infecções bacterianas",
+                    Descricao = "Combate infecções bacterianas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -3721,7 +3690,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26,
                     QtdEmEstoque = 199,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda na diminuição de pelos em excesso",
+                    Descricao = "Ajuda na diminuição de pelos em excesso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -3734,7 +3703,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 24,
                     QtdEmEstoque = 119,
                     PrecisaDeCarro = false,
-                    Descricao = "Aumenta a imunidade",
+                    Descricao = "Aumenta a imunidade.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3747,7 +3716,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 40,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda no desenvolvimento muscular",
+                    Descricao = "Ajuda no desenvolvimento muscular.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -3760,7 +3729,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 65,
                     QtdEmEstoque = 90,
                     PrecisaDeCarro = false,
-                    Descricao = "Auxilia na prevenção de problemas ósseos",
+                    Descricao = "Auxilia na prevenção de problemas ósseos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3773,7 +3742,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 44,
                     QtdEmEstoque = 130,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a prevenir problemas dentários",
+                    Descricao = "Ajuda a prevenir problemas dentários.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -3786,7 +3755,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 66,
                     QtdEmEstoque = 111,
                     PrecisaDeCarro = false,
-                    Descricao = "Aumenta a energia",
+                    Descricao = "Aumenta a energia.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -3799,20 +3768,20 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 88,
                     QtdEmEstoque = 131,
                     PrecisaDeCarro = false,
-                    Descricao = " Ajuda a prevenir problemas digestivos",
+                    Descricao = " Ajuda a prevenir problemas digestivos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Tapete Higienico",
+                    Nome = "Tapete higiênico",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 34,
                     QtdEmEstoque = 165,
                     PrecisaDeCarro = false,
-                    Descricao = "Absorção ultra rápida",
+                    Descricao = "Absorção ultra rápida.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -3825,7 +3794,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 85,
                     QtdEmEstoque = 25,
                     PrecisaDeCarro = false,
-                    Descricao = "Mantem o local higienizado",
+                    Descricao = "Mantem o local higienizado.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3838,7 +3807,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 18.99,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Facilita o recolhimento dos dejetos do seu pet",
+                    Descricao = "Facilita o recolhimento dos dejetos do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -3851,7 +3820,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.6,
                     QtdEmEstoque = 95,
                     PrecisaDeCarro = false,
-                    Descricao = "Cheiro de melancia",
+                    Descricao = "Cheiro de melancia.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -3864,7 +3833,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 90,
                     PrecisaDeCarro = false,
-                    Descricao = "Deixa os pelos macios",
+                    Descricao = "Deixa os pelos macios.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3877,7 +3846,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 31,
                     QtdEmEstoque = 88,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador super afiado",
+                    Descricao = "Cortador super afiado.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3890,7 +3859,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador para unhas duras",
+                    Descricao = "Cortador para unhas duras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -3903,7 +3872,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.9,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete com cheiro de rosas",
+                    Descricao = "Sabonete com cheiro de rosas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -3916,7 +3885,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25,
                     QtdEmEstoque = 120,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete de coco para gatos",
+                    Descricao = "Sabonete líquido ideal para limpeza da pelagem.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -3929,7 +3898,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36.5,
                     QtdEmEstoque = 165,
                     PrecisaDeCarro = false,
-                    Descricao = "Remove os pelos mortos",
+                    Descricao = "Remove os pelos mortos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3942,7 +3911,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 160,
                     PrecisaDeCarro = false,
-                    Descricao = "Facilita na escovação do pet",
+                    Descricao = "Facilita na escovação do pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -3955,20 +3924,20 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 111,
                     PrecisaDeCarro = false,
-                    Descricao = "Tamanmho médio com grande profundidade",
+                    Descricao = "Tamanho médio com grande profundidade.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Areia higienica",
+                    Nome = "Areia higiênica",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 26,
                     QtdEmEstoque = 120,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora o controle de odores",
+                    Descricao = "Melhora o controle de odores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -3981,26 +3950,26 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 4.1,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Aumenta a praticidade na coleta de fezes",
+                    Descricao = "Aumenta a praticidade na coleta de fezes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Pó de banho",
+                    Nome = "Pó de Banho",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 22,
                     QtdEmEstoque = 68,
                     PrecisaDeCarro = false,
-                    Descricao = "Tira a umidade do pelo do animal",
+                    Descricao = "Pó de Banho a seco para manter seus Roedores limpos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bolinha",
+                    Nome = "Bolinhas",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
@@ -4013,14 +3982,14 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhoss",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 14.5,
                     QtdEmEstoque = 156,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda na limpeza bucal",
+                    Descricao = "Ajuda na limpeza bucal.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -4033,111 +4002,111 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 6,
                     QtdEmEstoque = 159,
                     PrecisaDeCarro = false,
-                    Descricao = "Ratinho de pelucia para diversão do seu gato",
+                    Descricao = "Ratinho de pelucia para diversão do seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Varinha",
+                    Nome = "Varinhass",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 15.6,
                     QtdEmEstoque = 185,
                     PrecisaDeCarro = false,
-                    Descricao = "Varinha com cordões",
+                    Descricao = "Varinhas com cordões.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhador",
+                    Nome = "Arranhadoreses",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 99,
                     QtdEmEstoque = 14,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a afiar e lixar as unhas do bichano",
+                    Descricao = "Ajuda a lixar as unhas do pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bichinhos de Pelucia",
+                    Nome = "pets de Pelúcia",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 48,
                     QtdEmEstoque = 52,
                     PrecisaDeCarro = false,
-                    Descricao = "Feito com algodão",
+                    Descricao = "Divertido e criativo que ajuda a combater o estresse do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bichinhos de Pelucia",
+                    Nome = "pets de Pelúcia",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 50,
                     QtdEmEstoque = 60,
                     PrecisaDeCarro = false,
-                    Descricao = "Feito de lã",
+                    Descricao = "Divertido e criativo que ajuda a combater o estresse do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Mordedor",
+                    Nome = "Mordedores",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 19.5,
                     QtdEmEstoque = 76,
                     PrecisaDeCarro = false,
-                    Descricao = "Feito de silicon",
+                    Descricao = "Feito de silicone.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Balanço",
+                    Nome = "Balançoss",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 19.5,
                     QtdEmEstoque = 12,
                     PrecisaDeCarro = false,
-                    Descricao = "Balanço médio",
+                    Descricao = "Balanços médio.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapezio",
+                    Nome = "Trapézioss",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 21,
                     QtdEmEstoque = 26,
                     PrecisaDeCarro = false,
-                    Descricao = "Trapezio grande",
+                    Descricao = "Trapézios grande.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escada",
+                    Nome = "Escadas",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 30,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Escada de madeiras para pássaros de porte médio",
+                    Descricao = "Escada de madeiras para pássaros de porte médio.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -4150,20 +4119,20 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 62,
                     PrecisaDeCarro = false,
-                    Descricao = "Argolas médias de balanço",
+                    Descricao = "Argolas Médias de Balanços.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Cabana",
+                    Nome = "Cabanas",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 24,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Cabana pequena para pássaros de pequeno porte",
+                    Descricao = "Cabana Pequena para pássaros de pequeno porte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -4176,20 +4145,20 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 23,
                     QtdEmEstoque = 30,
                     PrecisaDeCarro = false,
-                    Descricao = "Feito para entreter a ave e aliviar o estresse",
+                    Descricao = "Feito para entreter a ave e aliviar o estresse.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Roda de exercício",
+                    Nome = "Roda de Exercício",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 34,
                     QtdEmEstoque = 14,
                     PrecisaDeCarro = false,
-                    Descricao = "Roda naturalmente silenciosa e leve",
+                    Descricao = "Roda naturalmente silenciosa e leve.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -4202,7 +4171,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 22,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Tranquiliza o pet",
+                    Descricao = "Tranquiliza o pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -4215,20 +4184,20 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25,
                     QtdEmEstoque = 50,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda na limpeza dental",
+                    Descricao = "Ajuda na limpeza dental.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Pedra mineral",
+                    Nome = "Pedra Mineral",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 8.5,
                     QtdEmEstoque = 75,
                     PrecisaDeCarro = false,
-                    Descricao = "Desenvolvida especialmente para atender a necessidade de roer de coelhos",
+                    Descricao = "Desenvolvida especialmente para atender a necessidade de roer de coelhos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -4241,7 +4210,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 9,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Feita especialmente para atender a necessidade dos roedores de roer para desgastar os dentes",
+                    Descricao = "Feita especialmente para atender a necessidade dos Roedores de roer para desgastar os dentes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -4254,33 +4223,33 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 50,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora as funções do aparelho digestivo ",
+                    Descricao = "Melhora as funções do aparelho digestivo.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Tunel",
+                    Nome = "Túnel",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25,
                     QtdEmEstoque = 66,
                     PrecisaDeCarro = false,
-                    Descricao = "Tuneis feitos para a distração do seu pet",
+                    Descricao = "Túneis feitos para a distração do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Tunel",
+                    Nome = "Túnel",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 21,
                     QtdEmEstoque = 70,
                     PrecisaDeCarro = false,
-                    Descricao = "Tuneil médio feito de poliéster durável",
+                    Descricao = "Túnel médio feito de poliéster durável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -4293,150 +4262,150 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19,
                     QtdEmEstoque = 68,
                     PrecisaDeCarro = false,
-                    Descricao = "Ótimos para seu pet fazer exercícios",
+                    Descricao = "Ótimos para seu pet fazer exercícios.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 45,
                     QtdEmEstoque = 300,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com seu cachorro",
+                    Descricao = "Para você passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 25,
                     QtdEmEstoque = 412,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira super resistente",
+                    Descricao = "Coleira super resistente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho G",
+                    Nome = "Coleira Tamanho G",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 65.50,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira confortável para seu pet",
+                    Descricao = "Coleira confortável para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 19.90,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com seu gato",
+                    Descricao = "Para você passear com seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho G",
+                    Nome = "Coleira Tamanho G",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 40.99,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira com peitoral",
+                    Descricao = "Coleira com peitoral.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Focinheira tamanho P",
+                    Nome = "Focinheira Tamanho P",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 26.30,
                     QtdEmEstoque = 350,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu cão usar pela proteção das pessoas",
+                    Descricao = "Para seu cão usar pela proteção das pessoas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa de transporte média",
+                    Nome = "Caixa de transporte Média",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 36.90,
                     QtdEmEstoque = 230,
                     PrecisaDeCarro = false,
-                    Descricao = "Uma forma pratica de transportar seu cachorro de um lugar para o outro de forma segura",
+                    Descricao = "Uma forma prática de transportar seu cachorro de um lugar para o outro de forma segura.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa de transporte pequena",
+                    Nome = "Caixa de transporte Pequena",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 25.90,
                     QtdEmEstoque = 210,
                     PrecisaDeCarro = false,
-                    Descricao = "Uma forma pratica de transportar seu gato de um lugar para o outro de forma segura",
+                    Descricao = "Uma forma prática de transportar seu gato de um lugar para o outro de forma segura.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caminha média",
+                    Nome = "Caminha Média",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 39.99,
                     QtdEmEstoque = 132,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu cachorro dormir",
+                    Descricao = "Para seu cachorro dormir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caminha pequena",
+                    Nome = "Caminha Pequena",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29,
                     QtdEmEstoque = 321,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu gato descansar confortvelmente",
+                    Descricao = "Para seu gato descansar confortvelmente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Filtro interno",
+                    Nome = "Filtro Interno",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 45,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água do seu aquário",
+                    Descricao = "Melhora a qualidade da água do seu aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -4449,7 +4418,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5.50,
                     QtdEmEstoque = 102,
                     PrecisaDeCarro = false,
-                    Descricao = "Decora o fundo do seu aquário",
+                    Descricao = "Decora o fundo do seu aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -4462,33 +4431,33 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.90,
                     QtdEmEstoque = 156,
                     PrecisaDeCarro = false,
-                    Descricao = "Aquário de vidro",
+                    Descricao = "Aquário de vidro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Lâmpada para aquário",
+                    Nome = "Lâmpada para Aquário",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 86.90,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Para plantas aquáticas",
+                    Descricao = "Para plantas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Termostato para aquário",
+                    Nome = "Termostato para Aquário",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 67.99,
                     QtdEmEstoque = 55,
                     PrecisaDeCarro = false,
-                    Descricao = "Aquese seu aquário e mantém uma temperatura estavel",
+                    Descricao = "Aquece seu aquário e mantém uma temperatura estável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -4501,7 +4470,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 43.99,
                     QtdEmEstoque = 44,
                     PrecisaDeCarro = false,
-                    Descricao = "Decora o ambiente",
+                    Descricao = "Decora o ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -4514,7 +4483,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45,
                     QtdEmEstoque = 55,
                     PrecisaDeCarro = false,
-                    Descricao = "Rocha de tamanho médio",
+                    Descricao = "Rocha de tamanho médio.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -4527,7 +4496,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 27.99,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Decora o ambiente",
+                    Descricao = "Decora o ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -4566,46 +4535,46 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 15,
                     QtdEmEstoque = 72,
                     PrecisaDeCarro = false,
-                    Descricao = "Planta de tamnaho pequeno",
+                    Descricao = "Planta de tamanho pequeno.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Sinfão manual",
+                    Nome = "Sinfão Manual",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 20.50,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda na limpeza do substrato do aquário",
+                    Descricao = "Ajuda na limpeza do substrato do aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Mídias biológicas",
+                    Nome = "Mídias Biológicas",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 25.60,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cria as bacterias necessárias para melhorar seu aquário",
+                    Descricao = "Cria as bactérias necessárias para melhorar seu aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Carvão ativo",
+                    Nome = "Carvão Ativo",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 25.30,
                     QtdEmEstoque = 38,
                     PrecisaDeCarro = false,
-                    Descricao = "Tira o mau cheiro do aquário",
+                    Descricao = "Tira o mau cheiro do aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -4618,20 +4587,20 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 13.90,
                     QtdEmEstoque = 85,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda na filtragem de resíduos maiores",
+                    Descricao = "Ajuda na filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Refil para filtro externo",
+                    Nome = "Refil para Filtro Externo",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 19.90,
                     QtdEmEstoque = 90,
                     PrecisaDeCarro = false,
-                    Descricao = "Contém a manta acrílica e o carvão ativado",
+                    Descricao = "Contém a manta acrílica e o carvão ativado.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -4644,7 +4613,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 99.90,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiola usada para transporte de aves",
+                    Descricao = "Gaiola usada para transporte de aves.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
@@ -4657,33 +4626,33 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 74,
                     PrecisaDeCarro = false,
-                    Descricao = "Vara disposta horizontalmente em que as aves pousam e dormem",
+                    Descricao = "Vara disposta horizontalmente em que as aves pousam e dormem.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Comedor",
+                    Nome = "Comedouros",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 5.90,
                     QtdEmEstoque = 69,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote de alimentação para seu pet",
+                    Descricao = "Pote de alimentação para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bebedor",
+                    Nome = "Bebedouros",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 6,
                     QtdEmEstoque = 95,
                     PrecisaDeCarro = false,
-                    Descricao = "Bebedor de plástico",
+                    Descricao = "Bebedor de plástico.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
@@ -4696,7 +4665,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 74,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote de ração grande",
+                    Descricao = "Pote de ração grande.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -4709,7 +4678,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 74,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote de água grande para cachorros",
+                    Descricao = "Pote de água grande para cachorros.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
@@ -4722,7 +4691,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote de ração pequeno para gatos",
+                    Descricao = "Pote de ração pequeno para gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
@@ -4735,20 +4704,20 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26,
                     QtdEmEstoque = 46,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote de água pequeno para gatos",
+                    Descricao = "Pote de água pequeno para gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Comedor",
+                    Nome = "Comedouros",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 15.90,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote de plástico para alimento",
+                    Descricao = "Pote de plástico para alimento.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
@@ -4761,64 +4730,62 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 14.99,
                     QtdEmEstoque = 35,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote de plástico para água",
+                    Descricao = "Pote de plástico para água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Comedor",
+                    Nome = "Comedouros",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 14.99,
                     QtdEmEstoque = 44,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote médio para alimento",
+                    Descricao = "Pote médio para alimento.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bebedor",
+                    Nome = "Bebedouros",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 15,
                     QtdEmEstoque = 48,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote médio para água",
+                    Descricao = "Pote médio para água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Comedor",
+                    Nome = "Comedouros",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Repteis,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 13.99,
                     QtdEmEstoque = 55,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote pequeno para alimento",
+                    Descricao = "Pote pequeno para alimento.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Bebedor",
+                    Nome = "Bebedouros",
                     Marca = "Vermelha",
                     TipoDeAnimal = ProdutoAnimais.Repteis,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 15.30,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Pote pequeno para água",
+                    Descricao = "Pote pequeno para água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
-            }
-
-            {
+            
                 //*********************************** MARCA VERDE - KAIO ***********************************
 
                 _context.Produto.Add(new Produto()
@@ -4830,9 +4797,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 22.9,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade",
+                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração pequeno porte 2Kg ",
@@ -4842,9 +4810,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade",
+                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração pequeno porte 2Kg ",
@@ -4854,9 +4823,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35.5,
                     QtdEmEstoque = 120,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade",
+                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração médio porte 5kg ",
@@ -4866,9 +4836,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45,
                     QtdEmEstoque = 300,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração super premiun para seu cachorro",
+                    Descricao = "Ração super premiun para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração médio porte 5kg ",
@@ -4878,9 +4849,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 47,
                     QtdEmEstoque = 302,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração super premiun para seu cachorro",
+                    Descricao = "Ração super premiun para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração médio porte 5kg ",
@@ -4890,9 +4862,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 55,
                     QtdEmEstoque = 330,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração super premiun para seu cachorro",
+                    Descricao = "Ração super premiun para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração pequeno porte 2kg",
@@ -4902,9 +4875,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 410,
                     PrecisaDeCarro = false,
-                    Descricao = "Ração super premiun para seu cachorro",
+                    Descricao = "Ração super premiun para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração pequeno porte 2kg",
@@ -4917,6 +4891,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Ração super premiun para seu cachorro",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração pequeno porte 2kg",
@@ -4929,6 +4904,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Ração super premiun para seu cachorro",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sache frango",
@@ -4938,9 +4914,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 3.1,
                     QtdEmEstoque = 320,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação completa e saborosa",
+                    Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sache frango",
@@ -4950,9 +4927,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 3.5,
                     QtdEmEstoque = 302,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação completa e saborosa",
+                    Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sache frango",
@@ -4962,9 +4940,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 3.6,
                     QtdEmEstoque = 300,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação completa e saborosa",
+                    Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Mistura de sementes Papagaios 600g",
@@ -4974,9 +4953,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 40.9,
                     QtdEmEstoque = 120,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação completa e saborosa",
+                    Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Mistura de sementes Papagaios 600g",
@@ -4986,9 +4966,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 42,
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação completa e saborosa",
+                    Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Mistura de sementes Papagaios 600g",
@@ -4998,9 +4979,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 43.5,
                     QtdEmEstoque = 102,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentação completa e saborosa",
+                    Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração extrusada 500g",
@@ -5010,9 +4992,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 23.9,
                     QtdEmEstoque = 301,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentaçãõ completa para seu roedor",
+                    Descricao = "Alimentação completa para seu Roedor.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração extrusada 500g",
@@ -5022,9 +5005,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25,
                     QtdEmEstoque = 300,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentaçãõ completa para seu roedor",
+                    Descricao = "Alimentação completa para seu Roedor.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração extrusada 500g",
@@ -5034,9 +5018,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 24.9,
                     QtdEmEstoque = 311,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentaçãõ completa para seu roedor",
+                    Descricao = "Alimentação completa para seu Roedor.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adas.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração extrusada 250g",
@@ -5046,9 +5031,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 32.9,
                     QtdEmEstoque = 310,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentaçãõ completa para seu réptil ",
+                    Descricao = "Alimentação completa para seu réptil.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adas.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração extrusada 250g",
@@ -5058,9 +5044,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 301,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentaçãõ completa para seu réptil",
+                    Descricao = "Alimentação completa para seu réptil.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adas.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ração extrusada 250g",
@@ -5070,11 +5057,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30.5,
                     QtdEmEstoque = 300,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimentaçãõ completa para seu réptil",
+                    Descricao = "Alimentação completa para seu réptil.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adas.com.br").First()
                 });
-
-
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5085,9 +5070,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 4.9,
                     QtdEmEstoque = 254,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimento complementar e necessario para seu coelho",
+                    Descricao = "Alimento complementar e necessário para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adas.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Alfalfa 100g",
@@ -5097,9 +5083,23 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 4.1,
                     QtdEmEstoque = 231,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimento complementar e necessario para seu coelho",
+                    Descricao = "Alimento complementar e necessário para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adas.com.br").First()
                 });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Alfalfa 100g",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 4.1,
+                    QtdEmEstoque = 231,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimento complementar e necessário para seu coelho.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adas.com.br").First()
+                });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Alfalfa 100g",
@@ -5109,9 +5109,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimento complementar e necessario para seu coelho",
+                    Descricao = "Alimento complementar e necessário para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adas.com.br").First()
                 });
+
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Alfalfa 100g",
@@ -5121,759 +5122,3181 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Alimento complementar e necessario para seu coelho",
+                    Descricao = "Alimento complementar e necessário para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
-            }
 
-            { 
-            //*********************************** MARCA AZUL - LUÍZA ***********************************
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 10.9,
+                    QtdEmEstoque = 123,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimento para peixes onivoros/herbívoros.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração Filhote 5kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 30,
-                QtdEmEstoque = 200,
-                PrecisaDeCarro = false,
-                Descricao = "Ração perfeita para seu cachorro. Natural, ajuda no hálito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 11.5,
+                    QtdEmEstoque = 130,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimento para peixes onivoros/herbívoros.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração Filhote 5kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 32,
-                QtdEmEstoque = 198,
-                PrecisaDeCarro = false,
-                Descricao = "Ração perfeita para seu cachorro. Natural, ajuda no hálito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 10,
+                    QtdEmEstoque = 131,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimento para peixes onivoros/herbívoros.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração grande porte 5kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 32,
-                QtdEmEstoque = 265,
-                PrecisaDeCarro = false,
-                Descricao = "Ração gold premiun para seu cachorro viver saudável.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 10.99,
+                    QtdEmEstoque = 130,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimento para peixes onivoros/herbívoros.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração grande porte 5kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 32.9,
-                QtdEmEstoque = 275,
-                PrecisaDeCarro = false,
-                Descricao = "Ração gold premiun para seu cachorro viver saudável.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 12,
+                    QtdEmEstoque = 120,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimento para peixes onivoros/herbívoros.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
 
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.99,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo cachorro que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração grande porte 5kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 31.9,
-                QtdEmEstoque = 266,
-                PrecisaDeCarro = false,
-                Descricao = "Ração gold premiun para seu cachorro viver saudável.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.5,
+                    QtdEmEstoque = 150,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo cachorro que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
 
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2,
+                    QtdEmEstoque = 126,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo cachorro que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração grande porte 5kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 32,
-                QtdEmEstoque = 265,
-                PrecisaDeCarro = false,
-                Descricao = "Ração gold premiun para seu cachorro viver saudável.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.9,
+                    QtdEmEstoque = 196,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo cachorro que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração gigante porte 10kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 53.90,
-                QtdEmEstoque = 90,
-                PrecisaDeCarro = true,
-                Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 3.5,
+                    QtdEmEstoque = 199,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo cachorro que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração gigante porte 10kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 51.90,
-                QtdEmEstoque = 95,
-                PrecisaDeCarro = true,
-                Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.99,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo gato que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração gigante porte 10kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 50.90,
-                QtdEmEstoque = 90,
-                PrecisaDeCarro = true,
-                Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.9,
+                    QtdEmEstoque = 160,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo gato que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração Filhote 5kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 29.90,
-                QtdEmEstoque = 200,
-                PrecisaDeCarro = false,
-                Descricao = "Ração perfeita para seu filhote. Natural, ajuda no hálito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.5,
+                    QtdEmEstoque = 164,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo gato que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração Filhote 5kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 31.90,
-                QtdEmEstoque = 206,
-                PrecisaDeCarro = false,
-                Descricao = "Ração perfeita para seu filhote. Natural, ajuda no hálito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2,
+                    QtdEmEstoque = 151,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo gato que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração Filhote 2kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 19.90,
-                QtdEmEstoque = 123,
-                PrecisaDeCarro = false,
-                Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2,
+                    QtdEmEstoque = 151,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para todo gato que mereçe uma recompensa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+  
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 75.5,
+                    QtdEmEstoque = 196,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alívio total da coceira em 24 horas.Age diretamente no foco da coceira, minimizando os efeitos colaterais.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração Filhote 2kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 21.90,
-                QtdEmEstoque = 125,
-                PrecisaDeCarro = false,
-                Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 75,
+                    QtdEmEstoque = 160,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alívio total da coceira em 24 horas.Age diretamente no foco da coceira, minimizando os efeitos colaterais.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração Filhote 2kg",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 19.49,
-                QtdEmEstoque = 136,
-                PrecisaDeCarro = false,
-                Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 75.9,
+                    QtdEmEstoque = 198,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alívio total da coceira em 24 horas.Age diretamente no foco da coceira, minimizando os efeitos colaterais.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Sache Cordeiro",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 1.99,
-                QtdEmEstoque = 200,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação completa e saborosa.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 74.9,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alívio total da coceira em 24 horas. Age diretamente no foco da coceira, minimizando os efeitos colaterais.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Sache Cordeiro",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 2.99,
-                QtdEmEstoque = 208,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação completa e saborosa.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 74.99,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alívio total da coceira em 24 horas. Age diretamente no foco da coceira, minimizando os efeitos colaterais.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+            
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 75.5,
+                    QtdEmEstoque = 196,
+                    PrecisaDeCarro = false,
+                    Descricao = "Trata infestações de pulgas e carrapatos. Elimina os parasitas rapidamente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Sache Salmão",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 2.90,
-                QtdEmEstoque = 350,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação completa e saborosa para seu gato.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 75.9,
+                    QtdEmEstoque = 198,
+                    PrecisaDeCarro = false,
+                    Descricao = "Trata infestações de pulgas e carrapatos. Elimina os parasitas rapidamente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Sache Salmão",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 3.8,
-                QtdEmEstoque = 306,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação completa e saborosa para seu gato.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 75,
+                    QtdEmEstoque = 185,
+                    PrecisaDeCarro = false,
+                    Descricao = "Trata infestações de pulgas e carrapatos. Elimina os parasitas rapidamente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Sache Salmão",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 3.69,
-                QtdEmEstoque = 350,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação completa e saborosa para seu gato.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 74.99,
+                    QtdEmEstoque = 191,
+                    PrecisaDeCarro = false,
+                    Descricao = "Trata infestações de pulgas e carrapatos. Elimina os parasitas rapidamente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Mistura de sementes Calopsitas 200g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Passaro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 22.90,
-                QtdEmEstoque = 320,
-                PrecisaDeCarro = false,
-                Descricao = "Mistura de sementes completa para sua calopsita.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antipulgas e Carrapatos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 75.99,
+                    QtdEmEstoque = 198,
+                    PrecisaDeCarro = false,
+                    Descricao = "Trata infestações de pulgas e carrapatos. Elimina os parasitas rapidamente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+             
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 30.5,
+                    QtdEmEstoque = 196,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Mistura de sementes Calopsitas 200g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Passaro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 21.90,
-                QtdEmEstoque = 325,
-                PrecisaDeCarro = false,
-                Descricao = "Mistura de sementes completa para sua calopsita.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 35,
+                    QtdEmEstoque = 198,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Mistura de sementes Calopsitas 200g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Passaro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 23.5,
-                QtdEmEstoque = 306,
-                PrecisaDeCarro = false,
-                Descricao = "Mistura de sementes completa para sua calopsita.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 75,
+                    QtdEmEstoque = 199,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
 
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 36.5,
+                    QtdEmEstoque = 190,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Mistura de sementes Periquitos 200g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Passaro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 15.90,
-                QtdEmEstoque = 450,
-                PrecisaDeCarro = false,
-                Descricao = "Mistura de sementes completa para seu periquito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 36.9,
+                    QtdEmEstoque = 191,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+              
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 30.5,
+                    QtdEmEstoque = 196,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Mistura de sementes Periquitos 200g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Passaro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 16.90,
-                QtdEmEstoque = 455,
-                PrecisaDeCarro = false,
-                Descricao = "Mistura de sementes completa para seu periquito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 36,
+                    QtdEmEstoque = 192,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Mistura de sementes Periquitos 200g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Passaro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 10.30,
-                QtdEmEstoque = 450,
-                PrecisaDeCarro = false,
-                Descricao = "Mistura de sementes completa para seu periquito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37.9,
+                    QtdEmEstoque = 185,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Mistura de sementes Periquitos 200g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Passaro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 12.85,
-                QtdEmEstoque = 450,
-                PrecisaDeCarro = false,
-                Descricao = "Mistura de sementes completa para seu periquito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 30,
+                    QtdEmEstoque = 191,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Mistura de sementes Periquitos 200g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Passaro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 13.90,
-                QtdEmEstoque = 650,
-                PrecisaDeCarro = false,
-                Descricao = "Mistura de sementes completa para seu periquito.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vermífugo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 30.55,
+                    QtdEmEstoque = 195,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vermífugo palatável de fácil administração.  Eficaz no tratamento contra vermes redondos e chatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 27.5,
+                    QtdEmEstoque = 136,
+                    PrecisaDeCarro = false,
+                    Descricao = "Auxilia no tratamento das afecções hepáticas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 14.90,
-                QtdEmEstoque = 123,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para jabutis.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38,
+                    QtdEmEstoque = 146,
+                    PrecisaDeCarro = false,
+                    Descricao = "Auxilia no tratamento das afecções hepáticas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 30,
+                    QtdEmEstoque = 130,
+                    PrecisaDeCarro = false,
+                    Descricao = "Auxilia no tratamento das afecções hepáticas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 27,
+                    QtdEmEstoque = 126,
+                    PrecisaDeCarro = false,
+                    Descricao = "Auxilia no tratamento das afecções hepáticas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 27.9,
+                    QtdEmEstoque = 136,
+                    PrecisaDeCarro = false,
+                    Descricao = "Auxilia no tratamento das afecções hepáticas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+              
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 27.5,
+                    QtdEmEstoque = 136,
+                    PrecisaDeCarro = false,
+                    Descricao = "Associação de agentes lipotrópicos e antitóxicos em veículo energético.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 28,
+                    QtdEmEstoque = 135,
+                    PrecisaDeCarro = false,
+                    Descricao = "Associação de agentes lipotrópicos e antitóxicos em veículo energético.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 30,
+                    QtdEmEstoque = 130,
+                    PrecisaDeCarro = false,
+                    Descricao = "Associação de agentes lipotrópicos e antitóxicos em veículo energético.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 27.5,
+                    QtdEmEstoque = 130,
+                    PrecisaDeCarro = false,
+                    Descricao = "Associação de agentes lipotrópicos e antitóxicos em veículo energético",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Antitóxico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 27.9,
+                    QtdEmEstoque = 131,
+                    PrecisaDeCarro = false,
+                    Descricao = "Associação de agentes lipotrópicos e antitóxicos em veículo energético.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+               
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 90.5,
+                    QtdEmEstoque = 163,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 95,
+                    QtdEmEstoque = 167,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 90.9,
+                    QtdEmEstoque = 160,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 92,
+                    QtdEmEstoque = 153,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 92.5,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 90.5,
+                    QtdEmEstoque = 163,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 90.5,
+                    QtdEmEstoque = 160,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 91.4,
+                    QtdEmEstoque = 162,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 95,
+                    QtdEmEstoque = 162,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Probiótico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 9.95,
+                    QtdEmEstoque = 166,
+                    PrecisaDeCarro = false,
+                    Descricao = "Composto por Lactobaccilus vivos. Auxilia na manutenção da flora intestinal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 36.5,
+                    QtdEmEstoque = 185,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para assaduras.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37,
+                    QtdEmEstoque = 147,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para sarar o machucado mais rápido.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37.5,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para passar em peles sensíveis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38,
+                    QtdEmEstoque = 126,
+                    PrecisaDeCarro = false,
+                    Descricao = "Usado para passar em pós cirurgia.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38.9,
+                    QtdEmEstoque = 162,
+                    PrecisaDeCarro = false,
+                    Descricao = "Usado para passar em pós cirurgia.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37,
+                    QtdEmEstoque = 185,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para assaduras.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); _context.Produto.Add(new Produto()
+
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37.5,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para sarar o machucado mais rápido.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); _context.Produto.Add(new Produto()
+
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38,
+                    QtdEmEstoque = 167,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para passar em peles sensíveis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38.9,
+                    QtdEmEstoque = 147,
+                    PrecisaDeCarro = false,
+                    Descricao = "Usado para passar em pós cirurgia.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38.5,
+                    QtdEmEstoque = 140,
+                    PrecisaDeCarro = false,
+                    Descricao = "Usado para passar em pós cirurgia.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+            
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 36.9,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Usado para passar em pós cirurgia.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Usado para passar em pós cirurgia.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37.9,
+                    QtdEmEstoque = 155,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para passar em peles sensíveis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38,
+                    QtdEmEstoque = 111,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para sarar o machucado mais rápido.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 40,
+                    QtdEmEstoque = 101,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para usar em assaduras.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37,
+                    QtdEmEstoque = 185,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para usar em assaduras.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37.6,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para sarar o machucado mais rápido.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 36.9,
+                    QtdEmEstoque = 183,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para passar em peles sensíveis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 39,
+                    QtdEmEstoque = 178,
+                    PrecisaDeCarro = false,
+                    Descricao = "Usado para passar em pós cirurgia.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38.9,
+                    QtdEmEstoque = 169,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para passar em peles sensíveis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para usar em assaduras.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37.9,
+                    QtdEmEstoque = 178,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para passar em machucados.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Passar em queimadura.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 39,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Fixa nas esCamas do seu pet. Aprova d'água.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38.5,
+                    QtdEmEstoque = 147,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ajuda o seu pet na trca de pele, amolecendo a pele antiga.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38.5,
+                    QtdEmEstoque = 147,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para passar na parte lesionada do seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 39,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Aprova d'água.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Passar em queimadura.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37.9,
+                    QtdEmEstoque = 178,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para passar em machucados.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pomadas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 37,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para usarm em assaduras.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+               
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 27.5,
+                    QtdEmEstoque = 148,
+                    PrecisaDeCarro = false,
+                    Descricao = "Retarda o envelhecimento celular.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 28,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Protege as funções renal e cardíaca.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 24,
+                    QtdEmEstoque = 140,
+                    PrecisaDeCarro = false,
+                    Descricao = "Suplemento nutricional indicado para cães de qualquer idade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 30,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Reduz a queda e a quebra dos fios.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 32,
+                    QtdEmEstoque = 148,
+                    PrecisaDeCarro = false,
+                    Descricao = "Rico em proteínas, aminoácidos, minerais e vitaminas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 29,
+                    QtdEmEstoque = 178,
+                    PrecisaDeCarro = false,
+                    Descricao = "Auxilia no crescimento do pelo, até em partes lesionadas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 30.5,
+                    QtdEmEstoque = 165,
+                    PrecisaDeCarro = false,
+                    Descricao = "Favorece a eliminação das bolas de pelo.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 36,
+                    QtdEmEstoque = 159,
+                    PrecisaDeCarro = false,
+                    Descricao = "Suplemento alimentar para gatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 45,
+                    QtdEmEstoque = 189,
+                    PrecisaDeCarro = false,
+                    Descricao = "Aumenta o apetite.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Vitaminas e Suplementos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Farmacia,
+                    Preco = 38,
+                    QtdEmEstoque = 148,
+                    PrecisaDeCarro = false,
+                    Descricao = "Suplemento à base de aminoácidos e vitaminas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Tapete higiênico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 44.9,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ultra absorção.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Tapete higiênico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 44,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Não deixa odor.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Tapete higiênico",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 46,
+                    QtdEmEstoque = 136,
+                    PrecisaDeCarro = false,
+                    Descricao = "Fácil limpeza.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coletor de fezes",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 23,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Plástico resistênte.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coletor de fezes",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 24.5,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para coletar as fezes do seu cachorro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coletor de fezes",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 26,
+                    QtdEmEstoque = 148,
+                    PrecisaDeCarro = false,
+                    Descricao = "Impermeável. Contém 4 rolos com 20 saquinhos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Shampoo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 35.9,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "2 em 1. Contém óleo de amêndoas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Shampoo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 36.5,
+                    QtdEmEstoque = 147,
+                    PrecisaDeCarro = false,
+                    Descricao = " Produz brilho e maciez ao pelos. Deixa fácil para escovação.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Shampoo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 39,
+                    QtdEmEstoque = 185,
+                    PrecisaDeCarro = false,
+                    Descricao = "Desenvolvido para proporcionar maciez e brilho para cães de todas as raças.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Shampoo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 36.9,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Desenvolvido para cuidar com carinho dos felinos que tem uma pele sensível.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Shampoo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 39.9,
+                    QtdEmEstoque = 136,
+                    PrecisaDeCarro = false,
+                    Descricao = " Foi criada para deixar o seu pet com um perfume suave e duradouro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Shampoo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 40,
+                    QtdEmEstoque = 185,
+                    PrecisaDeCarro = false,
+                    Descricao = "Sua composição é feita com ingredientes que hidratam o pêlo do animal.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Cortador de unhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 25.9,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Aço Inox e emborrachado.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Cortador de unhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 36,
+                    QtdEmEstoque = 196,
+                    PrecisaDeCarro = false,
+                    Descricao = "Produto atóxico.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Cortador de unhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 25.9,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Com trava de segurança.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Cortador de unhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 36,
+                    QtdEmEstoque = 147,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para higiene e beleza.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Cortador de unhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 35.8,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Aço inox e emborrachado.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Cortador de unhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 25.99,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Produto atóxico.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+               
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Escova rasqueira",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 25.99,
+                    QtdEmEstoque = 155,
+                    PrecisaDeCarro = false,
+                    Descricao = "Tira os pelos mortos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Escova rasqueira",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 36,
+                    QtdEmEstoque = 136,
+                    PrecisaDeCarro = false,
+                    Descricao = "Leve e fácil de usar.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Escova rasqueira",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 40,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Desembola pelo sem sofrimento.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Escova rasqueira",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 39,
+                    QtdEmEstoque = 150,
+                    PrecisaDeCarro = false,
+                    Descricao = "Tira os pelos mortos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Escova rasqueira",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 25.99,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Leve e fácil de usar..",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Escova rasqueira",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 25.99,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Desembola pelo sem sofrimento.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+             
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de areia",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 25.99,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Fácil de limpar.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de areia",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 30,
+                    QtdEmEstoque = 150,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ótima durabilidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de areia",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 36,
+                    QtdEmEstoque = 116,
+                    PrecisaDeCarro = false,
+                    Descricao = "Vem com 3 bandejas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+              
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Areia higiênica",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 23,
+                    QtdEmEstoque = 230,
+                    PrecisaDeCarro = false,
+                    Descricao = "Grãos super finos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Areia higiênica",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 12.55,
+                    QtdEmEstoque = 111,
+                    PrecisaDeCarro = false,
+                    Descricao = "Elimina os odores.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Areia higiênica",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 36,
+                    QtdEmEstoque = 158,
+                    PrecisaDeCarro = false,
+                    Descricao = "Econômica: rende mais.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pó de Banho",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 24.5,
+                    QtdEmEstoque = 158,
+                    PrecisaDeCarro = false,
+                    Descricao = "Econômica: rende mais.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pó de Banho",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 16.5,
+                    QtdEmEstoque = 150,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para peles sensíveis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Pó de Banho",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Higiene,
+                    Preco = 18,
+                    QtdEmEstoque = 155,
+                    PrecisaDeCarro = false,
+                    Descricao = "Deixa seu pet cheiroso e com pelos brilhantes.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+           
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Bolinhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 12.5,
+                    QtdEmEstoque = 165,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para você se divertir com seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Bolinhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 13,
+                    QtdEmEstoque = 155,
+                    PrecisaDeCarro = false,
+                    Descricao = "Brinquedo não tóxico para a segurança do seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Bolinhas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 11.5,
+                    QtdEmEstoque = 144,
+                    PrecisaDeCarro = false,
+                    Descricao = "Foi produzida em 100% vinil, material não tóxico de alta qualidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+               
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ossinhos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 12,
+                    QtdEmEstoque = 111,
+                    PrecisaDeCarro = false,
+                    Descricao = "Não desgasta os dentes.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ossinhos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 12,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Com alto nível de resistência.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ossinhos",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 13,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "O brinquedo certo para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+                
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ratinho",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 9,
+                    QtdEmEstoque = 112,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ratinho e Bolinhas, melhor distrativo para gatos.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ratinho",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 10.5,
+                    QtdEmEstoque = 132,
+                    PrecisaDeCarro = false,
+                    Descricao = "Material de qualidade e resistente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ratinho",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 11,
+                    QtdEmEstoque = 125,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ideal para aliviar o estresse.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+             
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Arranhadores",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 65.5,
+                    QtdEmEstoque = 90,
+                    PrecisaDeCarro = false,
+                    Descricao = "Feito de papelão, ideal para o seu gato manter-se ocupado e com as unhas igualadas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Arranhadores",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 96.5,
+                    QtdEmEstoque = 100,
+                    PrecisaDeCarro = false,
+                    Descricao = "Possui Bolinhas que aumentam a brincadeira.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Arranhadores",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 99.9,
+                    QtdEmEstoque = 63,
+                    PrecisaDeCarro = false,
+                    Descricao = "Tem o ângulo perfeito para seu pet se acalmar e não arranhar mais seu sofá.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+               
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Balanços",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 25.5,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Fabricado em madeira pinus, plastico,esculpido a fogo, materiais de altissima qualidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Balanços",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 24.99,
+                    QtdEmEstoque = 141,
+                    PrecisaDeCarro = false,
+                    Descricao = "Fabricado em madeira pinus, plastico,esculpido a fogo, materiais de altissima qualidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Balanços",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 26,
+                    QtdEmEstoque = 162,
+                    PrecisaDeCarro = false,
+                    Descricao = "Fabricado em madeira pinus, plastico,esculpido a fogo, materiais de altissima qualidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+         
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Argolas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 15,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ajuda no desgaste natural o bico.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Argolas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 14.5,
+                    QtdEmEstoque = 112,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ajuda no desgaste natural o bico.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Argolas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 15.9,
+                    QtdEmEstoque = 152,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ajuda no desgaste natural o bico.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "@adaspet.com.br").First()
+                });
+              
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Roda de exercício",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 33.5,
+                    QtdEmEstoque = 141,
+                    PrecisaDeCarro = false,
+                    Descricao = "Perfeito para distrair seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Roda de exercício",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 30.5,
+                    QtdEmEstoque = 124,
+                    PrecisaDeCarro = false,
+                    Descricao = "Produto pode haver variação de cores.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Roda de exercício",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Brinquedos,
+                    Preco = 34,
+                    QtdEmEstoque = 147,
+                    PrecisaDeCarro = false,
+                    Descricao = "Acessório para seu pet se exercitar e brincar.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+              
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coleira Tamanho P",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 22.9,
+                    QtdEmEstoque = 147,
+                    PrecisaDeCarro = false,
+                    Descricao = "Nylon com fivelas plásticas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coleira Tamanho P",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 50,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Resistente e confortável.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coleira Tamanho P",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 45,
+                    QtdEmEstoque = 150,
+                    PrecisaDeCarro = false,
+                    Descricao = "Regulável para um ajuste perfeito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+              
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coleira Tamanho M",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 35.5,
+                    QtdEmEstoque = 123,
+                    PrecisaDeCarro = false,
+                    Descricao = "Fecho de segurança anti-enforcamento.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coleira Tamanho M",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 33.9,
+                    QtdEmEstoque = 125,
+                    PrecisaDeCarro = false,
+                    Descricao = "Material de qualidade e costura reforçada.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Coleira Tamanho M",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 30.99,
+                    QtdEmEstoque = 110,
+                    PrecisaDeCarro = false,
+                    Descricao = "Regulável para um ajuste perfeito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+         
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Focinheira Tamanho G",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 60,
+                    QtdEmEstoque = 90,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para você ultilizar pela segurança das pessoas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Focinheira Tamanho G",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 65,
+                    QtdEmEstoque = 52,
+                    PrecisaDeCarro = false,
+                    Descricao = "Para você ultilizar pela segurança das pessoas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "´thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de transporte grande",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 40.9,
+                    QtdEmEstoque = 96,
+                    PrecisaDeCarro = true,
+                    Descricao = "Transporte seu pet com segurança.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de transporte grande",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 55,
+                    QtdEmEstoque = 56,
+                    PrecisaDeCarro = true,
+                    Descricao = "Material resistente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de transporte grande",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 60,
+                    QtdEmEstoque = 33,
+                    PrecisaDeCarro = true,
+                    Descricao = "Transporte seu pet confortalvemente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+               
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de transporte Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 33,
+                    QtdEmEstoque = 55,
+                    PrecisaDeCarro = true,
+                    Descricao = "Material resistente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de transporte Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 34,
+                    QtdEmEstoque = 59,
+                    PrecisaDeCarro = true,
+                    Descricao = "Transporte seu pet confortalvemente.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caixa de transporte Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 35.5,
+                    QtdEmEstoque = 51,
+                    PrecisaDeCarro = true,
+                    Descricao = "Transporte seu pet com segurança.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+             
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caminha Pequena",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 60,
+                    QtdEmEstoque = 63,
+                    PrecisaDeCarro = true,
+                    Descricao = "Não retém umidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caminha Pequena",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 55.5,
+                    QtdEmEstoque = 36,
+                    PrecisaDeCarro = true,
+                    Descricao = "Tecido externo em camurça",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caminha Pequena",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 52.5,
+                    QtdEmEstoque = 54,
+                    PrecisaDeCarro = true,
+                    Descricao = "Pelúcia interna em poliéster.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+               
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caminha Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 52.5,
+                    QtdEmEstoque = 54,
+                    PrecisaDeCarro = true,
+                    Descricao = "Pelúcia interna em poliéster.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caminha Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 55.5,
+                    QtdEmEstoque = 36,
+                    PrecisaDeCarro = true,
+                    Descricao = "Tecido externo em camurça.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Caminha Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 60,
+                    QtdEmEstoque = 63,
+                    PrecisaDeCarro = true,
+                    Descricao = "Não retém umidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+              
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Filtro externo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 55.9,
+                    QtdEmEstoque = 96,
+                    PrecisaDeCarro = false,
+                    Descricao = "Melhorar a qualidade da agua do seu aquário.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Filtro externo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 65,
+                    QtdEmEstoque = 83,
+                    PrecisaDeCarro = false,
+                    Descricao = "Melhorar a qualidade da agua do seu aquário.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Filtro externo",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 70,
+                    QtdEmEstoque = 71,
+                    PrecisaDeCarro = false,
+                    Descricao = "Melhorar a qualidade da agua do seu aquário.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+             
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Substrato",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 2.9,
+                    QtdEmEstoque = 156,
+                    PrecisaDeCarro = false,
+                    Descricao = "Decorar o fundo do seu aquário.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Substrato",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 2.5,
+                    QtdEmEstoque = 123,
+                    PrecisaDeCarro = false,
+                    Descricao = "Decorar o fundo do seu aquário.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Substrato",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 3,
+                    QtdEmEstoque = 145,
+                    PrecisaDeCarro = false,
+                    Descricao = "Decorar o fundo do seu aquário.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kitthypet@adaspet.com.br").First()
+                });
+             
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Gaiola Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 185.5,
+                    QtdEmEstoque = 52,
+                    PrecisaDeCarro = true,
+                    Descricao = "A gaiola perfeita para seu pássaro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Gaiola Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 186,
+                    QtdEmEstoque = 20,
+                    PrecisaDeCarro = true,
+                    Descricao = "A gaiola perfeita para seu pássaro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Gaiola Média",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 190,
+                    QtdEmEstoque = 10,
+                    PrecisaDeCarro = true,
+                    Descricao = "A gaiola perfeita para seu pássaro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+           
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Gaiolas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 119,
+                    QtdEmEstoque = 20,
+                    PrecisaDeCarro = true,
+                    Descricao = "O conforto para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Gaiolas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 100,
+                    QtdEmEstoque = 85,
+                    PrecisaDeCarro = true,
+                    Descricao = "O conforto para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Gaiolas",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Roedores,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 120,
+                    QtdEmEstoque = 30,
+                    PrecisaDeCarro = true,
+                    Descricao = "O conforto para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+            
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Alojamento",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 99.5,
+                    QtdEmEstoque = 20,
+                    PrecisaDeCarro = true,
+                    Descricao = "O espaço adequado para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kitthypets@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Alojamento",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 110,
+                    QtdEmEstoque = 30,
+                    PrecisaDeCarro = true,
+                    Descricao = "O espaço adequado para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Alojamneto",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 120,
+                    QtdEmEstoque = 25,
+                    PrecisaDeCarro = true,
+                    Descricao = "O espaço adequado para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Aquário 3L",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 30.5,
+                    QtdEmEstoque = 56,
+                    PrecisaDeCarro = true,
+                    Descricao = "Vidro de ótima qualidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Aquário 3L",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 33.5,
+                    QtdEmEstoque = 20,
+                    PrecisaDeCarro = true,
+                    Descricao = "Aquário com borda curva.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Aquário 3L",
+                    Marca = "Verde",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 39,
+                    QtdEmEstoque = 15,
+                    PrecisaDeCarro = true,
+                    Descricao = "O vidro não embaça.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
+           
+                //*********************************** MARCA AZUL - LUÍZA ***********************************
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração Filhote 5kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 30,
+                    QtdEmEstoque = 200,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração perfeita para seu cachorro. Natural, ajuda no hálito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração Filhote 5kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 32,
+                    QtdEmEstoque = 198,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração perfeita para seu cachorro. Natural, ajuda no hálito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração grande porte 5kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 32,
+                    QtdEmEstoque = 265,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração gold premiun para seu cachorro viver saudável.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração grande porte 5kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 32.9,
+                    QtdEmEstoque = 275,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração gold premiun para seu cachorro viver saudável.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração grande porte 5kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 31.9,
+                    QtdEmEstoque = 266,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração gold premiun para seu cachorro viver saudável.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração grande porte 5kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 32,
+                    QtdEmEstoque = 265,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração gold premiun para seu cachorro viver saudável.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração gigante porte 10kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 53.90,
+                    QtdEmEstoque = 90,
+                    PrecisaDeCarro = true,
+                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração gigante porte 10kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 51.90,
+                    QtdEmEstoque = 95,
+                    PrecisaDeCarro = true,
+                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração gigante porte 10kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 50.90,
+                    QtdEmEstoque = 90,
+                    PrecisaDeCarro = true,
+                    Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração Filhote 5kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 29.90,
+                    QtdEmEstoque = 200,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração perfeita para seu filhote. Natural, ajuda no hálito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração Filhote 5kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 31.90,
+                    QtdEmEstoque = 206,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração perfeita para seu filhote. Natural, ajuda no hálito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração Filhote 2kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 19.90,
+                    QtdEmEstoque = 123,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração Filhote 2kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 21.90,
+                    QtdEmEstoque = 125,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração Filhote 2kg",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 19.49,
+                    QtdEmEstoque = 136,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Sache Cordeiro",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 1.99,
+                    QtdEmEstoque = 200,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação completa e saborosa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Sache Cordeiro",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.99,
+                    QtdEmEstoque = 208,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação completa e saborosa.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Sache Salmão",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.90,
+                    QtdEmEstoque = 350,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação completa e saborosa para seu gato.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Sache Salmão",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 3.8,
+                    QtdEmEstoque = 306,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação completa e saborosa para seu gato.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Sache Salmão",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 3.69,
+                    QtdEmEstoque = 350,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação completa e saborosa para seu gato.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Mistura de sementes Calopsitas 200g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 22.90,
+                    QtdEmEstoque = 320,
+                    PrecisaDeCarro = false,
+                    Descricao = "Mistura de sementes completa para sua calopsita.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Mistura de sementes Calopsitas 200g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 21.90,
+                    QtdEmEstoque = 325,
+                    PrecisaDeCarro = false,
+                    Descricao = "Mistura de sementes completa para sua calopsita.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Mistura de sementes Calopsitas 200g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 23.5,
+                    QtdEmEstoque = 306,
+                    PrecisaDeCarro = false,
+                    Descricao = "Mistura de sementes completa para sua calopsita.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Mistura de sementes Periquitos 200g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 15.90,
+                    QtdEmEstoque = 450,
+                    PrecisaDeCarro = false,
+                    Descricao = "Mistura de sementes completa para seu periquito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Mistura de sementes Periquitos 200g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 16.90,
+                    QtdEmEstoque = 455,
+                    PrecisaDeCarro = false,
+                    Descricao = "Mistura de sementes completa para seu periquito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Mistura de sementes Periquitos 200g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 10.30,
+                    QtdEmEstoque = 450,
+                    PrecisaDeCarro = false,
+                    Descricao = "Mistura de sementes completa para seu periquito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Mistura de sementes Periquitos 200g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 12.85,
+                    QtdEmEstoque = 450,
+                    PrecisaDeCarro = false,
+                    Descricao = "Mistura de sementes completa para seu periquito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Mistura de sementes Periquitos 200g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Passaro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 13.90,
+                    QtdEmEstoque = 650,
+                    PrecisaDeCarro = false,
+                    Descricao = "Mistura de sementes completa para seu periquito.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
+
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 14.90,
+                    QtdEmEstoque = 123,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para jabutis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
 
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 12.50,
-                QtdEmEstoque = 115,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para jabutis.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 12.50,
+                    QtdEmEstoque = 115,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para jabutis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 17.90,
-                QtdEmEstoque = 321,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para jabutis.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 17.90,
+                    QtdEmEstoque = 321,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para jabutis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 11.90,
-                QtdEmEstoque = 98,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para jabutis.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 11.90,
+                    QtdEmEstoque = 98,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para jabutis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 9.99,
-                QtdEmEstoque = 51,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para jabutis.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 9.99,
+                    QtdEmEstoque = 51,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para jabutis.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 500g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 25.99,
-                QtdEmEstoque = 203,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para tartarugas.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 500g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 25.99,
+                    QtdEmEstoque = 203,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para tartarugas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 500g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 26.90,
-                QtdEmEstoque = 210,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para tartarugas.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 500g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 26.90,
+                    QtdEmEstoque = 210,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para tartarugas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 500g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 20.50,
-                QtdEmEstoque = 183,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para tartarugas",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 500g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 20.50,
+                    QtdEmEstoque = 183,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para tartarugas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 500g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 21.23,
-                QtdEmEstoque = 213,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para tartarugas.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 500g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 21.23,
+                    QtdEmEstoque = 213,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para tartarugas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 500g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Repteis,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 21.99,
-                QtdEmEstoque = 244,
-                PrecisaDeCarro = false,
-                Descricao = "Ração granulada para tartarugas.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 500g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Repteis,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 21.99,
+                    QtdEmEstoque = 244,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração granulada para tartarugas.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Coelho,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 20.90,
-                QtdEmEstoque = 300,
-                PrecisaDeCarro = false,
-                Descricao = "Ração completa e equilibrada para seu coelho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 20.90,
+                    QtdEmEstoque = 300,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração completa e equilibrada para seu coelho.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Coelho,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 23.95,
-                QtdEmEstoque = 310,
-                PrecisaDeCarro = false,
-                Descricao = "Ração completa e equilibrada para seu coelho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 23.95,
+                    QtdEmEstoque = 310,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração completa e equilibrada para seu coelho.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Coelho,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 18.99,
-                QtdEmEstoque = 233,
-                PrecisaDeCarro = false,
-                Descricao = "Ração completa e equilibrada para seu coelho",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 18.99,
+                    QtdEmEstoque = 233,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração completa e equilibrada para seu coelho.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Coelho,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 25.90,
-                QtdEmEstoque = 323,
-                PrecisaDeCarro = false,
-                Descricao = "Ração completa e equilibrada para seu coelho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 25.90,
+                    QtdEmEstoque = 323,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração completa e equilibrada para seu coelho.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração extrusada 250g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Coelho,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 25.50,
-                QtdEmEstoque = 321,
-                PrecisaDeCarro = false,
-                Descricao = "Ração completa e equilibrada para seu coelho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração extrusada 250g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Coelho,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 25.50,
+                    QtdEmEstoque = 321,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ração completa e equilibrada para seu coelho.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração granulada 50g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Peixe,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 14.90,
-                QtdEmEstoque = 321,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação para o dia a dia do seu peixe.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 14.90,
+                    QtdEmEstoque = 321,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação para o dia a dia do seu peixe.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração granulada 50g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Peixe,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 14.90,
-                QtdEmEstoque = 321,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação para o dia a dia do seu peixe.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 14.90,
+                    QtdEmEstoque = 321,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação para o dia a dia do seu peixe.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração granulada 50g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Peixe,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 14.90,
-                QtdEmEstoque = 321,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação para o dia a dia do seu peixe.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 14.90,
+                    QtdEmEstoque = 321,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação para o dia a dia do seu peixe.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração granulada 50g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Peixe,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 11.90,
-                QtdEmEstoque = 321,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação para o dia a dia do seu peixe.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 11.90,
+                    QtdEmEstoque = 321,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação para o dia a dia do seu peixe.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Ração granulada 50g",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Peixe,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 12.90,
-                QtdEmEstoque = 333,
-                PrecisaDeCarro = false,
-                Descricao = "Alimentação para o dia a dia do seu peixe.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Ração granulada 50g",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 12.90,
+                    QtdEmEstoque = 333,
+                    PrecisaDeCarro = false,
+                    Descricao = "Alimentação para o dia a dia do seu peixe.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 3.90,
-                QtdEmEstoque = 333,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu cãozinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 3.90,
+                    QtdEmEstoque = 333,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu cachorro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 2.90,
-                QtdEmEstoque = 213,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu cãozinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.90,
+                    QtdEmEstoque = 213,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu cachorro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
 
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 4.90,
-                QtdEmEstoque = 343,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu cãozinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 4.90,
+                    QtdEmEstoque = 343,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu cachorro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 2.90,
-                QtdEmEstoque = 333,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu cãozinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2.90,
+                    QtdEmEstoque = 333,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu cachorro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Cachorro,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 3.90,
-                QtdEmEstoque = 333,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu cãozinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Cachorro,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 3.90,
+                    QtdEmEstoque = 333,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu cachorro.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 4,
-                QtdEmEstoque = 369,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu gatinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 4,
+                    QtdEmEstoque = 369,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 5.90,
-                QtdEmEstoque = 369,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu gatinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 5.90,
+                    QtdEmEstoque = 369,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 1.99,
-                QtdEmEstoque = 123,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu gatinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 1.99,
+                    QtdEmEstoque = 123,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 5,
-                QtdEmEstoque = 369,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu gatinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 5,
+                    QtdEmEstoque = 369,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
 
-            _context.Produto.Add(new Produto()
-            {
-                Nome = "Petisco",
-                Marca = "Azul",
-                TipoDeAnimal = ProdutoAnimais.Gato,
-                Categoria = ProdutoCategorias.Alimentacao,
-                Preco = 2,
-                QtdEmEstoque = 369,
-                PrecisaDeCarro = false,
-                Descricao = "Petisco delicioso para seu gatinho.",
-                ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-            }); ;
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Petisco",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Gato,
+                    Categoria = ProdutoCategorias.Alimentacao,
+                    Preco = 2,
+                    QtdEmEstoque = 369,
+                    PrecisaDeCarro = false,
+                    Descricao = "Petisco delicioso para seu pet.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
+                }); ;
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5884,11 +8307,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 64.5,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu cãozinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5899,12 +8320,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 63.90,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu cãozinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5915,11 +8333,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 62.99,
                     QtdEmEstoque = 115,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu cãozinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5930,11 +8346,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 66.5,
                     QtdEmEstoque = 134,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu cãozinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5945,11 +8359,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 64.5,
                     QtdEmEstoque = 129,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu cãozinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5960,11 +8372,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 64.5,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu gatinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5975,11 +8385,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 63.5,
                     QtdEmEstoque = 135,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu gatinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -5990,11 +8398,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 62.99,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu gatinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu pet",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6005,11 +8411,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 65.5,
                     QtdEmEstoque = 135,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu gatinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6020,162 +8424,139 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 64.5,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Atipulgas ou carrapatos perfeito para seu gatinho",
+                    Descricao = "Antipulgas ou carrapatos perfeito para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 12.9,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu caõzinho ",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 13.9,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu caõzinho ",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 11.9,
                     QtdEmEstoque = 148,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu caõzinho ",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 12.9,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu caõzinho ",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 12.9,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu caõzinho ",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 12.9,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu gatinho",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 13.9,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu gatinho",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 13.9,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu gatinho",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 11.9,
                     QtdEmEstoque = 95,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu gatinho",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vermifugo",
+                    Nome = "Vermífugo",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 14.9,
                     QtdEmEstoque = 128,
                     PrecisaDeCarro = false,
-                    Descricao = "Remédio perfeito contra vermes para seu gatinho",
+                    Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6186,11 +8567,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.9,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6201,11 +8580,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 13.9,
                     QtdEmEstoque = 211,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6216,11 +8593,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12,
                     QtdEmEstoque = 214,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6231,11 +8606,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 11.9,
                     QtdEmEstoque = 196,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6246,12 +8619,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.9,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Antitóxico",
@@ -6261,13 +8632,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.9,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Antitóxico",
@@ -6277,11 +8645,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.9,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6292,11 +8658,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10.9,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6307,11 +8671,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 13.9,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6322,11 +8684,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 11.9,
                     QtdEmEstoque = 205,
                     PrecisaDeCarro = false,
-                    Descricao = "Remedio que combate a intoxicação do seu bichinho",
+                    Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6337,12 +8697,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 105,
                     QtdEmEstoque = 147,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6353,11 +8710,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 109.99,
                     QtdEmEstoque = 157,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6368,11 +8723,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 107.90,
                     QtdEmEstoque = 127,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6383,11 +8736,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 105,
                     QtdEmEstoque = 147,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6398,12 +8749,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 111,
                     QtdEmEstoque = 183,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6414,11 +8762,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 105,
                     QtdEmEstoque = 147,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6429,11 +8775,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 109.99,
                     QtdEmEstoque = 147,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6444,11 +8788,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 107.90,
                     QtdEmEstoque = 167,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6459,11 +8801,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 105,
                     QtdEmEstoque = 147,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6474,12 +8814,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 103,
                     QtdEmEstoque = 140,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6490,12 +8827,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 103,
                     QtdEmEstoque = 140,
                     PrecisaDeCarro = false,
-                    Descricao = "Previni a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas",
+                    Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6506,11 +8840,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6524,8 +8856,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Pomada para ajudar na cicatrização do seu pet",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6536,11 +8866,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6551,11 +8879,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6566,12 +8892,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 34,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pomada",
@@ -6581,12 +8905,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pomada",
@@ -6596,11 +8918,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6611,11 +8931,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 30,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6626,11 +8944,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6641,12 +8957,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 34,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pomada",
@@ -6656,12 +8970,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pomada",
@@ -6671,11 +8983,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6686,11 +8996,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 39,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6701,11 +9009,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6716,12 +9022,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6732,11 +9035,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6747,11 +9048,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6762,11 +9061,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 34,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6777,11 +9074,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6792,11 +9087,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -6807,12 +9100,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pomada",
@@ -6822,12 +9113,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pomada",
@@ -6837,12 +9126,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pomada",
@@ -6852,12 +9139,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pomada",
@@ -6867,391 +9152,334 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Pomada para ajudar na cicatrização do seu pet",
+                    Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                //////////////////////////////////////////////////////////////////////////////
-                //////////////////////////////////////////////////////////////////////////////
-                //////////////////////////////////////////////////////////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 25.2,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 34,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 30,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 34,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 30,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 34,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "vitaminas e suplimentos",
+                    Nome = "vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 39,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "vitaminas e suplimentos",
+                    Nome = "vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Coelho,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 33,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 35,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 34,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 36,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 38,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Vitaminas e suplimentos",
+                    Nome = "Vitaminas e Suplementos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Farmacia,
                     Preco = 37,
                     QtdEmEstoque = 106,
                     PrecisaDeCarro = false,
-                    Descricao = "Vitamina e suplimentos para seu pet ficar forte",
+                    Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7262,12 +9490,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Tapete higienico para seu amigo pet",
+                    Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tapete higiênico",
@@ -7277,12 +9503,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Tapete higienico para seu amigo pet",
+                    Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tapete higiênico",
@@ -7292,12 +9516,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Tapete higienico para seu amigo pet",
+                    Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tapete higiênico",
@@ -7307,12 +9529,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Tapete higienico para seu amigo pet",
+                    Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tapete higiênico",
@@ -7322,15 +9542,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Tapete higienico para seu amigo pet",
+                    Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                ////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7341,11 +9555,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7356,11 +9568,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7371,11 +9581,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 46,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7386,11 +9594,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7401,11 +9607,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7416,12 +9620,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 69.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Banheiro para seu cãozinho",
+                    Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Banheiros para cacochorros",
@@ -7431,12 +9633,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 69.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Banheiro para seu cãozinho",
+                    Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Banheiros para cacochorros",
@@ -7446,12 +9646,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 69.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Banheiro para seu cãozinho",
+                    Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Banheiros para cacochorros",
@@ -7461,12 +9659,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 69.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Banheiro para seu cãozinho",
+                    Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Banheiros para cacochorros",
@@ -7476,16 +9672,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 69.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Banheiro para seu cãozinho",
+                    Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                //////////////////////////
-                //////////////////////////
-                //////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
+ 
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Coletor de fezes",
@@ -7495,12 +9685,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cãozinho",
+                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Coletor de fezes",
@@ -7510,12 +9698,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cãozinho",
+                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Coletor de fezes",
@@ -7525,12 +9711,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cãozinho",
+                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Coletor de fezes",
@@ -7540,12 +9724,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cãozinho",
+                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Coletor de fezes",
@@ -7555,14 +9737,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cãozinho",
+                    Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                ///////////////////
-                ///////////////////
-                ///////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7573,11 +9750,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7588,11 +9763,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7603,11 +9776,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 46,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7618,11 +9789,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7633,12 +9802,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 56,
                     PrecisaDeCarro = false,
-                    Descricao = "Shampoo para seu bichinho ficar cheirosinho",
+                    Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Cortador de unhas",
@@ -7648,12 +9815,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Cortador de unhas",
@@ -7663,11 +9828,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7678,11 +9841,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7693,11 +9854,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35.90,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7708,15 +9867,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 34,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                //////////////////////
-                //////////////////////
-                //////////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
+ 
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Cortador de unhas",
@@ -7726,12 +9880,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Cortador de unhas",
@@ -7741,11 +9893,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7756,11 +9906,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7771,11 +9919,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35.90,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7786,319 +9932,269 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 34,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Cortador de unhas para seu pet ficar confortavel",
+                    Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 17.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 17.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 16.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 17.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 15.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                ////////////////////////
-                ////////////////////////
-                ////////////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 17.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 17.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 16.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 17.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Saonete",
+                    Nome = "Sabonete",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 15.50,
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
-                    Descricao = "Sabonete para seu animalzinho ficar cheirosinho",
+                    Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                ////////////////////////
-                ////////////////////////
-                ////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Escova raqueira",
+                    Nome = "Escova Rasquiadeira",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 31.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Escova para o pelo do seu bichinho ficar estiloso",
+                    Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8109,11 +10205,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Caixinha de areia fofa para seu gatinho",
+                    Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8124,11 +10218,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Caixinha de areia fofa para seu gatinho",
+                    Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8139,11 +10231,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.50,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Caixinha de areia fofa para seu gatinho",
+                    Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8154,11 +10244,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 29.99,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Caixinha de areia fofa para seu gatinho",
+                    Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8169,87 +10257,75 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 28.90,
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
-                    Descricao = "Caixinha de areia fofa para seu gatinho",
+                    Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Areia higienica",
+                    Nome = "Areia higiênica",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 29,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Areia para seu gatinho fazer as necessidades",
+                    Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Areia higienica",
+                    Nome = "Areia higiênica",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 29,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Areia para seu gatinho fazer as necessidades",
+                    Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Areia higienica",
+                    Nome = "Areia higiênica",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 22,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Areia para seu gatinho fazer as necessidades",
+                    Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Areia higienica",
+                    Nome = "Areia higiênica",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 30,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Areia para seu gatinho fazer as necessidades",
+                    Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Areia higienica",
+                    Nome = "Areia higiênica",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 25,
                     QtdEmEstoque = 110,
                     PrecisaDeCarro = false,
-                    Descricao = "Areia para seu gatinho fazer as necessidades",
+                    Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pazinha coletora",
@@ -8259,12 +10335,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 4.5,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pazinha para coletar as fezes do seu bichano",
+                    Descricao = "Pazinha para coletar as fezes do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pazinha coletora",
@@ -8274,11 +10348,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 4.5,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pazinha para coletar as fezes do seu bichano",
+                    Descricao = "Pazinha para coletar as fezes do seu pet",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8289,11 +10361,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 2.5,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pazinha para coletar as fezes do seu bichano",
+                    Descricao = "Pazinha para coletar as fezes do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8304,11 +10374,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 3.99,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pazinha para coletar as fezes do seu bichano",
+                    Descricao = "Pazinha para coletar as fezes do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8319,87 +10387,75 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pazinha para coletar as fezes do seu bichano",
+                    Descricao = "Pazinha para coletar as fezes do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Pó de banho",
+                    Nome = "Pó de Banho",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 25.5,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pó de banho para seu bichinho ficar seguro e cheiroso",
+                    Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Pó de banho",
+                    Nome = "Pó de Banho",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 25.5,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pó de banho para seu bichinho ficar seguro e cheiroso",
+                    Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Pó de banho",
+                    Nome = "Pó de Banho",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 25.5,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pó de banho para seu bichinho ficar seguro e cheiroso",
+                    Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Pó de banho",
+                    Nome = "Pó de Banho",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 23.5,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pó de banho para seu bichinho ficar seguro e cheiroso",
+                    Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Pó de banho",
+                    Nome = "Pó de Banho",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Roedores,
                     Categoria = ProdutoCategorias.Higiene,
                     Preco = 25,
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
-                    Descricao = "Pó de banho para seu bichinho ficar seguro e cheiroso",
+                    Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Bolinhas",
@@ -8409,12 +10465,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.5,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Bolinhas para seu cãozinho se divertir",
+                    Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Bolinhas",
@@ -8424,11 +10478,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.5,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Bolinhas para seu cãozinho se divertir",
+                    Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8439,11 +10491,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 11.99,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Bolinhas para seu cãozinho se divertir",
+                    Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8454,11 +10504,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.5,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Bolinhas para seu cãozinho se divertir",
+                    Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8469,87 +10517,75 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 13,
                     QtdEmEstoque = 123,
                     PrecisaDeCarro = false,
-                    Descricao = "Bolinhas para seu cãozinho se divertir",
+                    Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 12,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "ossinho para seu cãozinho se divertir e relaxar",
+                    Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 13,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "ossinho para seu cãozinho se divertir e relaxar",
+                    Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 12.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "ossinho para seu cãozinho se divertir e relaxar",
+                    Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 12,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "ossinho para seu cãozinho se divertir e relaxar",
+                    Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Ossinho",
+                    Nome = "Ossinhos",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 12,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "ossinho para seu cãozinho se divertir e relaxar",
+                    Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ratinho",
@@ -8559,12 +10595,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5.6,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Ratinho para seu gatinho se divertir",
+                    Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ratinho",
@@ -8574,11 +10608,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5.6,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Ratinho para seu gatinho se divertir",
+                    Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8589,11 +10621,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Ratinho para seu gatinho se divertir",
+                    Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8604,11 +10634,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5.6,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Ratinho para seu gatinho se divertir",
+                    Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8619,162 +10647,140 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 5.99,
                     QtdEmEstoque = 158,
                     PrecisaDeCarro = false,
-                    Descricao = "Ratinho para seu gatinho se divertir",
+                    Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Varinha",
+                    Nome = "Varinhas",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 16.90,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Varinha para seu gatinho se divertir",
+                    Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Varinha",
+                    Nome = "Varinhas",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 16.90,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Varinha para seu gatinho se divertir",
+                    Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Varinha",
+                    Nome = "Varinhas",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 16.90,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Varinha para seu gatinho se divertir",
+                    Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Varinha",
+                    Nome = "Varinhas",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 17.50,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Varinha para seu gatinho se divertir",
+                    Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Varinha",
+                    Nome = "Varinhas",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 16.99,
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
-                    Descricao = "Varinha para seu gatinho se divertir",
+                    Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhador",
+                    Nome = "Arranhadores",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 69.50,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Arranhador para seu gatinho se divertir e relaxar",
+                    Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhador",
+                    Nome = "Arranhadores",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 65.50,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Arranhador para seu gatinho se divertir e relaxar",
+                    Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhador",
+                    Nome = "Arranhadores",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 65.50,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Arranhador para seu gatinho se divertir e relaxar",
+                    Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhador",
+                    Nome = "Arranhadores",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 66.50,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Arranhador para seu gatinho se divertir e relaxar",
+                    Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Arranhador",
+                    Nome = "Arranhadores",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 65,
                     QtdEmEstoque = 96,
                     PrecisaDeCarro = false,
-                    Descricao = "Arranhador para seu gatinho se divertir e relaxar",
+                    Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8784,12 +10790,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8799,12 +10803,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8814,12 +10816,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
+  
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8829,12 +10829,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8844,17 +10842,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                ////////////////////
-                ////////////////////
-                ////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8864,12 +10855,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8879,12 +10868,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8894,12 +10881,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8909,12 +10894,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pelúcia",
@@ -8924,12 +10907,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 45.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Pelúcia fofa para seu animalzinho",
+                    Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Mordedor",
@@ -8939,12 +10920,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.9,
                     QtdEmEstoque = 163,
                     PrecisaDeCarro = false,
-                    Descricao = "Mordedor para seu cãozinho relaxar",
+                    Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Mordedor",
@@ -8954,12 +10933,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.9,
                     QtdEmEstoque = 163,
                     PrecisaDeCarro = false,
-                    Descricao = "Mordedor para seu cãozinho relaxar",
+                    Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Mordedor",
@@ -8969,12 +10946,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.9,
                     QtdEmEstoque = 163,
                     PrecisaDeCarro = false,
-                    Descricao = "Mordedor para seu cãozinho relaxar",
+                    Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Mordedor",
@@ -8984,12 +10959,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.9,
                     QtdEmEstoque = 163,
                     PrecisaDeCarro = false,
-                    Descricao = "Mordedor para seu cãozinho relaxar",
+                    Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Mordedor",
@@ -8999,161 +10972,139 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.9,
                     QtdEmEstoque = 163,
                     PrecisaDeCarro = false,
-                    Descricao = "Mordedor para seu cãozinho relaxar",
+                    Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Balanço",
+                    Nome = "Balanços",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Balanço para seu pássaro brincar",
+                    Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Balanço",
+                    Nome = "Balanços",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Balanço para seu pássaro brincar",
+                    Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Balanço",
+                    Nome = "Balanços",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Balanço para seu pássaro brincar",
+                    Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Balanço",
+                    Nome = "Balanços",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Balanço para seu pássaro brincar",
+                    Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Balanço",
+                    Nome = "Balanços",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Balanço para seu pássaro brincar",
+                    Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapézio",
+                    Nome = "Trapézios",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Trapézio para seu pássaro brincar",
+                    Descricao = "Trapézios para seu pássaro brincar",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapézio",
+                    Nome = "Trapézios",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 26.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Trapézio para seu pássaro brincar",
+                    Descricao = "Trapézios para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapézio",
+                    Nome = "Trapézios",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 23.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Trapézio para seu pássaro brincar",
+                    Descricao = "Trapézios para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapézio",
+                    Nome = "Trapézios",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Trapézio para seu pássaro brincar",
+                    Descricao = "Trapézios para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Trapézio",
+                    Nome = "Trapézios",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Brinquedos,
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Trapézio para seu pássaro brincar",
+                    Descricao = "Trapézios para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9164,12 +11115,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Escada para seu pássaro brincar",
+                    Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Escada",
@@ -9179,11 +11128,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Escada para seu pássaro brincar",
+                    Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9194,12 +11141,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Escada para seu pássaro brincar",
+                    Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Escada",
@@ -9209,12 +11154,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Escada para seu pássaro brincar",
+                    Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Escada",
@@ -9224,12 +11167,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26.5,
                     QtdEmEstoque = 63,
                     PrecisaDeCarro = false,
-                    Descricao = "Escada para seu pássaro brincar",
+                    Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9240,12 +11180,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Argolas para seu pássaro brincar",
+                    Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Argolas",
@@ -9255,12 +11193,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Argolas para seu pássaro brincar",
+                    Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Argolas",
@@ -9270,12 +11206,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Argolas para seu pássaro brincar",
+                    Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Argolas",
@@ -9285,12 +11219,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Argolas para seu pássaro brincar",
+                    Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Argolas",
@@ -9300,11 +11232,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "Argolas para seu pássaro brincar",
+                    Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9315,11 +11245,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "cabana para seu pássaro brincar",
+                    Descricao = "Cabana para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9330,11 +11258,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 26,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "cabana para seu pássaro brincar",
+                    Descricao = "Cabana para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9345,12 +11271,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 24.99,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "cabana para seu pássaro brincar",
+                    Descricao = "Cabana para seu pássaro brincar",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Cabana",
@@ -9360,12 +11284,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "cabana para seu pássaro brincar",
+                    Descricao = "Cabana para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Cabana",
@@ -9375,11 +11297,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.5,
                     QtdEmEstoque = 65,
                     PrecisaDeCarro = false,
-                    Descricao = "cabana para seu pássaro brincar",
+                    Descricao = "Cabana para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9390,11 +11310,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.5,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Espiral para seu pássaro brincar",
+                    Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9405,11 +11323,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Espiral para seu pássaro brincar",
+                    Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9420,11 +11336,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 22.99,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Espiral para seu pássaro brincar",
+                    Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9435,11 +11349,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.5,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Espiral para seu pássaro brincar",
+                    Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9450,13 +11362,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25.5,
                     QtdEmEstoque = 45,
                     PrecisaDeCarro = false,
-                    Descricao = "Espiral para seu pássaro brincar",
+                    Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roda de exercício",
@@ -9466,12 +11375,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roda para seu roedor se exercitar e se manter saudavel e em forma",
+                    Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roda de exercício",
@@ -9481,12 +11388,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roda para seu roedor se exercitar e se manter saudavel e em forma",
+                    Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roda de exercício",
@@ -9496,12 +11401,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roda para seu roedor se exercitar e se manter saudavel e em forma",
+                    Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roda de exercício",
@@ -9511,12 +11414,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roda para seu roedor se exercitar e se manter saudavel e em forma",
+                    Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roda de exercício",
@@ -9526,12 +11427,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 33,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roda para seu roedor se exercitar e se manter saudavel e em forma",
+                    Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9541,12 +11440,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu roedorzinho relaxar",
+                    Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9556,12 +11453,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu roedorzinho relaxar",
+                    Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9571,12 +11466,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu roedorzinho relaxar",
+                    Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9586,12 +11479,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu roedorzinho relaxar",
+                    Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9601,12 +11492,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu roedorzinho relaxar",
+                    Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9616,12 +11505,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu coelhiho relaxar",
+                    Descricao = "Roedor para seu coelhiho relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9631,12 +11518,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu coelhiho relaxar",
+                    Descricao = "Roedor para seu coelhiho relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9646,11 +11531,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu coelhiho relaxar",
+                    Descricao = "Roedor para seu coelhiho relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9665,8 +11548,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Roedor",
@@ -9676,12 +11557,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Roedo para seu coelhiho relaxar",
+                    Descricao = "Roedor para seu coelhiho relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9691,12 +11570,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet ",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9706,12 +11583,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9721,12 +11596,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9736,12 +11609,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9751,16 +11622,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //////////////////////////////
-                //////////////////////////////
-                //////////////////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9770,12 +11635,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9785,12 +11648,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9800,11 +11661,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9815,11 +11674,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 8,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9830,15 +11687,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 9.99,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                ////////////////////////////////
-                ////////////////////////////////
-                ////////////////////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9849,12 +11700,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9864,12 +11713,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9879,12 +11726,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9894,12 +11739,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pedra mineral",
@@ -9909,12 +11752,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 7.5,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Pedrinhga mineral para seu bichinho ",
+                    Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9925,12 +11765,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu roedor se divertir",
+                    Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel",
@@ -9940,12 +11778,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu roedor se divertir",
+                    Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel",
@@ -9955,12 +11791,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu roedor se divertir",
+                    Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel",
@@ -9970,12 +11804,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu roedor se divertir",
+                    Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel",
@@ -9985,15 +11817,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu roedor se divertir",
+                    Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                ////////////////////
-                ////////////////////
-                ////////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10004,12 +11830,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu coelho se divertir",
+                    Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel",
@@ -10019,12 +11843,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu coelho se divertir",
+                    Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel",
@@ -10034,12 +11856,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu coelho se divertir",
+                    Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel",
@@ -10049,12 +11869,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu coelho se divertir",
+                    Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Túnel",
@@ -10064,11 +11882,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Túnel para seu coelho se divertir",
+                    Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10079,11 +11895,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Tubo para seu roedor se divertir",
+                    Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10094,12 +11908,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Tubo para seu roedor se divertir",
+                    Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigiopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tubo",
@@ -10109,12 +11921,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Tubo para seu roedor se divertir",
+                    Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tubo",
@@ -10124,12 +11934,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Tubo para seu roedor se divertir",
+                    Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tubo",
@@ -10139,1012 +11947,855 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
-                    Descricao = "Tubo para seu roedor se divertir",
+                    Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                ////
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
+    
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                ///////////////////////////////////////
-                ///////////////////////////////////////
-                ///////////////////////////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
+ 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 32.40,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 32,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                ///////////////////////
-                ///////////////////////
-                ///////////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho G",
+                    Nome = "Coleira Tamanho G",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 50.50,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho G",
+                    Nome = "Coleira Tamanho G",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 55,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho G",
+                    Nome = "Coleira Tamanho G",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 49.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho G",
+                    Nome = "Coleira Tamanho G",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 50.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho G",
+                    Nome = "Coleira Tamanho G",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 50.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para passear com seu cãozoinho",
+                    Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 19.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho P",
+                    Nome = "Coleira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                /////////////////
-                /////////////////
-                /////////////////
-                ///
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 19.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
+ 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Coleira tamanho M",
+                    Nome = "Coleira Tamanho M",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Coleira para seu gatinho ficar estiloso",
+                    Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Focinheira tamanho P",
+                    Nome = "Focinheira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 23.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Focinheira para manter as pessoas seguras do seu diabinho",
+                    Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Focinheira tamanho P",
+                    Nome = "Focinheira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 23.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Focinheira para manter as pessoas seguras do seu diabinho",
+                    Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Focinheira tamanho P",
+                    Nome = "Focinheira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 25.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Focinheira para manter as pessoas seguras do seu diabinho",
+                    Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Focinheira tamanho P",
+                    Nome = "Focinheira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 23.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Focinheira para manter as pessoas seguras do seu diabinho",
+                    Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Focinheira tamanho P",
+                    Nome = "Focinheira Tamanho P",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 23.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Focinheira para manter as pessoas seguras do seu diabinho",
+                    Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 21.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 21.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 22.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 21.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 20.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                /////////////////////////////////////////////
-                /////////////////////////////////////////////
-                /////////////////////////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 21.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 21.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 49.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 45.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 46.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                /////////////////////////////
-                /////////////////////////////
-                /////////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 21.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 21.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 18.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 19.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora pequena",
+                    Nome = "Caixa Transportadora Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 20.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                /////////////////////////////////////////////
-                /////////////////////////////////////////////
-                /////////////////////////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
+ 
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 21.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 31.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 29.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Caixa transportadora média",
+                    Nome = "Caixa Transportadora Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 32.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para você passear com mais praticidade com seu bichinho",
+                    Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 30,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama média",
+                    Nome = "Cama Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 45,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama média",
+                    Nome = "Cama Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 45,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama média",
+                    Nome = "Cama Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 45,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama média",
+                    Nome = "Cama Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 44.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "cama média",
+                    Nome = "Cama Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Cachorro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 45.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 39.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 39.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 39.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 39.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Cama pequena",
+                    Nome = "Cama Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Gato,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 40,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para seu bichinho descansar confortável",
+                    Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro interno",
@@ -11154,12 +12805,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 49.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro interno",
@@ -11169,12 +12818,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 49.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro interno",
@@ -11184,12 +12831,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 49.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro interno",
@@ -11199,12 +12844,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 49.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro interno",
@@ -11214,12 +12857,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 49.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro externo",
@@ -11229,12 +12870,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 59.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro externo",
@@ -11244,12 +12883,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 59.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro externo",
@@ -11259,12 +12896,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 59.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro externo",
@@ -11274,12 +12909,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 59.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capiaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Filtro externo",
@@ -11289,11 +12922,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 59.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Melhora a qualidade da água de seu áquario",
+                    Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11304,12 +12935,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 2.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Substrato para decorar o fundo do seu áquario",
+                    Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Subastrato",
@@ -11319,12 +12948,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 2.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Substrato para decorar o fundo do seu áquario",
+                    Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Subastrato",
@@ -11334,12 +12961,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 2.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Substrato para decorar o fundo do seu áquario",
+                    Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Subastrato",
@@ -11349,12 +12974,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 2.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Substrato para decorar o fundo do seu áquario",
+                    Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Subastrato",
@@ -11364,299 +12987,257 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 2.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Substrato para decorar o fundo do seu áquario",
+                    Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 500ml",
+                    Nome = "Aquário 500ml",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 14,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 500ml",
+                    Nome = "Aquário 500ml",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 14,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 500ml",
+                    Nome = "Aquário 500ml",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 14,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 500ml",
+                    Nome = "Aquário 500ml",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 14,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 500ml",
+                    Nome = "Aquário 500ml",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 14,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 1l",
+                    Nome = "Aquário 1L",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 24.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 1l",
+                    Nome = "Aquário 1L",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 24.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 1l",
+                    Nome = "Aquário 1L",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 24.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 1l",
+                    Nome = "Aquário 1L",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 24.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Áquario 1l",
+                    Nome = "Aquário 1L",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 24.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = true,
-                    Descricao = "Áquario para seu bichinho aquático",
+                    Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Lampada para áquario ",
+                    Nome = "Lâmpada para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 64.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para lampadas aquáticas",
+                    Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Lampada para áquario ",
+                    Nome = "Lâmpada para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 64.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para lampadas aquáticas",
+                    Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Lampada para áquario ",
+                    Nome = "Lâmpada para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 64.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para lampadas aquáticas",
+                    Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Lampada para áquario ",
+                    Nome = "Lâmpada para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 64.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para lampadas aquáticas",
+                    Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Lampada para áquario ",
+                    Nome = "Lâmpada para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 64.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para lampadas aquáticas",
+                    Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Termostato para áquario ",
+                    Nome = "Termostato para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 56,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Aquecer seu áquario e manter uma temperatura constante",
+                    Descricao = "Aquecer seu Aquário e manter uma temperatura constante.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Termostato para áquario ",
+                    Nome = "Termostato para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 56,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Aquecer seu áquario e manter uma temperatura constante",
+                    Descricao = "Aquecer seu Aquário e manter uma temperatura constante.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Termostato para áquario ",
+                    Nome = "Termostato para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 56,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Aquecer seu áquario e manter uma temperatura constante",
+                    Descricao = "Aquecer seu Aquário e manter uma temperatura constante.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Termostato para áquario ",
+                    Nome = "Termostato para Aquário ",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Peixe,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 56,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Aquecer seu áquario e manter uma temperatura constante",
+                    Descricao = "Aquecer seu Aquário e manter uma temperatura constante.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Rocha decorativa",
@@ -11666,12 +13247,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Rocha decorativa",
@@ -11681,12 +13260,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Rocha decorativa",
@@ -11696,12 +13273,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Rocha decorativa",
@@ -11711,10 +13286,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11725,16 +13299,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                ////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////
-                ////////////////////////////////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11745,12 +13312,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Rocha decorativa",
@@ -11760,12 +13325,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Rocha decorativa",
@@ -11775,12 +13338,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Rocha decorativa",
@@ -11790,10 +13351,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11804,11 +13364,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu áquario",
+                    Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11819,11 +13377,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11834,11 +13390,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11849,11 +13403,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 34.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11864,11 +13416,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11879,17 +13429,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                ///////////////////////////////////////////////////////////////
-                ///////////////////////////////////////////////////////////////
-                ///////////////////////////////////////////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tronco decorativa",
@@ -11899,12 +13442,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Tronco decorativa",
@@ -11914,11 +13455,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11929,11 +13468,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 34.99,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11944,11 +13481,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 35,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11959,11 +13494,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 36.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11974,12 +13507,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Planta decorativa",
@@ -11989,12 +13520,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Planta decorativa",
@@ -12004,12 +13533,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Planta decorativa",
@@ -12019,12 +13546,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Planta decorativa",
@@ -12034,12 +13559,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.90,
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
-                    Descricao = "Para decorar seu ambiente",
+                    Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12050,12 +13572,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sinfão manual",
@@ -12065,12 +13585,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sinfão manual",
@@ -12080,12 +13598,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sinfão manual",
@@ -12095,12 +13611,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sinfão manual",
@@ -12110,17 +13624,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //////////////////////////////////////////////////////////////////
-                //////////////////////////////////////////////////////////////////
-                //////////////////////////////////////////////////////////////////
-                ///
-
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12131,12 +13637,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sinfão manual",
@@ -12146,12 +13650,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sinfão manual",
@@ -12161,12 +13663,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sinfão manual",
@@ -12176,12 +13676,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Sinfão manual",
@@ -12191,11 +13689,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 16.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a limpar o substrato do áquario",
+                    Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12206,12 +13702,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtrar o áquario",
+                    Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Midias biológicas",
@@ -12221,12 +13715,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtrar o áquario",
+                    Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Midias biológicas",
@@ -12236,12 +13728,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtrar o áquario",
+                    Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Midias biológicas",
@@ -12251,12 +13741,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtrar o áquario",
+                    Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Midias biológicas",
@@ -12266,11 +13754,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 19.90,
                     QtdEmEstoque = 23,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtrar o áquario",
+                    Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12281,11 +13767,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 234,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água ",
+                    Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12296,11 +13780,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 234,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água ",
+                    Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12315,7 +13797,18 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
+                _context.Produto.Add(new Produto()
+                {
+                    Nome = "Carvão ativado",
+                    Marca = "Azul",
+                    TipoDeAnimal = ProdutoAnimais.Peixe,
+                    Categoria = ProdutoCategorias.Acessorio,
+                    Preco = 20,
+                    QtdEmEstoque = 234,
+                    PrecisaDeCarro = false,
+                    Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água.",
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                }); ;
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12326,26 +13819,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 20,
                     QtdEmEstoque = 234,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água ",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
-                _context.Produto.Add(new Produto()
-                {
-                    Nome = "Carvão ativado",
-                    Marca = "Azul",
-                    TipoDeAnimal = ProdutoAnimais.Peixe,
-                    Categoria = ProdutoCategorias.Acessorio,
-                    Preco = 20,
-                    QtdEmEstoque = 234,
-                    PrecisaDeCarro = false,
-                    Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água ",
+                    Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12356,12 +13832,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.50,
                     QtdEmEstoque = 234,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Esponja biologica",
@@ -12371,12 +13845,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.50,
                     QtdEmEstoque = 234,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Esponja biologica",
@@ -12386,12 +13858,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.50,
                     QtdEmEstoque = 234,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Esponja biologica",
@@ -12401,12 +13871,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.50,
                     QtdEmEstoque = 234,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Esponja biologica",
@@ -12416,11 +13884,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 12.50,
                     QtdEmEstoque = 234,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12431,12 +13897,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 15,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Refil para filtro externo",
@@ -12446,12 +13910,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 15,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Refil para filtro externo",
@@ -12461,12 +13923,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 15,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Refil para filtro externo",
@@ -12476,12 +13936,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 15,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Refil para filtro externo",
@@ -12491,161 +13949,139 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 15,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Ajuda a filtragem de residuos maiores",
+                    Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola pequena",
+                    Nome = "Gaiola Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 96.90,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiolinha para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola pequena",
+                    Nome = "Gaiola Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 96.90,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiolinha para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola pequena",
+                    Nome = "Gaiola Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 96.90,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiolinha para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola pequena",
+                    Nome = "Gaiola Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 95.90,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiolinha para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola pequena",
+                    Nome = "Gaiola Pequena",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 96.99,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiolinha para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola média",
+                    Nome = "Gaiola Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 150,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiola para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola média",
+                    Nome = "Gaiola Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 150,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiola para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola média",
+                    Nome = "Gaiola Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 150,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiola para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola média",
+                    Nome = "Gaiola Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 150,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiola para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
-                    Nome = "Gaiola média",
+                    Nome = "Gaiola Média",
                     Marca = "Azul",
                     TipoDeAnimal = ProdutoAnimais.Passaro,
                     Categoria = ProdutoCategorias.Acessorio,
                     Preco = 150,
                     QtdEmEstoque = 34,
                     PrecisaDeCarro = false,
-                    Descricao = "Gaiola para seu pássaro",
+                    Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12656,11 +14092,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 25,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Puleiro para seu pássaro",
+                    Descricao = "Puleiro para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12671,11 +14105,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu cãozinho",
+                    Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12686,12 +14118,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu cãozinho",
+                    Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pote de ração",
@@ -12701,12 +14131,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu cãozinho",
+                    Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pote de ração",
@@ -12716,12 +14144,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu cãozinho",
+                    Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pote de ração",
@@ -12731,15 +14157,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu cãozinho",
+                    Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
-                ///////////////////////////
-                ///////////////////////////
-                ///////////////////////////
-                ///
-
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12750,12 +14170,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu gatinho",
+                    Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pote de ração",
@@ -12765,12 +14183,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu gatinho",
+                    Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pote de ração",
@@ -12780,12 +14196,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu gatinho",
+                    Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pote de ração",
@@ -12795,12 +14209,10 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu gatinho",
+                    Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 }); ;
 
-                //"apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
-
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Pote de ração",
@@ -12810,15 +14222,13 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Preco = 10,
                     QtdEmEstoque = 101,
                     PrecisaDeCarro = false,
-                    Descricao = "Potinho para seu gatinho",
+                    Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 }); ;
 
 
 
-            }
-
-
+            
 
 
             _context.SaveChanges();
