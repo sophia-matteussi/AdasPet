@@ -158,3 +158,11 @@ h1 {
     display: block;
     margin-top: 0;
 }
+
+.bt-vm:hover {
+    background: linear-gradient(to bottom, #f61f0e 5%, #fca8a1 100%);
+}
+
+.bt-vd:hover {
+    background: linear-gradient(to bottom, #68b465 5%, #abd5aa 100%);
+}

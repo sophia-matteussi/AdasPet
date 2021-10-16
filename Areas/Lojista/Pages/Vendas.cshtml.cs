@@ -27,24 +27,16 @@ namespace AdasPet.Areas.Lojista.Pages
             _userManager = userManager;
             _context = context;
         }
+
         public void OnGet()
         {
             UserID = _userManager.GetUserId(User);
-            Pedidos = QueryPedidosDoUser(User).ToList();         
+            Pedidos = QueryPedidosDoUser(User).ToList();
         }
-        
-        public string GetNomeProdutos(Pedido pedido)
-        {
-            var produtos = _context.Entry(pedido).Collection(p => p.Produtos).Query().Where(p => p.ContaCadastro.Id == UserID)
-                .Select(p => p.Nome + " " + p.Marca);
-            return String.Join(",",produtos);
 
-            //return produtos.ToList();
-        }
- 
         public async Task<IActionResult> OnGetNovosPedidosAsync()
         {
-            var novosPedidos = QueryPedidosDoUser(User).Where(p => p.StatusDoPedido.Equals("Novo")).ToList();
+            List<Pedido> novosPedidos = QueryPedidosDoUser(User).Where(p => p.StatusDoPedido.Equals("Novo")).ToList();
             if (novosPedidos.Count > 0)
             {
                 return Content("Novos Pedidos");
@@ -52,13 +44,39 @@ namespace AdasPet.Areas.Lojista.Pages
             return Content("Nenhum novo Pedido");
         }
 
+
+        public string GetNomeProdutos(Pedido pedido)
+        {
+            var produtos = _context.Entry(pedido).Collection(p => p.Produtos).Query().Where(p => p.ContaCadastro.Id == UserID)
+                .Select(p => p.Nome + " " + p.Marca);
+            return String.Join(",", produtos);
+
+            //return produtos.ToList();
+        }
+
         private IQueryable<Pedido> QueryPedidosDoUser(ClaimsPrincipal user)
         {
-            var userId = _userManager.GetUserId(User);
+            string userId = _userManager.GetUserId(user);
             return _context.Pedido.Where(
                 o => o.Produtos.Select(
                     p => p.ContaCadastro.Id)
                 .Contains(userId));
+        } 
+
+        public async Task OnPostRejeitarAsync(Guid pedidoId)
+        {
+            string userId = _userManager.GetUserId(User);
+            Pedido pedido = _context.Pedido.Find(pedidoId);
+            List<Produto> produtosUpdated = _context.Entry(pedido)
+                .Collection(p => p.Produtos)
+                .Query()
+                .Where(p => p.ContaCadastro.Id != userId)
+                .ToList();
+
+            pedido.Produtos = produtosUpdated;
+            pedido.StatusDoPedido = "Cancelado";
+
+            await _context.SaveChangesAsync();
         }
     }
 }

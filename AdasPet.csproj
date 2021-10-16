@@ -3,7 +3,15 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>aspnet-AdasPet-9220F87C-BC67-42C7-B964-7FD76E323DFA</UserSecretsId>
+    <ApplicationIcon />
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Lojista\Pages\teste\**" />
+    <Content Remove="Areas\Lojista\Pages\teste\**" />
+    <EmbeddedResource Remove="Areas\Lojista\Pages\teste\**" />
+    <None Remove="Areas\Lojista\Pages\teste\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
@@ -22,7 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Lojista\Pages\teste\" />
     <Folder Include="wwwroot\imagens\" />
   </ItemGroup>
 

@@ -434,7 +434,7 @@ $.validator.addMethod( "creditcardtypes", function( value, element, param ) {
  *
  * Usage examples:
  *  currency: ["£", false] - Use false for soft currency validation
- *  currency: ["$", false]
+ *  currency: ["£", false]
  *  currency: ["RM", false] - also works with text based symbols such as "RM" - Malaysia Ringgit etc
  *
  *  <input class="currencyInput" name="currencyInput">
@@ -453,7 +453,7 @@ $.validator.addMethod( "creditcardtypes", function( value, element, param ) {
  *
  * Multiple Symbols
  *  currencyInput: {
- *     currency: "$,£,¢"
+ *     currency: "$,R$,¢"
  *  }
  */
 $.validator.addMethod( "currency", function( value, element, param ) {

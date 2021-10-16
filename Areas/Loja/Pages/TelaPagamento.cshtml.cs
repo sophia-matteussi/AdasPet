@@ -46,10 +46,7 @@ namespace AdasPet.Areas.Loja.Pages
             public string CartaoTipo { get; set; }
             public string EnderecoId { get; set; }
             public string FormaPgto { get; set; }
-
-        }
-
-        
+        }   
 
         public IActionResult OnGet(string tipo)
         {
@@ -142,7 +139,6 @@ namespace AdasPet.Areas.Loja.Pages
             _context.SaveChanges();
 
             return Redirect("~/Identity/Account/Manage/Pedidos");
-
         }
 
         //calcula o valor total da compra

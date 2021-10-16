@@ -38,34 +38,39 @@
                     @Html.DisplayFor(modelItem => item.DataInicio)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Preco)
+                    @Html.DisplayFor(modelItem => item.Preco)                   
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Pagamento)
                 </td>
-                @{ 
+                @{
                     string treco = Model.GetNomeProdutos(item);
                 }
                 <td>
                     @Html.DisplayFor(modelItem => treco)
                 </td>
+                <td>
+                    <form method="post" asp-page-handler="Rejeitar">                      
+                        <button type="submit" class="btn bt-vm">Recusar</button>
+                    </form>
+                </td>
             </tr>
-         }
-                    }
-                    else
-                    {
-                        <h1>Não tem pedidos</h1>
-                    }
+        }
+    }
+    else
+    {
+        <h1>Não há pedidos ainda</h1>
+    }
 </table>
 
 
 
-@section scripts{ 
+@section scripts{
     <script type="text/javascript">
         function checaNovos() {
             $.ajax({
                 type: "GET",
-                url: "https://localhost:44323/Lojista/Vendas?handler=NovosPedidos",
+                url: "/Lojista/Vendas?handler=NovosPedidos",
                 success: function (result) {
                     if (result == "Novos Pedidos") {
                         alert(result);
