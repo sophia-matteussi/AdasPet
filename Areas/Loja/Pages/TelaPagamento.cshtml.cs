@@ -81,14 +81,14 @@ namespace AdasPet.Areas.Loja.Pages
 
         public List<Produto> GetProdutosCarrinho(ISession session)
         {
-            //id dos produtos que est„o no carrinho
+            //id dos produtos que est√£o no carrinho
             var CarrinhoListID = CarrinhoOp.GetCarrinho(session);
             for (int i = 0; i < CarrinhoListID.Count; i++)
             {
                 var ProdutoId = CarrinhoListID[i];
                 var produto = _context.Produto.Find(ProdutoId);
                 // Quando buscamos o objeto com find os objetos relacionados nao sao carregados automaticamente
-                // Ent„o precisamos diizer para o entity framework carrega-los
+                // Ent√£o precisamos diizer para o entity framework carrega-los
                 _context.Entry(produto).Reference(p => p.ContaCadastro).Load();
                 Produtos.Add(produto);
             }
@@ -101,8 +101,8 @@ namespace AdasPet.Areas.Loja.Pages
             Dictionary<IdentityUser, List<Produto>> dicionario = new Dictionary<IdentityUser, List<Produto>>();
             foreach (var item in produtos)
             {
-                //checa se o dicionario j· possui aquela chave nele, se tiver, sÛ adiona o item,
-                //senao, adiciona a nova chave +  lista vazia (que depois ser· adicionado o item na lista)
+                //checa se o dicionario j√° possui aquela chave nele, se tiver, s√≥ adiona o item,
+                //senao, adiciona a nova chave +  lista vazia (que depois ser√° adicionado o item na lista)
                 if (!dicionario.ContainsKey(item.ContaCadastro))
                 {
                     dicionario.Add(item.ContaCadastro, new List<Produto>());
@@ -112,7 +112,7 @@ namespace AdasPet.Areas.Loja.Pages
             return dicionario;
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPost()
         {
             string Pagamento;
             if (Input.FormaPgto == "Cartao")
@@ -126,13 +126,24 @@ namespace AdasPet.Areas.Loja.Pages
             Produtos = GetProdutosCarrinho(HttpContext.Session);
 
             Pedido pedido = Input.Pedido;
-            pedido.Produtos = Produtos;
-            pedido.StatusDoPedido = "Novo";
+
+            //pedido.ID = new Guid();
+            //pedido.StatusDoPedido = "Novo";
             pedido.DataInicio = DateTime.Now;
             pedido.Preco = ValorTotal();
             pedido.Pagamento = Pagamento;
             var userId = _userManager.GetUserId(User);
             pedido.Cliente = _context.Cliente.Where(c => c.ContaCadastro.Id == userId).First();
+
+            foreach (var produto in Produtos)
+            {
+                _context.PedidoProduto.Add(
+                    new PedidoProduto() {
+                        Pedido = pedido,
+                        Produto = produto
+                    }
+                );
+            }
 
             _context.Pedido.Add(pedido);
 
@@ -156,7 +167,7 @@ namespace AdasPet.Areas.Loja.Pages
         public double CalculaFrete(Dictionary<IdentityUser, List<Produto>> dicionario)
         {
             double numeroFornecedores = dicionario.Keys.Count;
-            double frete = 10; //comeÁa em 10 por causa do frete
+            double frete = 10; //come√ßa em 10 por causa do frete
             frete += (numeroFornecedores - 1) * 5;
             Frete = frete;
             return frete;

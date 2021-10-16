@@ -41,9 +41,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DataInicio)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataFim)
-            </td>
+            @if (item.DataFim.Year.Equals(1))
+            {
+                <td></td>
+            }else
+            { 
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataFim)
+                </td>
+            }
             <td>
                 @Html.DisplayFor(modelItem => item.Pagamento)
             </td>

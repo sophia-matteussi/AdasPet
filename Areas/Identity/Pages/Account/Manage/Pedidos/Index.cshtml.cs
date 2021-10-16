@@ -25,7 +25,7 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage.Pedidos
 
         public IList<Pedido> Pedido { get; set; } = new List<Pedido>();
 
-        public async Task<IActionResult> OnGetAsync()
+        public IActionResult OnGet()
         {
             string UserId = _userManager.GetUserId(User);
 

@@ -63,27 +63,27 @@ namespace AdasPet.Areas.Loja.Pages.Testes
         {
             _context.Produto.Add(new Produto()
             {
-                Nome = "Ração 5Kg",
+                Nome = "RaÃ§Ã£o 5Kg",
                 Marca = "Vermelha",
                 TipoDeAnimal = ProdutoAnimais.Cachorro,
                 Categoria = ProdutoCategorias.Alimentacao,
                 Preco = 100,
                 QtdEmEstoque = 30,
                 PrecisaDeCarro = false,
-                Descricao = "Ração muito gostosa",
+                Descricao = "RaÃ§Ã£o muito gostosa",
                 ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
             });
 
             _context.Produto.Add(new Produto()
             {
-                Nome = "Ração 10Kg",
+                Nome = "RaÃ§Ã£o 10Kg",
                 Marca = "Vermelha",
                 TipoDeAnimal = ProdutoAnimais.Cachorro,
                 Categoria = ProdutoCategorias.Alimentacao,
                 Preco = 200,
                 QtdEmEstoque = 30,
                 PrecisaDeCarro = false,
-                Descricao = "Ração muito gostosa",
+                Descricao = "RaÃ§Ã£o muito gostosa",
                 ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
             });
 

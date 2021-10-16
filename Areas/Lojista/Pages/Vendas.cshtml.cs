@@ -15,7 +15,7 @@ namespace AdasPet.Areas.Lojista.Pages
     [Authorize(Roles = "fornecedor")]
     public class VendasModel : PageModel
     {
-        public List<Pedido> Pedidos { get; set; }
+        public List<Pedido> Pedidos { get; set; } = new List<Pedido>();
 
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
@@ -34,7 +34,7 @@ namespace AdasPet.Areas.Lojista.Pages
             Pedidos = QueryPedidosDoUser(User).ToList();
         }
 
-        public async Task<IActionResult> OnGetNovosPedidosAsync()
+        public IActionResult OnGetNovosPedidos()
         {
             List<Pedido> novosPedidos = QueryPedidosDoUser(User).Where(p => p.StatusDoPedido.Equals("Novo")).ToList();
             if (novosPedidos.Count > 0)
@@ -45,11 +45,12 @@ namespace AdasPet.Areas.Lojista.Pages
         }
 
 
-        public string GetNomeProdutos(Pedido pedido)
+        public List<string> GetNomeProdutos(Pedido pedido)
         {
-            var produtos = _context.Entry(pedido).Collection(p => p.Produtos).Query().Where(p => p.ContaCadastro.Id == UserID)
+            var produtos = _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID)).Select(o => o.Produto)
+            .Where(p => p.ContaCadastro.Id == UserID)
                 .Select(p => p.Nome + " " + p.Marca);
-            return String.Join(",", produtos);
+            return produtos.ToList();
 
             //return produtos.ToList();
         }
@@ -58,25 +59,27 @@ namespace AdasPet.Areas.Lojista.Pages
         {
             string userId = _userManager.GetUserId(user);
             return _context.Pedido.Where(
-                o => o.Produtos.Select(
+                o => o.PedidoProdutos.Select(p => p.Produto).Select(
                     p => p.ContaCadastro.Id)
                 .Contains(userId));
         } 
 
-        public async Task OnPostRejeitarAsync(Guid pedidoId)
+        public async Task OnPostRejeitarAsync(string pedidoId)
         {
             string userId = _userManager.GetUserId(User);
-            Pedido pedido = _context.Pedido.Find(pedidoId);
-            List<Produto> produtosUpdated = _context.Entry(pedido)
-                .Collection(p => p.Produtos)
-                .Query()
-                .Where(p => p.ContaCadastro.Id != userId)
-                .ToList();
+            Pedido pedido = _context.Pedido.Find(new Guid(pedidoId));
+            
+            //pedido.Produtos = produtosUpdated;
+            pedido.StatusDoPedido = PedidoStatus.Recusado;
+            pedido.DataFim = DateTime.Now;
 
-            pedido.Produtos = produtosUpdated;
-            pedido.StatusDoPedido = "Cancelado";
+            _context.PedidoProduto.RemoveRange(
+                _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID) && o.Produto.ContaCadastro.Id.Equals(userId))
+            );
 
             await _context.SaveChangesAsync();
+
+            Pedidos = QueryPedidosDoUser(User).ToList();
         }
     }
 }

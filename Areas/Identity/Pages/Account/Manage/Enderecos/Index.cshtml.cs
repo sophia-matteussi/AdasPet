@@ -27,10 +27,10 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos
         [BindProperty]
         public List<Endereco> Enderecos { get; private set; } = new List<Endereco>();
 
-        public async Task<IActionResult> OnGetAsync()
+        public IActionResult OnGet()
         {
             string UserId = _userManager.GetUserId(User);
-            
+
             var cliente = _context.Cliente.Where(user => user.ContaCadastro.Id == UserId);
             if (!cliente.Any())
             {
@@ -42,7 +42,7 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos
             Enderecos = enderecos;
 
             return Page();
-        
+
         }
     }
 }

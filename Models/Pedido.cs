@@ -12,12 +12,12 @@ namespace AdasPet.Models
         public Guid ID { get; set; }
 
         [Required]
-        [Column(TypeName = "varchar(20)")]
         [Display(Name = "Status do Pedido")]
-        public string StatusDoPedido { get; set; }
+        public PedidoStatus StatusDoPedido { get; set; } = PedidoStatus.Novo;
 
         [Required]
-        [Display(Name = "Data de Início")]
+        [Display(Name = "Data de InÃ­cio")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime DataInicio { get; set; }
 
         [Required]
@@ -34,7 +34,7 @@ namespace AdasPet.Models
 
         [Required]
         [Column(TypeName = "money")]
-        [Display(Name = "Preço")]
+        [Display(Name = "PreÃ§o")]
         public double Preco { get; set; }
 
         [Required]
@@ -47,6 +47,37 @@ namespace AdasPet.Models
         public Endereco Endereco { get; set; }
 
         //[Required]
-        public List<Produto> Produtos { get; set; }
+        //public List<Produto> Produtos { get; set; }
+
+        [ForeignKey("PedidoID")]
+        public virtual List<PedidoProduto> PedidoProdutos { get; set; }
+    }
+
+    public class PedidoProduto
+    {
+        [Key]
+        //[Required]
+        public Guid ID { get; set; }
+
+        //[Required]
+        [ForeignKey("Pedido")]
+        public Guid PedidoID { get; set; }
+
+        //[Required]
+        [ForeignKey("Produto")]
+        public Guid ProdutoID { get; set; }
+        public Pedido Pedido { get; set; }
+        public Produto Produto { get; set; }
+        public PedidoStatus Status { get; set; } = PedidoStatus.Novo;
+    }
+
+    public enum PedidoStatus {
+        Novo,
+        Aceito,
+        Recusado,
+        Cancelado,
+        Completo,
+        Entregando
+
     }
 }

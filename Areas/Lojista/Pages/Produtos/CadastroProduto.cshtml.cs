@@ -39,7 +39,7 @@ namespace AdasPet.Areas.Lojista.Pages.Produtos
 
             Produto.ContaCadastro = user;
 
-            //checa se os valores dados pelo usu·rio est„o dentro/de acordo das/com regras das propriedades
+            //checa se os valores dados pelo usu√°rio est√£o dentro/de acordo das/com regras das propriedades
             if (!ModelState.IsValid)
             {
                 return Page();

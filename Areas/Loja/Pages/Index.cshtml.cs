@@ -29,7 +29,7 @@ namespace AdasPet.Areas.Loja.Pages
         {
             Animal = animal;
 
-            // Categoria È opcional, entao se È null chamamos o GetProdutos apenas com o animal
+            // Categoria √© opcional, entao se √© null chamamos o GetProdutos apenas com o animal
             if (String.IsNullOrEmpty(categoria))
             {
                 return GetProdutos(animal);
@@ -53,7 +53,7 @@ namespace AdasPet.Areas.Loja.Pages
         /// Adiciona todos os produtos do animal selecionado ao prop Produtos
         /// </summary>
         /// <param name="animal">Animal</param>
-        /// <returns>Retorna resultado da pagina, se o animal n„o for encontrado, retornara NotFound</returns>
+        /// <returns>Retorna resultado da pagina, se o animal n√£o for encontrado, retornara NotFound</returns>
         private IActionResult GetProdutos(string animal)
         {
             // Checa se a string animal esta dentro do enum ProdutosAnimais
@@ -74,7 +74,7 @@ namespace AdasPet.Areas.Loja.Pages
         /// </summary>
         /// <param name="animal">Animal</param>
         /// <param name="categoria">Categoria</param>
-        /// <returns>Retorna resultado da pagina, se o animal e/ou categoria n„o for encontrada, retornara NotFound</returns>
+        /// <returns>Retorna resultado da pagina, se o animal e/ou categoria n√£o for encontrada, retornara NotFound</returns>
         private IActionResult GetProdutos(string animal,string categoria)
         {
             // Checa se a string animal esta dentro do enum ProdutosAnimais

@@ -1,8 +1,11 @@
 @page
-@model AdasPet.Areas.Lojista.Pages.VendasModel
+@model AdasPet.Areas.Lojista.Pages.EntregasModel
 @{
-    ViewData["Title"] = "Vendas";
+    ViewData["Title"] = "Entregas";
 }
+
+@{/*
+<h1>@ViewData["Title"]</h1>
 
 <table class="table">
     <thead>
@@ -20,8 +23,7 @@
                 @Html.DisplayNameFor(model => model.Pedidos[0].Pagamento)
             </th>
             <th>
-                @{//Html.DisplayNameFor(model => model.Pedidos[0].Produtos)
-                }
+                @Html.DisplayNameFor(model => model.Pedidos[0].Produtos)
             </th>
             <th></th>
         </tr>
@@ -45,20 +47,20 @@
                     @Html.DisplayFor(modelItem => item.Pagamento)
                 </td>
                 <td>
-                    @foreach (var produto in Model.GetNomeProdutos(item))
-                    {
-                        <div>
-                            <p>@produto</p>
-                        </div>
-                    }
+                    @Html.DisplayFor(modelItem => item.Produtos)
                 </td>
-                @if (@item.StatusDoPedido == AdasPet.Models.PedidoStatus.Novo)
+                @if (@item.StatusDoPedido == "Novo")
                 {
-                <td>
-                    <form method="post" asp-route-pedidoId="@item.ID" asp-page-handler="Rejeitar">                      
-                        <button type="submit" class="btn bt-vm">Recusar</button>
-                    </form>
-                </td>
+                    <td>
+                        <form method="post" asp-route-pedidoId="@item.ID" asp-page-handler="Rejeitar">                      
+                            <button type="submit" class="btn bt-vm">Recusar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-route-pedidoId="@item.ID" asp-page-handler="Rejeitar">                      
+                            <button type="submit" class="btn bt-vm">Recusar</button>
+                        </form>
+                    </td>
                 }
             </tr>
         }
@@ -68,23 +70,4 @@
         <h1>Não há pedidos ainda</h1>
     }
 </table>
-
-
-
-@section scripts{
-    <script type="text/javascript">
-        function checaNovos() {
-            $.ajax({
-                type: "GET",
-                url: "/Lojista/Vendas?handler=NovosPedidos",
-                success: function (result) {
-                    if (result == "Novos Pedidos") {
-                        alert(result);
-                        window.location.reload();
-                    }
-                }
-            })
-        };
-        var intervalo = window.setInterval(checaNovos, 10000);
-    </script>
-}
+*/}
