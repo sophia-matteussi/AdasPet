@@ -150,11 +150,11 @@ h1 {
 }
 
 
-.dropdown-toggle::after {
+.dropdown-toggle-no-arrow::after {
     content: none;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu-hover {
     display: block;
     margin-top: 0;
 }

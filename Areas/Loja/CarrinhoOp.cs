@@ -76,5 +76,10 @@ namespace AdasPet.Areas.Loja.Pages.Carrinho
 
             return session;
         }
+
+        public static void LimparCarrinho(ISession session)
+        {
+            session.Remove(CarrinhoKey);
+        }
     }
 }

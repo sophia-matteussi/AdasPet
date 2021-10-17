@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace AdasPet.Areas.Lojista.Pages
 {
     [Authorize(Roles = "fornecedor")]
-    public class VendasModel : PageModel
+    public class EntregasModel : PageModel
     {
         public List<Pedido> Pedidos { get; set; } = new List<Pedido>();
 
@@ -22,7 +23,7 @@ namespace AdasPet.Areas.Lojista.Pages
 
         public string UserID { get; set; }
 
-        public VendasModel(UserManager<IdentityUser> userManager, ApplicationDbContext context)
+        public EntregasModel(UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
             _userManager = userManager;
             _context = context;
@@ -31,17 +32,32 @@ namespace AdasPet.Areas.Lojista.Pages
         public void OnGet()
         {
             UserID = _userManager.GetUserId(User);
-            Pedidos = QueryPedidosDoUser(User).ToList();
+            Pedidos = QueryPedidosDoUser(User).OrderByDescending(p => p.DataInicio).ToList();
+        }
+
+
+        public PedidoStatus GetStatusProdutosFornecedor(Pedido pedido, string userId)
+        {
+            var produtosFornecedor = GetUsersPedidoProdutoinPedido(pedido, userId).ToList();
+            foreach (PedidoStatus item in Enum.GetValues(typeof(PedidoStatus)))
+            {
+                if (produtosFornecedor.All(p => p.Status.Equals(item)))
+                {
+                    return item;
+                }
+            }
+            throw new Exception($"Nem todos os produtos do fornecedor {userId} tem o mesmo status");
         }
 
         public IActionResult OnGetNovosPedidos()
         {
-            List<Pedido> novosPedidos = QueryPedidosDoUser(User).Where(p => p.StatusDoPedido.Equals("Novo")).ToList();
+            List<Pedido> novosPedidos = QueryPedidosDoUser(User).Where(p => p.StatusDoPedido.Equals(PedidoStatus.Novo)).ToList();
             if (novosPedidos.Count > 0)
             {
                 return Content("Novos Pedidos");
             }
-            return Content("Nenhum novo Pedido");
+            //return Content("Nenhum novo Pedido");
+            return new OkResult();
         }
 
 
@@ -64,22 +80,56 @@ namespace AdasPet.Areas.Lojista.Pages
                 .Contains(userId));
         } 
 
-        public async Task OnPostRejeitarAsync(string pedidoId)
+        private IQueryable<PedidoProduto> GetUsersPedidoProdutoinPedido(Pedido pedido, string userId)
         {
-            string userId = _userManager.GetUserId(User);
-            Pedido pedido = _context.Pedido.Find(new Guid(pedidoId));
-            
-            //pedido.Produtos = produtosUpdated;
-            pedido.StatusDoPedido = PedidoStatus.Recusado;
-            pedido.DataFim = DateTime.Now;
-
-            _context.PedidoProduto.RemoveRange(
-                _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID) && o.Produto.ContaCadastro.Id.Equals(userId))
+            var pedidoProdutos = _context.PedidoProduto.Where(o => 
+                o.PedidoID.Equals(pedido.ID) && o.Produto.ContaCadastro.Id.Equals(userId)
             );
+            return pedidoProdutos;
+        }
+        
+        public async Task<IActionResult> OnPostAceitarAsync(string pedidoId)
+        {
+            UserID = _userManager.GetUserId(User);
+            Pedido pedido = _context.Pedido.Find(new Guid(pedidoId));
+            var meusProdutos = _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID) && o.Produto.ContaCadastro.Id.Equals(UserID)).ToList();
+
+            foreach (var produto in meusProdutos)
+            {
+                produto.Status = PedidoStatus.Aceito;
+                _context.Produto.Find(produto.ProdutoID).QtdEmEstoque -= 1;
+            } 
+
+            if (GetUsersPedidoProdutoinPedido(pedido, UserID).ToList().All(p => p.Status == PedidoStatus.Aceito))
+            {
+                pedido.StatusDoPedido = PedidoStatus.Aceito;
+            }
 
             await _context.SaveChangesAsync();
 
-            Pedidos = QueryPedidosDoUser(User).ToList();
+            return Redirect("./Vendas");
+        }
+
+        public async Task<IActionResult> OnPostRejeitarAsync(string pedidoId)
+        {
+            UserID = _userManager.GetUserId(User);
+            Pedido pedido = _context.Pedido.Find(new Guid(pedidoId));
+
+            var meusProdutos = _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID) && o.Produto.ContaCadastro.Id.Equals(UserID)).ToList();
+
+            foreach (var produto in meusProdutos)
+            {
+                produto.Status = PedidoStatus.Recusado;
+            } 
+
+            if (GetUsersPedidoProdutoinPedido(pedido, UserID).All(p => p.Status.Equals(PedidoStatus.Recusado)))
+            {
+                pedido.StatusDoPedido = PedidoStatus.Recusado;
+                pedido.DataFim = DateTime.Now;
+            }
+
+            await _context.SaveChangesAsync();
+            return Redirect("./Vendas");
         }
     }
 }

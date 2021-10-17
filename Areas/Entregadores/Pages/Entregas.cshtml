@@ -1,0 +1,92 @@
+@page
+@using AdasPet.Models
+@model AdasPet.Areas.Entregadores.Pages.EntregasModel
+@{
+    ViewData["Title"] = "Entregas";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedidos[0].StatusDoPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedidos[0].Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedidos[0].Pagamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedidos[0].Troco)
+            </th>
+            <th>
+                Pegar em
+            </th>
+            <th>
+                Deixar em
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    @if (Model.Pedidos.Count > 0)
+    {
+
+        @foreach (var item in Model.Pedidos)
+        {
+            <tr>
+                <td hidden="true">@item.ID</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusDoPedido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)                   
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pagamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Troco)
+                </td>
+                <td>
+                    @foreach (var endereco in Model.GetPedidoFornecedoresEnderecos(item))
+                    {
+                        <p>
+                            @endereco.Rua, @endereco.NumeroCasa - @endereco.Complemento
+                        </p>
+                    }
+                </td>
+                <td>
+                    @Model.GetEnderecoPretty(item)
+                </td>
+                @if (item.StatusDoPedido.Equals(PedidoStatus.Aceito))
+                {
+                    <td>
+                        <form method="post" asp-route-pedidoId="@item.ID" asp-page-handler="Aceitar">                      
+                            <button type="submit" class="btn btn-success">Aceitar</button>
+                        </form>
+                    </td>
+                }else if (item.StatusDoPedido.Equals(PedidoStatus.Entregando))
+                {
+                   <td>
+                        <form method="post" asp-route-pedidoId="@item.ID" asp-page-handler="Finalizar">                      
+                            <button type="submit" class="btn btn-success">Finalizar entrega</button>
+                        </form>
+                    </td> 
+                }
+            </tr>
+        }
+    }
+    else
+    {
+        <h1>Nenhuma entrega pendente</h1>
+    }
+</table>
+
+
+
+@section scripts{
+    <script type="text/javascript">
+        setTimeout(function(){window.location.reload(1)}, 15000);
+    </script>
+}

@@ -1,5 +1,6 @@
 @page
-@model AdasPet.Areas.Lojista.Pages.VendasModel
+@using AdasPet.Models
+@model AdasPet.Areas.Lojista.Pages.EntregasModel
 @{
     ViewData["Title"] = "Vendas";
 }
@@ -32,8 +33,12 @@
         @foreach (var item in Model.Pedidos)
         {
             <tr>
+                @{
+                    var status = Model.GetStatusProdutosFornecedor(item,Model.UserID);
+                }
+                <td hidden="true">@item.ID</td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.StatusDoPedido)
+                    @Enum.GetName(status)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.DataInicio)
@@ -45,20 +50,31 @@
                     @Html.DisplayFor(modelItem => item.Pagamento)
                 </td>
                 <td>
-                    @foreach (var produto in Model.GetNomeProdutos(item))
-                    {
-                        <div>
-                            <p>@produto</p>
+                    @{ var nomeProdutos = Model.GetNomeProdutos(item);}
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="produtos-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @nomeProdutos.Count Produtos
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="produtos-toggle">
+                            @foreach (var produto in nomeProdutos)
+                            {
+                                <p>@produto</p>
+                            }
                         </div>
-                    }
+                    </div>
                 </td>
-                @if (@item.StatusDoPedido == AdasPet.Models.PedidoStatus.Novo)
+                @if (status == PedidoStatus.Novo)
                 {
-                <td>
-                    <form method="post" asp-route-pedidoId="@item.ID" asp-page-handler="Rejeitar">                      
-                        <button type="submit" class="btn bt-vm">Recusar</button>
-                    </form>
-                </td>
+                    <td>
+                        <form method="post" asp-route-pedidoId="@item.ID" asp-page-handler="Aceitar">                      
+                            <button type="submit" class="btn btn-success">Aceitar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-route-pedidoId="@item.ID" asp-page-handler="Rejeitar">                      
+                            <button type="submit" class="btn btn-danger">Recusar</button>
+                        </form>
+                    </td>
                 }
             </tr>
         }

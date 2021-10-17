@@ -35,6 +35,7 @@ namespace AdasPet.Models
         [Required]
         [Column(TypeName = "money")]
         [Display(Name = "Preço")]
+        [DataType(DataType.Currency)]
         public double Preco { get; set; }
 
         [Required]

@@ -37,9 +37,7 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos
                 return Page();
             }
 
-            var enderecos = _context.Endereco.Where(end => end.Cliente.ID == cliente.First().ID).ToList();
-
-            Enderecos = enderecos;
+            Enderecos = _context.Endereco.Where(end => end.Cliente.ID == cliente.First().ID).ToList();
 
             return Page();
 

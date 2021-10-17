@@ -129,6 +129,7 @@ namespace AdasPet.Areas.Loja.Pages
 
             //pedido.ID = new Guid();
             //pedido.StatusDoPedido = "Novo";
+            pedido.Endereco = _context.Endereco.Find(new Guid(Input.EnderecoId));
             pedido.DataInicio = DateTime.Now;
             pedido.Preco = ValorTotal();
             pedido.Pagamento = Pagamento;
@@ -148,6 +149,8 @@ namespace AdasPet.Areas.Loja.Pages
             _context.Pedido.Add(pedido);
 
             _context.SaveChanges();
+
+            CarrinhoOp.LimparCarrinho(HttpContext.Session);
 
             return Redirect("~/Identity/Account/Manage/Pedidos");
         }
