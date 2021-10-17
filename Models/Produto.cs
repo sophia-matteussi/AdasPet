@@ -16,7 +16,7 @@ namespace AdasPet.Models
         Cachorro,
         [Display(Name = "Gatos")]
         Gato,
-        [Display(Name = "Pass·ros")]
+        [Display(Name = "Pass√°ros")]
         Passaro,
         [Display(Name = "Peixes")]
         Peixe,
@@ -24,7 +24,7 @@ namespace AdasPet.Models
         Coelho,
         [Display(Name = "Roedores")]
         Roedores,
-        [Display(Name = "RÈpteis")]
+        [Display(Name = "R√©pteis")]
         Repteis
     }
 
@@ -33,13 +33,13 @@ namespace AdasPet.Models
     /// </summary>
     public enum ProdutoCategorias
     {
-        [Display(Name="AlimentaÁ„o")]
+        [Display(Name="Alimenta√ß√£o")]
         Alimentacao,
-        [Display(Name = "AcessÛrios e Equipamentos")]
+        [Display(Name = "Acess√≥rios e Equipamentos")]
         Acessorio,
         [Display(Name = "Brinquedos")]
         Brinquedos,
-        [Display(Name = "Farm·cia")]
+        [Display(Name = "Farm√°cia")]
         Farmacia,
         [Display(Name = "Higiene")]
         Higiene
@@ -58,6 +58,7 @@ namespace AdasPet.Models
 
         [Required]
         //[Column(TypeName = "varchar(20)")]
+        [Display(Name = "Tipo de animal")]
         public ProdutoAnimais TipoDeAnimal { get; set; }
 
         [Required]
@@ -67,7 +68,7 @@ namespace AdasPet.Models
         [Required]
         [Column(TypeName = "money")]
         [DataType(DataType.Currency)]
-        [Display(Name ="PreÁo")]
+        [Display(Name ="Pre√ßo")]
         public double Preco { get; set; }
 
         [Required]
@@ -79,13 +80,16 @@ namespace AdasPet.Models
         public bool PrecisaDeCarro { get; set; }
 
         [Column(TypeName = "varchar(200)")]
-        [Display(Name = "DescriÁ„o")]
+        [Display(Name = "Descri√ß√£o")]
         public string Descricao { get; set; }
 
         //[Required]
         public Microsoft.AspNetCore.Identity.IdentityUser ContaCadastro { get; set; }
 
-        public List<Pedido> Pedidos { get; set; }
+        //public List<Pedido> Pedidos { get; set; }
+
+        [ForeignKey("ProdutoID")]
+        public List<PedidoProduto> PedidoProdutos { get; set; }
 
     }
 }

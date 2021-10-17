@@ -26,22 +26,22 @@ namespace AdasPet
 
         public IConfiguration Configuration { get; }
 
-        // Configura os serviços do ASPNET
-        // É rodado no começo do programa
+        // Configura os serviï¿½os do ASPNET
+        // ï¿½ rodado no comeï¿½o do programa
         public void ConfigureServices(IServiceCollection services)
         {
-            // Padrão
+            // Padrï¿½o
             services.AddDistributedMemoryCache();
 
             // Adiciona Session ao contexto, permitindo manter dados entre paginas
             services.AddSession(options =>
             {
                 // Por quanto tempo guardar a session depois que o usuario fecha o browser
-                // Quando expira perde tudo na sessão
+                // Quando expira perde tudo na sessï¿½o
                 options.IdleTimeout = TimeSpan.FromHours(2);
                 // Indica se o cookie pode ser acessado pelo browser/cliente
                 options.Cookie.HttpOnly = true;
-                // Indica se o cookie é essencial para o funcionamento do site
+                // Indica se o cookie ï¿½ essencial para o funcionamento do site
                 options.Cookie.IsEssential = true;
             });
 
@@ -52,32 +52,38 @@ namespace AdasPet
                     // Pegamos a ConnectionString do arquivo appsettings.json
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            // Adiciona uma pagina para quando operações no banco de dados dão erro
+            // Adiciona uma pagina para quando operaï¿½ï¿½es no banco de dados dï¿½o erro
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            // Adiciona o identity framework para autenticação e autorização
+            // Adiciona o identity framework para autenticaï¿½ï¿½o e autorizaï¿½ï¿½o
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                // Adicionamos nosso contexto de BD para o identity guardar suas iniformações
-                .AddEntityFrameworkStores<ApplicationDbContext>(); 
+                //Adiciona Roles para autorizaï¿½ï¿½o
+                .AddRoles<IdentityRole>()
+                // Adicionamos nosso contexto de BD para o identity guardar suas iniformaï¿½ï¿½es
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             // Adiciona MVC
             services.AddControllersWithViews();
 
             // Adiciona o Google como forma de login
+            /*
             services.AddAuthentication()
                 .AddGoogle("Google", options =>
                 {
                     options.ClientId = "12407940964-80rvesf0pcdqoo9strhe1tjh77qj6a1k.apps.googleusercontent.com";
                     options.ClientSecret = Configuration["GoogleClientSecret"];
                 });
+            */
 
             // Adiciona nossa classe de mandar email
             services.AddTransient<IEmailSender, EmailSender>();
 
-            // Padrão
+            // Padrï¿½o
             services.Configure<AuthMessageSenderOptions>(Configuration);
 
             services.AddAntiforgery(option => option.HeaderName = "X-XSRF-TOKEN");
+
+            
 
         }
 
@@ -109,14 +115,16 @@ namespace AdasPet
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
-            {   
+            {
                 endpoints.MapControllerRoute(
-                    // Diz qual a rota padrão/pagina inicial
+                    // Diz qual a rota padrï¿½o/pagina inicial
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 // Ativa Razor Pages
                 endpoints.MapRazorPages();
             });
         }
+
+       
     }
 }

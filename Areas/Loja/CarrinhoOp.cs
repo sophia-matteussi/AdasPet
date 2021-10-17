@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -75,6 +75,11 @@ namespace AdasPet.Areas.Loja.Pages.Carrinho
             session.SetString(CarrinhoKey, carrinho);
 
             return session;
+        }
+
+        public static void LimparCarrinho(ISession session)
+        {
+            session.Remove(CarrinhoKey);
         }
     }
 }

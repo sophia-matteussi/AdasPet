@@ -16,7 +16,7 @@ namespace AdasPet.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.9")
+                .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("AdasPet.Models.Cliente", b =>
@@ -196,6 +196,7 @@ namespace AdasPet.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DataInicio")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.Property<Guid?>("EnderecoID")
@@ -211,9 +212,8 @@ namespace AdasPet.Data.Migrations
                     b.Property<decimal>("Preco")
                         .HasColumnType("money");
 
-                    b.Property<string>("StatusDoPedido")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)");
+                    b.Property<int>("StatusDoPedido")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("Troco")
                         .HasColumnType("money");
@@ -227,6 +227,30 @@ namespace AdasPet.Data.Migrations
                     b.HasIndex("EntregadorID");
 
                     b.ToTable("Pedido");
+                });
+
+            modelBuilder.Entity("AdasPet.Models.PedidoProduto", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PedidoID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ProdutoID")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("PedidoID");
+
+                    b.HasIndex("ProdutoID");
+
+                    b.ToTable("PedidoProduto");
                 });
 
             modelBuilder.Entity("AdasPet.Models.Produto", b =>
@@ -471,21 +495,6 @@ namespace AdasPet.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("PedidoProduto", b =>
-                {
-                    b.Property<Guid>("PedidosID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ProdutosID")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("PedidosID", "ProdutosID");
-
-                    b.HasIndex("ProdutosID");
-
-                    b.ToTable("PedidoProduto");
-                });
-
             modelBuilder.Entity("AdasPet.Models.Cliente", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "ContaCadastro")
@@ -549,6 +558,25 @@ namespace AdasPet.Data.Migrations
                     b.Navigation("Entregador");
                 });
 
+            modelBuilder.Entity("AdasPet.Models.PedidoProduto", b =>
+                {
+                    b.HasOne("AdasPet.Models.Pedido", "Pedido")
+                        .WithMany("PedidoProdutos")
+                        .HasForeignKey("PedidoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AdasPet.Models.Produto", "Produto")
+                        .WithMany("PedidoProdutos")
+                        .HasForeignKey("ProdutoID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pedido");
+
+                    b.Navigation("Produto");
+                });
+
             modelBuilder.Entity("AdasPet.Models.Produto", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "ContaCadastro")
@@ -609,19 +637,14 @@ namespace AdasPet.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PedidoProduto", b =>
+            modelBuilder.Entity("AdasPet.Models.Pedido", b =>
                 {
-                    b.HasOne("AdasPet.Models.Pedido", null)
-                        .WithMany()
-                        .HasForeignKey("PedidosID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("PedidoProdutos");
+                });
 
-                    b.HasOne("AdasPet.Models.Produto", null)
-                        .WithMany()
-                        .HasForeignKey("ProdutosID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            modelBuilder.Entity("AdasPet.Models.Produto", b =>
+                {
+                    b.Navigation("PedidoProdutos");
                 });
 #pragma warning restore 612, 618
         }

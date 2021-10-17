@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using AdasPet.Data;
 using AdasPet.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AdasPet.Areas.Lojista.Pages.Produtos
 {
+    [Authorize(Roles = "fornecedor")]
     public class CadastroProdutoModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -37,7 +39,7 @@ namespace AdasPet.Areas.Lojista.Pages.Produtos
 
             Produto.ContaCadastro = user;
 
-            //checa se os valores dados pelo usu·rio est„o dentro/de acordo das/com regras das propriedades
+            //checa se os valores dados pelo usu√°rio est√£o dentro/de acordo das/com regras das propriedades
             if (!ModelState.IsValid)
             {
                 return Page();
