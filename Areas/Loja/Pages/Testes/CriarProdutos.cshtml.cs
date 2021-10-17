@@ -7,6 +7,7 @@ using AdasPet.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Logging;
 
 namespace AdasPet.Areas.Loja.Pages.Testes
 {
@@ -15,6 +16,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
         private ApplicationDbContext _context { get; set; }
         private readonly UserManager<IdentityUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ILogger _logger;
+
+        private static Random Rand = new Random();
 
         //Lista de fornecedores cadastrados
         private List<string> Fornecedores { get; } = new List<string>() 
@@ -22,18 +26,28 @@ namespace AdasPet.Areas.Loja.Pages.Testes
             "apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
         };
 
+        private List<string> Entregadores { get; } = new List<string>()
+        {
+            "oscar", "cleber", "djalma"
+        };
+
+        private List<string> CEPs { get; }= new List<string>()
+        {
+            "89052440", "89036450", "89046445", "89074740", "89045460", "89040200", "89042342", "89035250", "89035401", "89072070", "89031582", "89045060", "89010902", "89056488", "89066140" 
+        };
+
         private List<string> Roles { get; } = new List<string>
         {
             "fornecedor","cliente","entregador"
         };
 
-        public CriarProdutosModel(ApplicationDbContext context, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
+        public CriarProdutosModel(ApplicationDbContext context, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, ILogger<CriarProdutosModel> logger)
         {
             _context = context;
             _userManager = userManager;
             _roleManager = roleManager;
+            _logger = logger;
         }
-
         public void OnGet()
         {
         }
@@ -47,17 +61,73 @@ namespace AdasPet.Areas.Loja.Pages.Testes
         }
 
         //Cria fornecedores
-        public async Task OnPostCriarFornecedoresAsync()
+        public async Task<IActionResult> OnPostCriarFornecedoresAsync()
         {
             foreach (var item in Fornecedores)
             {
+                var cep = CEPs[Rand.Next(14)];
+                var enderecoTask = Endereco.GetEnderecoDeCepAsync(cep);
                 string nome = item + "@adaspet.com.br";
                 await _userManager.CreateAsync(new IdentityUser { UserName = nome, Email = nome }, "1Ad@s2");
                 var user = await _userManager.FindByNameAsync(nome);
+                await _userManager.AddToRoleAsync(user, "fornecedor");
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                await _userManager.ConfirmEmailAsync(user, code);
+                var confirmTask =  _userManager.ConfirmEmailAsync(user, code);
+
+
+                _context.Fornecedor.Add(new Fornecedor() {
+                    CNPJ = (Convert.ToInt64(Rand.Next(100000,799999)) * 111111111).ToString(),
+                    ContaCadastro = user,
+                    RazaoSocial = "PetShop " + item,
+                    Telefone = (Convert.ToInt64(Rand.Next(100000,799999)) * 111).ToString()
+                });
+                _logger.LogInformation("Criado objeto fornecedor para " + nome);
+                await enderecoTask;
+                var endereco = enderecoTask.Result;
+                endereco.CEP = cep;
+                endereco.NumeroCasa = Rand.Next(200).ToString();
+                endereco.Complemento = "Sala " + Rand.Next(1,6).ToString();
+                _context.Endereco.Add( endereco);
+
+                await confirmTask;
             }
+            await _context.SaveChangesAsync();
+
+            return Redirect("./CriarProdutos");
+
         }
+
+        public async Task<IActionResult> OnPostCriarEntregadoresAsync()
+        {
+            foreach (var item in Entregadores)
+            {
+                string nome = item + "@entregador.adaspet.com.br";
+                await _userManager.CreateAsync(new IdentityUser { UserName = nome, Email = nome }, "1Ad@s2");
+                var user = await _userManager.FindByNameAsync(nome);
+                var addRoleTask = _userManager.AddToRoleAsync(user, "entregador");
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                var confirmTask =  _userManager.ConfirmEmailAsync(user, code);
+
+                _context.Entregador.Add( new Entregador(){
+                    CNH = (Convert.ToInt64(Rand.Next(100000,799999)) * 111111).ToString(),
+                    ContaCadastro = user,
+                    CPF = (Convert.ToInt64(Rand.Next(100000,799999)) * 111111).ToString(),
+                    DataNascimento = DateTime.Now,
+                    Nome = item,
+                    Placa = "abc1234",
+                    Renavam = (Convert.ToInt64(Rand.Next(100000,799999)) * 111111).ToString(),
+                    Telefone = (Convert.ToInt64(Rand.Next(100000,799999)) * 111).ToString(),
+                    TipoVeiculo = "Carro"
+                });
+
+                await addRoleTask;
+                await confirmTask;
+            }
+            await _context.SaveChangesAsync();
+
+            return Redirect("./CriarProdutos");
+        }
+
 
         //Cria produtos
         public void OnPost()

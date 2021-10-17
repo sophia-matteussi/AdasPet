@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace AdasPet.Areas.Lojista.Pages
 {
     [Authorize(Roles = "fornecedor")]
-    public class EntregasModel : PageModel
+    public class VendasModel : PageModel
     {
         public List<Pedido> Pedidos { get; set; } = new List<Pedido>();
 
@@ -23,7 +23,7 @@ namespace AdasPet.Areas.Lojista.Pages
 
         public string UserID { get; set; }
 
-        public EntregasModel(UserManager<IdentityUser> userManager, ApplicationDbContext context)
+        public VendasModel(UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
             _userManager = userManager;
             _context = context;
