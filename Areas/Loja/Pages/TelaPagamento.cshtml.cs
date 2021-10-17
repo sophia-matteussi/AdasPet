@@ -32,19 +32,21 @@ namespace AdasPet.Areas.Loja.Pages
         [BindProperty]
         public List<Produto> Produtos { get; set; } = new List<Produto>();
 
+        public double Preco { get; set; }
+
+        public double Frete { get; set; }
 
         [BindProperty]
         public InputModel Input { get; set; }
 
         public class InputModel
         {
-            public Pedido Pedido { get; set; }
+            public Pedido Pedido { get; set; } = new Pedido();
             public string Bandeira { get; set; }
             public string CartaoTipo { get; set; }
             public string EnderecoId { get; set; }
             public string FormaPgto { get; set; }
-
-        }
+        }   
 
         public IActionResult OnGet(string tipo)
         {
@@ -64,24 +66,31 @@ namespace AdasPet.Areas.Loja.Pages
                     Text = end.Rua
                 }
                 ).ToList();
-            } catch
+            }
+            catch
             {
                 return Redirect("~/Identity/Account/CadastroCompleto");
             }
 
             Produtos = GetProdutosCarrinho(HttpContext.Session);
 
+            Preco = ValorTotal();
+
             return Page();
         }
 
-        public List<Produto> GetProdutosCarrinho(ISession session )
+        public List<Produto> GetProdutosCarrinho(ISession session)
         {
-            //id dos produtos que est„o no carrinho
+            //id dos produtos que est√£o no carrinho
             var CarrinhoListID = CarrinhoOp.GetCarrinho(session);
             for (int i = 0; i < CarrinhoListID.Count; i++)
             {
                 var ProdutoId = CarrinhoListID[i];
-                Produtos.Add(_context.Produto.Find(ProdutoId));
+                var produto = _context.Produto.Find(ProdutoId);
+                // Quando buscamos o objeto com find os objetos relacionados nao sao carregados automaticamente
+                // Ent√£o precisamos diizer para o entity framework carrega-los
+                _context.Entry(produto).Reference(p => p.ContaCadastro).Load();
+                Produtos.Add(produto);
             }
             return Produtos;
         }
@@ -92,8 +101,8 @@ namespace AdasPet.Areas.Loja.Pages
             Dictionary<IdentityUser, List<Produto>> dicionario = new Dictionary<IdentityUser, List<Produto>>();
             foreach (var item in produtos)
             {
-                //checa se o dicionario j· possui aquela chave nele, se tiver, sÛ adiona o item,
-                //senao, adiciona a nova chave +  lista vazia (que depois ser· adicionado o item na lista)
+                //checa se o dicionario j√° possui aquela chave nele, se tiver, s√≥ adiona o item,
+                //senao, adiciona a nova chave +  lista vazia (que depois ser√° adicionado o item na lista)
                 if (!dicionario.ContainsKey(item.ContaCadastro))
                 {
                     dicionario.Add(item.ContaCadastro, new List<Produto>());
@@ -105,21 +114,70 @@ namespace AdasPet.Areas.Loja.Pages
 
         public IActionResult OnPost()
         {
-            Produtos = GetProdutosCarrinho(HttpContext.Session);
-            var dicionario = ChecaFornecedor(Produtos);
-            foreach (var item in dicionario)
+            string Pagamento;
+            if (Input.FormaPgto == "Cartao")
             {
-                Pedido pedido = new Pedido();
-                pedido.Produtos = item.Value;
-                //pedido.
-                _context.Pedido.Add(pedido);
+                Pagamento = Input.FormaPgto + " " + Input.CartaoTipo + " " + Input.Bandeira;
             }
-            return Redirect("~/Identity/Account/Manage/Pedidos");
+            else
+            {
+                Pagamento = Input.FormaPgto;
+            }
+            Produtos = GetProdutosCarrinho(HttpContext.Session);
 
+            Pedido pedido = Input.Pedido;
+
+            //pedido.ID = new Guid();
+            //pedido.StatusDoPedido = "Novo";
+            pedido.Endereco = _context.Endereco.Find(new Guid(Input.EnderecoId));
+            pedido.DataInicio = DateTime.Now;
+            pedido.Preco = ValorTotal();
+            pedido.Pagamento = Pagamento;
+            var userId = _userManager.GetUserId(User);
+            pedido.Cliente = _context.Cliente.Where(c => c.ContaCadastro.Id == userId).First();
+
+            foreach (var produto in Produtos)
+            {
+                _context.PedidoProduto.Add(
+                    new PedidoProduto() {
+                        Pedido = pedido,
+                        Produto = produto
+                    }
+                );
+            }
+
+            _context.Pedido.Add(pedido);
+
+            _context.SaveChanges();
+
+            CarrinhoOp.LimparCarrinho(HttpContext.Session);
+
+            return Redirect("~/Identity/Account/Manage/Pedidos");
         }
-    
-    
-        
+
+        //calcula o valor total da compra
+        public double ValorTotal()
+        {
+            double valorTotal = CalculaFrete(ChecaFornecedor(Produtos));
+            foreach (var item in Produtos)
+            {
+                valorTotal += item.Preco;
+            }
+            return valorTotal;
+        }
+
+        //calcula o frete de acordo com a quantidade de fornecedores
+        public double CalculaFrete(Dictionary<IdentityUser, List<Produto>> dicionario)
+        {
+            double numeroFornecedores = dicionario.Keys.Count;
+            double frete = 10; //come√ßa em 10 por causa do frete
+            frete += (numeroFornecedores - 1) * 5;
+            Frete = frete;
+            return frete;
+        }
+
+
+
     }
 
 

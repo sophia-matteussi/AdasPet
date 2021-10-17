@@ -1,7 +1,257 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1>ADA'S PET</h1>
-</div>
+<style>
+   import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+/* Override UGG site */
+#main {width: 100%; padding:0;}
+.content-asset p {margin:0 auto;}
+.breadcrumb {display:none;}
+
+/* Helpers */
+/**************************/
+.margin-top-10 {padding-top:10px;}
+.margin-bot-10 {padding-bottom:10px;}
+
+/* Typography */
+/**************************/
+/*#parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:black; padding:0; margin:0;}*/
+#parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:white; font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
+#parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
+#parallax-world-of-ugg p {font-family:'Source Sans Pro', sans-serif; font-weight:400; font-size:16px; line-height:24px;}
+.first-character {font-weight:400; float: left; font-size: 82px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+
+    .wr {
+        color: #DDA0DD;
+    }
+   .fontes{
+        color: #DDA0DD;
+   }
+
+/* Section - Title */
+/**************************/
+#parallax-world-of-ugg .title {background: white; padding: 60px; margin:0 auto; text-align:center;}
+#parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
+
+/* Section - Block */
+/**************************/
+#parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto; text-align:justify;}
+#parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
+#parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
+
+/* Section - Parallax */
+/**************************/
+#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1529257414772-1960b7bea4eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1517101724602-c257fe568157?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1112&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-four {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1617994467542-51bf41a6b6da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-five {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1514917151705-150d9bcf5acd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1173&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-six {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-seven {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1592868787763-acee4cbc7019?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+
+
+/* Extras */
+/**************************/
+#parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
+
+/* Media Queries */
+/**************************/
+media screen and (max-width: 959px) and (min-width: 768px) {
+  #parallax-world-of-ugg .block {padding: 40px; width:620px;}
+}
+media screen and (max-width: 767px) {
+  #parallax-world-of-ugg .block {padding: 30px; width:420px;}
+  #parallax-world-of-ugg h2 {font-size:30px;}
+  #parallax-world-of-ugg .block {padding: 30px;}
+  #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
+}
+media screen and (max-width: 479px) {
+  #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
+}
+
+   
+
+    #parallax-world-of-ugg .title h1 {
+        position: relative;
+        font-size: 5rem;
+        /*font-family: Broadway;*/
+        color: #DDA0DD;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .pow{
+        width: 300px;
+    }
+
+    .arrow{
+        width: 50px;
+    }
+    .arrow2{
+        width: 80px;
+    }
+</style>
+
+   
+    <div id="parallax-world-of-ugg">
+        <section>
+            <div class="title">
+                <img src="~/ImagemSobreNos/Ada's Pet.svg" class="pow" />
+                <h1>ADA'S PET</h1><br />
+                <h3>AQUI VOCÊ ENCONTRA PRODUTOS PARA:</h3>
+                <br />
+                <br />
+                <br />
+                <br />
+                @*<img src="~/ImagemSobreNos/long-arrow-alt-down_1.svg" class="arrow"/>*@
+                <img src="~/ImagemSobreNos/down-arrow-5.svg" class="arrow2" />
+            </div>
+        </section>
+                
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <section>
+            <div class="parallax-one">
+                <h2>CACHORROS</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <p>
+                    <span class="first-character wr">O</span>s cães são mais do que apenas companheiros fofinhos - pesquisas continuam a mostrar que animais de estimação trazem benefícios reais à saúde de seus donos.
+                    Ter um cachorro por perto pode diminuir os níveis de estresse para adultos e crianças. Descobriu-se que eles diminuem o risco de asma em crianças e têm sido associados à redução da pressão arterial.
+                    E os pesquisadores também mostraram que os donos de cães são mais ativos do que aqueles que não têm cães, dando mais passos por dia em suas caminhadas ou apenas nas brincadeiras regulares. Um estudo mostrou que os donos de cães mais velhos dão 2.760 passos a mais por dia, em média, em comparação com os não-donos, o que equivale a 23 minutos diários adicionais de exercícios moderados.               
+                </p>
+                <p >
+                    <a class="fontes" href="https://time.com/4870796/dog-owners-benefits/">Fonte</a>
+                </p>
+                <p class="line-break margin-top-10"></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="parallax-two">
+                <h2>GATOS</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <p>
+                    <span class="first-character wr">T</span>er um gato pode significar coisas diferentes para pessoas diferentes. Alguns querem um gato para acariciar e sentar em seu colo; outros ficam felizes em viver com um gato muito independente que passa a maior parte do tempo fora e não quer muita interação humana.
+                    Os gatos geralmente ganham uma reputação injusta de serem criaturas retraídas, independentes e emocionalmente distantes, especialmente quando comparados aos cães. Embora os gatos de estimação demonstrem afeição de maneira diferente dos cães, um estudo recente mostra que os gatos podem se ligar tão fortemente aos humanos quanto os cães.
+                </p>
+
+                <p>
+                    <a class="fontes" href="https://icatcare.org/advice/thinking-of-getting-a-cat/">Fonte</a>
+                </p>
+
+                <p class="line-break margin-top-10"></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="parallax-three">
+                <h2>PASSÁROS</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <p>
+                    <span class="first-character wr">Q</span>uando o assunto é barulho, cacatuas, araras e jandaias são as aves mais barulhentas. Canários machos possuem um belo canto, mas cantam frequentemente. As calopsitas podem ser barulhentas devido seu assobio constante (geralmente os machos são mais vocais do que as fêmeas). As aves mais silenciosas são: mandarim, manon, diamante gold.
+                    Aves possuem personalidade variadas e você pode encontrar um pouco de tudo de acordo com a espécie escolhida. Alguns passarinhos amam cantar e assobiar. Outros são quietos e ainda tem aqueles que adoram falar. Se você procura um pássaro carinhoso e que gosta de ter um tempo com seu humano, isso também é possível.
+                </p>
+
+                <p>
+                    <a class="fontes" href="https://www.petz.com.br/blog/pets/passaros/">Fonte</a>
+                </p>
+                <p class="line-break margin-top-10"></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="parallax-four">
+                <h2>PEIXES</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <p>
+                    <span class="first-character wr">O</span>s peixes são uma escolha fantástica de animal de estimação por muitos motivos. Eles economizam espaço, pois têm uma área fixa da sala e você sabe onde eles estão o tempo todo! Eles não exigem caminhada e são mais baratos de cuidar do que outros animais de estimação, sem os altos custos de comida e contas do veterinário. Os peixes precisam de pouca manutenção, embora você deva reservar tempo para manter o tanque e a água em boas condições. Se a água parecer turva ou cheirar mal, tome medidas e resolva o problema, em vez de esperar que os peixes adoeçam. Eles são uma espécie silenciosa, que nunca faz barulho! Os peixes também são conhecidos como apaziguadores do estresse, com pesquisas mostrando que o ato relaxante de observá-los nadando silenciosamente e sem conflito reduzirá a pressão arterial.
+                </p>
+
+                <p>
+                    <a class="fontes" href="https://www.thepetexpress.co.uk/blog/blog-new-products/the-beginners-guide-to-keeping-fish/">Fonte</a>
+                </p>
+                <p class="line-break margin-top-10"></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="parallax-five">
+                <h2>COELHOS</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <p>
+                    <span class="first-character wr">C</span>oelhos são ótimos animais de estimação. Em geral os coelhos precisam de alojamento adequado, exercícios, socialização e uma dieta específica para um bom bem-estar. Algumas raças de coelhos, particularmente os coelhos de pêlo comprido, podem necessitar de cuidados diários. É importante que você compreenda todos os requisitos para cuidar de um coelho antes de comprar um.
+                    Os coelhos podem ser uma adição maravilhosa à sua família. Se você tem outros animais de estimação, é importante considerar o impacto do seu coelho sobre eles e os deles sobre o seu coelho. Cães e gatos podem ter um instinto natural para caçar e matar coelhos. Se você estiver apresentando coelhos a uma casa que já tem cães e gatos, seu coelho deve estar protegido de outros animais de estimação o tempo todo.
+
+                </p>
+
+                <p>
+                    <a class="fontes" href="https://agriculture.vic.gov.au/livestock-and-animals/animal-welfare-victoria/other-pets/rabbits/owning-a-rabbit">Fonte</a>
+                </p>
+                <p class="line-break margin-top-10"></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="parallax-six">
+                <h2>ROEDORES</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <p><span class="first-character wr">A</span>lém de serem dóceis, ativos e muito espertos, os diferentes roedores se adaptam em apartamentos e são relativamente independentes. Os roedores de estimação são animais domesticados e não possuem chances altas de transmitir doenças. Claro, assim como qualquer outro pet, eles podem ser vetores de algumas enfermidades. Por serem pequenos, ocupam pouco espaço e também demandam menos cuidados que outros pets, como cães e gatos. Pequenos e fáceis de cuidar, os roedores atualmente têm sido usados, também, como uma poderosa ferramenta para ensinar noções de responsabilidade para as crianças – que, ao cuidar da alimentação e higiene do pet, se desenvolvem. </p>
+
+                <p>
+                    <a class="fontes" href="https://chalesco.com.br/roedor-de-estimacao/">Fonte</a>
+                </p>
+                <p class="line-break margin-top-10"></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="parallax-seven">
+                <h2>RÉPTEIS</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="block">
+                <p><span class="first-character wr">A</span>ntes de decidir levar um animalzinho desses para casa, é preciso lembrar que além de necessitarem de um cuidado especial, eles tem um custo alto. A maioria deles precisa de ambientes adaptados, com temperatura controlada. Além disso, o répteis precisam ser comprados de maneira legal em criadouros licenciados pelo Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (Ibama). Quando comprados de maneira correta, esses animais vêm com microchips e nota fiscal. Além disso tudo, a alimentação também deve de ser tratada com cuidado, alguns répteis comem plantas porém outros se alimentam de animais menores como ratos. Répteis podem sim serem amigos, porém não vá achando que você vai pegar seu réptil e ficar acariciando-o. Répteis são animais tranquilos e não tendem a confiar muito nos humanos, porém com tempo, cuidado (muito), pode se gerar uma grande amizade.</p>
+
+                <p>
+                    <a class="fontes" href="https://www.metropoles.com/colunas/e-o-bicho/quais-sao-os-repteis-que-podemos-ter-em-casa-veja-opcoes">Fonte</a>
+                </p>
+                <p class="line-break margin-top-10"></p>
+            </div>
+        </section>
+    </div>
+  

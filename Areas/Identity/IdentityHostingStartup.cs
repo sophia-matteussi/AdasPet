@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using AdasPet.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;

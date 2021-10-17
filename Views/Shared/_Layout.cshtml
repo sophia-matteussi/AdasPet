@@ -1,4 +1,4 @@
-﻿@using AdasPet.Models
+@using AdasPet.Models
 @using System.Collections;
 @{
     var animaisGramaticalmenteCorretos = new Hashtable()
@@ -46,10 +46,10 @@
                             foreach (var animal in Enum.GetNames<ProdutoAnimais>())
                             {
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link text-dark dropdown-toggle" href="~/Loja/@animal" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link text-dark dropdown-toggle dropdown-toggle-no-arrow" href="~/Loja/@animal" aria-haspopup="true" aria-expanded="false">
                                         @animaisGramaticalmenteCorretos[animal]
                                     </a>
-                                    <div class="dropdown-menu">
+                                    <div class="dropdown-menu dropdown-menu-hover">
                                         @foreach (var categoria in Enum.GetNames<ProdutoCategorias>())
                                         {
                                             <a class="nav-link text-dark dropdown-item" href="~/Loja/@animal/@categoria">@categoriasGramaticalmenteCorretos[categoria]</a>
@@ -58,9 +58,31 @@
                                 </li>
                             }
                         }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("fornecedor"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/Lojista/Produtos/CadastroProduto">
+                                    Cadastrar Produto
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/Lojista/Vendas">
+                                    Vendas
+                                </a>
+                            </li>
+                        }
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("entregador"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="~/Lojista/Entregas">
+                                    Entregas
+                                </a>
+                            </li>
+                            
+                        }
                     </ul>
-                    <a class="navbar-brand" href ="~/Loja/Carrinho">
-                        <img src="/imagens/carrinho.svg" alt="Carrinho" width="70" height="70"/>
+                    <a class="navbar-brand" href="~/Loja/Carrinho">
+                        <img src="/imagens/carrinho.svg" alt="Carrinho" width="70" height="70" />
                     </a>
                     <partial name="_LoginPartial" />
                 </div>

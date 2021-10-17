@@ -1,6 +1,298 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+@{
+    ViewData["Title"] = "Sobre Nós";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+    .testimg {
+        width: 15%;
+        height: 20%;
+        border-radius: 50%;
+    }
+
+    .card {
+        box-shadow:  0 0 1em blue;
+        /*10px 10px 26px -15px rgba(0, 0, 205, 0.75)*/
+    }
+
+    .card-body {
+        height: 255px;
+    }
+
+    .about-col h2 {
+        color: #000;
+        text-align: center;
+        font-weight: 700;
+        font-size: 30px;
+        padding: 0;
+        margin: 40px 0 12px 0;
+    }
+
+    .about-col h2 a {
+        color: #000;
+    }
+
+        .about-col h2 a:hover {
+            color: #3C5A99;
+        }
+
+    .about-col p {
+        font-size: 20px;
+        line-height: 24px;
+        color: #333;
+        margin-bottom: 0;
+        padding: 0 20px 20px 20px;
+    }
+
+    .Pow{
+        width: 140px;
+    }
+    
+    .dog{
+        width: 500px;
+    }
+
+    .nossoProd::before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+
+    .nossoProd:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .nossoProd::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        inset: 0 0 0 0;
+        background-image: linear-gradient(40deg, #9932CC, #00BFFF);
+        /*background: #EE82EE;*/
+        z-index: -1;
+        transition: transform .3s ease;
+    }
+    
+    .nossoProd {
+        position: relative;
+        font-size: 50px;
+        font-family: Broadway;
+        color: #DDA0DD;
+    }
+
+    media (orientation: landscape) {
+        grid-auto-flow: column;
+    }
+
+    .main{
+        font-size: 20px;
+    }
+
+    h4{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+   .in{
+       width: 25px;
+   }
+   a{
+       font-size: 20px;
+   }
+    hr {
+        background-image: linear-gradient(40deg, #9932CC, #00BFFF);
+        height: 5px;
+    }
+</style>
+
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 bgcol p-5">
+
+                <img class="dog" src="~/ImagemSobreNos/Dog.jpg" />
+            </div>
+            <div class="col-md-6 p-5">
+                <br />
+                <br />
+                <br />
+                <br />
+                <h2 class="nossoProd">Nosso Produto</h2>
+                <p class="main">
+                    Aplicação de delivery de produtos de Pet Shop para os mais variados tipos de animais de diversas lojas de Blumenau e região, proporcionando ao usuário maior facilidade ao fazer suas compras online ao possibilitar a comparação de preços em um só lugar.
+                </p>
+            </div>
+        </div>
+    <div />
+</section>
+
+<br />
+
+<section id="about">
+    <div class="row about-cols">
+
+        <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+                <div class="img">
+                    <img src="img/about-mission.webp" alt="" class="img-fluid">
+                    <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                </div>
+                <h2 class="title"> Propósito</h2>
+                <p class="text-center">
+                    Oferecer mais praticidade para as compras de produtos para seu Pet.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+                <div class="img">
+                    <img src="img/about-plan.webp" alt="" class="img-fluid">
+                    <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                </div>
+                <h2 class="title">Vantagens</h2>
+                <p class="text-center">
+                    Melhores produtos que há no mercado no conforto de sua residência.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+                <div class="img">
+                    <img src="img/about-vision.webp" alt="" class="img-fluid">
+                    <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                </div>
+                <h2 class="title">Diferencial</h2>
+                <p class="text-center">
+                    Entrega realizada a poucos minutos após aprovação do pedido.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="p-0 p-md-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <img class="Pow" src="~/ImagemSobreNos/Ada's Pet.svg" />
+                <h4>Nossa Equipe</h4>
+                <p>
+                    Conheça nossa equipe e visite nossos perfis do LinkedIn
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p- p-md-5">
+    <div class="container">
+        <div class="d-md-flex justify-content-space-between">
+            <div class="flexitem p-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <img src="~/ImagemSobreNos/img1.png" class="testimg" alt="error">
+                            Sophia Matteussi
+                        </h5>
+                        <hr>
+                        <p class="card-text">Líder</p>
+                        <p class="card-text">Desenvolvimento Front-End e Back-End</p>
+                        <div class="icon">
+                            @*<i class="fa fa-linkedin"></i>*@
+                            <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                            <a href="https://www.linkedin.com/in/sophia-matteussi-0408811b0">Acesse Aqui</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flexitem p-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <img src="~/ImagemSobreNos/img2.png" class="testimg" alt="error">
+                            Franciele Casas
+                        </h5>
+                        <hr>
+                        <p class="card-text">Desenvolvimento Back-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/franciele-casas-28aaaa191/">Acesse Aqui</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flexitem p-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <img src="~/ImagemSobreNos/img3.png" class="testimg" alt="error">
+                            Jeniffer Steilein
+                        </h5>
+                        <hr>
+                        <p class="card-text">Desenvolvimento Front-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/jeniffer-steilein-8b551721b">Acesse Aqui</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="p- p-md-5">
+    <div class="container">
+        <div class="d-md-flex justify-content-space-between">
+            <div class="flexitem p-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <img src="~/ImagemSobreNos/img4.png" class="testimg" alt="error">
+                            Kaio Viana
+                        </h5>
+                        <hr>
+                        <p class="card-text">Deselvovimento Back-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/kaio-vin%C3%ADcius-de-freitas-viana-8881b6202/">Acesse Aqui</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flexitem p-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <img src="~/ImagemSobreNos/img5.png" class="testimg" alt="error">
+                            Luiza Salvador
+                        </h5>
+                        <hr>
+                        <p class="card-text">Desenvolvimento Back-end e Front-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/luiza-salvador-machado-37683a1a4/">Acesse Aqui</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flexitem p-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <img src="~/ImagemSobreNos/img6.png" class="testimg" alt="error">
+                            Sara Machado
+                        </h5>
+                        <hr>
+                        <p class="card-text">Desenvolvimento Back-End</p>
+                        <img class="in" src="~/ImagemSobreNos/linkedin-icon-2.svg">
+                        <a href="https://www.linkedin.com/in/sara-machado-7ab585209/">Acesse Aqui</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

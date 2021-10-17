@@ -16,8 +16,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
         private readonly UserManager<IdentityUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-
-        private List<string> Fornecedores { get; } = new List<string>() {
+        //Lista de fornecedores cadastrados
+        private List<string> Fornecedores { get; } = new List<string>() 
+        { 
             "apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
         };
 
@@ -45,7 +46,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
             }
         }
 
-
+        //Cria fornecedores
         public async Task OnPostCriarFornecedoresAsync()
         {
             foreach (var item in Fornecedores)
@@ -58,9 +59,9 @@ namespace AdasPet.Areas.Loja.Pages.Testes
             }
         }
 
+        //Cria produtos
         public void OnPost()
-        {
-            
+        {   
                 //*********************************** MARCA AMARELO - FRAN ***********************************
 
                 _context.Produto.Add(new Produto()
@@ -14245,10 +14246,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
-
-
-
-            
 
 
             _context.SaveChanges();

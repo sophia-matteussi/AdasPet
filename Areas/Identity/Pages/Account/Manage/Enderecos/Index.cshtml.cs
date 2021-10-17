@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos
 {
+
     public class IndexModel : PageModel
     {
         private readonly AdasPet.Data.ApplicationDbContext _context;
@@ -26,22 +27,20 @@ namespace AdasPet.Areas.Identity.Pages.Account.Manage.Enderecos
         [BindProperty]
         public List<Endereco> Enderecos { get; private set; } = new List<Endereco>();
 
-        public async Task<IActionResult> OnGetAsync()
+        public IActionResult OnGet()
         {
             string UserId = _userManager.GetUserId(User);
-            
+
             var cliente = _context.Cliente.Where(user => user.ContaCadastro.Id == UserId);
             if (!cliente.Any())
             {
                 return Page();
             }
 
-            var enderecos = _context.Endereco.Where(end => end.Cliente.ID == cliente.First().ID).ToList();
-
-            Enderecos = enderecos;
+            Enderecos = _context.Endereco.Where(end => end.Cliente.ID == cliente.First().ID).ToList();
 
             return Page();
-        
+
         }
     }
 }

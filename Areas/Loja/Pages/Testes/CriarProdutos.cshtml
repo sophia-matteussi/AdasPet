@@ -1,9 +1,15 @@
-﻿@page
+@page
 @model AdasPet.Areas.Loja.Pages.Testes.CriarProdutosModel
 @{
 }
 
-<form method="post" asp-route="CriarFornecedores">
+<form method="post" asp-page-handler="CriarRoles">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Criar Roles</button>
+    </div>
+</form>
+
+<form method="post" asp-page-handler="CriarFornecedores">
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Criar Fornecedores</button>
     </div>

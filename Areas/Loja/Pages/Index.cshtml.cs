@@ -29,7 +29,7 @@ namespace AdasPet.Areas.Loja.Pages
         {
             Animal = animal;
 
-            // Categoria È opcional, entao se È null chamamos o GetProdutos apenas com o animal
+            // Categoria √© opcional, entao se √© null chamamos o GetProdutos apenas com o animal
             if (String.IsNullOrEmpty(categoria))
             {
                 return GetProdutos(animal);
@@ -53,7 +53,7 @@ namespace AdasPet.Areas.Loja.Pages
         /// Adiciona todos os produtos do animal selecionado ao prop Produtos
         /// </summary>
         /// <param name="animal">Animal</param>
-        /// <returns>Retorna resultado da pagina, se o animal n„o for encontrado, retornara NotFound</returns>
+        /// <returns>Retorna resultado da pagina, se o animal n√£o for encontrado, retornara NotFound</returns>
         private IActionResult GetProdutos(string animal)
         {
             // Checa se a string animal esta dentro do enum ProdutosAnimais
@@ -64,7 +64,7 @@ namespace AdasPet.Areas.Loja.Pages
             }
 
             //seleciona os produtos no DB
-            Produtos = _context.Produto.Where(p => p.TipoDeAnimal == animalEnum).ToList();
+            Produtos = _context.Produto.Where(p => p.TipoDeAnimal == animalEnum && p.QtdEmEstoque > 0).ToList();
 
             return Page();
         }
@@ -74,8 +74,9 @@ namespace AdasPet.Areas.Loja.Pages
         /// </summary>
         /// <param name="animal">Animal</param>
         /// <param name="categoria">Categoria</param>
-        /// <returns>Retorna resultado da pagina, se o animal e/ou categoria n„o for encontrada, retornara NotFound</returns>
-        private IActionResult GetProdutos(string animal, string categoria)
+
+        /// <returns>Retorna resultado da pagina, se o animal e/ou categoria n√£o for encontrada, retornara NotFound</returns>
+        private IActionResult GetProdutos(string animal,string categoria)
         {
             // Checa se a string animal esta dentro do enum ProdutosAnimais
             // Nesse enum temos todos os tipos de animais possiveis
@@ -91,7 +92,7 @@ namespace AdasPet.Areas.Loja.Pages
             }
 
             //seleciona os produtos no DB
-            Produtos = _context.Produto.Where(p => p.TipoDeAnimal == animalEnum && p.Categoria == categoriaEnum).ToList();
+            Produtos = _context.Produto.Where(p => p.TipoDeAnimal == animalEnum && p.Categoria == categoriaEnum && p.QtdEmEstoque > 0).ToList();
 
             return Page();
         }
