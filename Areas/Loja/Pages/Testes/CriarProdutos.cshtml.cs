@@ -12,29 +12,49 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 {
     public class CriarProdutosModel : PageModel
     {
-        public ApplicationDbContext _context { get; set; }
+        private ApplicationDbContext _context { get; set; }
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
 
         private List<string> Fornecedores { get; } = new List<string>() {
             "apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
         };
 
-        public CriarProdutosModel(ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        private List<string> Roles { get; } = new List<string>
+        {
+            "fornecedor","cliente","entregador"
+        };
+
+        public CriarProdutosModel(ApplicationDbContext context, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _context = context;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
+
         public void OnGet()
         {
         }
 
-        public async void OnPostCriarFornecedores()
+        public async Task OnPostCriarRolesAsync()
+        {
+            foreach (var item in Roles)
+            {
+                await _roleManager.CreateAsync(new IdentityRole(item));
+            }
+        }
+
+
+        public async Task OnPostCriarFornecedoresAsync()
         {
             foreach (var item in Fornecedores)
             {
                 string nome = item + "@adaspet.com.br";
                 await _userManager.CreateAsync(new IdentityUser { UserName = nome, Email = nome }, "1Ad@s2");
+                var user = await _userManager.FindByNameAsync(nome);
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                await _userManager.ConfirmEmailAsync(user, code);
             }
         }
 
@@ -92,7 +112,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 250,
                     PrecisaDeCarro = false,
                     Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade e premiun.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -157,7 +177,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 242,
                     PrecisaDeCarro = false,
                     Descricao = "Ração premiun sabor salmão.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -222,7 +242,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 230,
                     PrecisaDeCarro = false,
                     Descricao = "Mistura de sementes completa para sua calopsita.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -664,7 +684,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
                     Descricao = "Ideal para tratamento de cicatrizes lesões e feridas, Previnir as doenças e infecções cutâneas transmissíveis ao homem.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -1015,7 +1035,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 116,
                     PrecisaDeCarro = false,
                     Descricao = "Proporciona mais aporte nutricional e vitamínico aos seus Roedores.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -1290,7 +1310,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 122,
                     PrecisaDeCarro = false,
                     Descricao = "Alicate de unha para cuidados especiais de higiene do seu gato.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -1355,7 +1375,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 166,
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete líquido ideal para limpeza da pelagem de gatos.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -1485,7 +1505,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 148,
                     PrecisaDeCarro = false,
                     Descricao = "Areia higiênica com um super poder de absorção, bastante eficaz no combate ao mau cheiro.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -1719,7 +1739,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 114,
                     PrecisaDeCarro = false,
                     Descricao = "Previnir o estrago de móveis e utensílios de sua casa.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -1875,7 +1895,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 100,
                     PrecisaDeCarro = false,
                     Descricao = "Indicado para pássaros. Estimula e exercita as aves.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -2512,7 +2532,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 348,
                     PrecisaDeCarro = false,
                     Descricao = "Para seu cachorro dormir/descansar confortávelmente.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -2904,7 +2924,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 25,
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola de madeira de Pinus estilo meia - lua com fibra branca.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5019,7 +5039,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 311,
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa para seu Roedor.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adas.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5032,7 +5052,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 310,
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa para seu réptil.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adas.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5045,7 +5065,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 301,
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa para seu réptil.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adas.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5058,7 +5078,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 300,
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa para seu réptil.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adas.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5071,7 +5091,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 254,
                     PrecisaDeCarro = false,
                     Descricao = "Alimento complementar e necessário para seu coelho.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adas.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5084,7 +5104,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 231,
                     PrecisaDeCarro = false,
                     Descricao = "Alimento complementar e necessário para seu coelho.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adas.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5097,7 +5117,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 231,
                     PrecisaDeCarro = false,
                     Descricao = "Alimento complementar e necessário para seu coelho.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adas.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5110,7 +5130,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 201,
                     PrecisaDeCarro = false,
                     Descricao = "Alimento complementar e necessário para seu coelho.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adas.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5344,7 +5364,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 160,
                     PrecisaDeCarro = false,
                     Descricao = "Alívio total da coceira em 24 horas.Age diretamente no foco da coceira, minimizando os efeitos colaterais.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -5630,7 +5650,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 126,
                     PrecisaDeCarro = false,
                     Descricao = "Auxilia no tratamento das afecções hepáticas.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -6874,7 +6894,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ratinho e Bolinhas, melhor distrativo para gatos.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
                 _context.Produto.Add(new Produto()
                 {
                     Nome = "Ratinho",
@@ -6988,7 +7008,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda no desgaste natural o bico.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -7001,7 +7021,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 112,
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda no desgaste natural o bico.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -7014,7 +7034,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 152,
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda no desgaste natural o bico.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
                 });
               
                 _context.Produto.Add(new Produto()
@@ -7157,7 +7177,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 52,
                     PrecisaDeCarro = false,
                     Descricao = "Para você ultilizar pela segurança das pessoas.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "´thom@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -7391,7 +7411,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 145,
                     PrecisaDeCarro = false,
                     Descricao = "Decorar o fundo do seu aquário.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kitthypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
              
                 _context.Produto.Add(new Produto()
@@ -7417,7 +7437,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 20,
                     PrecisaDeCarro = true,
                     Descricao = "A gaiola perfeita para seu pássaro.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -7482,7 +7502,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 20,
                     PrecisaDeCarro = true,
                     Descricao = "O espaço adequado para seu pet.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kitthypets@adaspet.com.br").First()
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
                 });
 
                 _context.Produto.Add(new Produto()
@@ -7563,7 +7583,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração perfeita para seu cachorro. Natural, ajuda no hálito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7576,7 +7596,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração perfeita para seu cachorro. Natural, ajuda no hálito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7589,7 +7609,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração gold premiun para seu cachorro viver saudável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7603,7 +7623,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Ração gold premiun para seu cachorro viver saudável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
 
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7617,7 +7637,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Ração gold premiun para seu cachorro viver saudável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
 
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7630,7 +7650,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração gold premiun para seu cachorro viver saudável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7643,7 +7663,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7656,7 +7676,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7669,7 +7689,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Ração perfeita para seu cachorro. Ela tem uma ótima qualidade.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7682,7 +7702,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração perfeita para seu filhote. Natural, ajuda no hálito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7695,7 +7715,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração perfeita para seu filhote. Natural, ajuda no hálito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7708,7 +7728,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7721,7 +7741,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7733,8 +7753,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 136,
                     PrecisaDeCarro = false,
                     Descricao = "Ração perfeita para seu filhote. Ração natural sem corantes.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypet@adaspet.com.br").First()
-                }); ;
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7747,7 +7767,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7760,7 +7780,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa e saborosa.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7773,7 +7793,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa e saborosa para seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7786,7 +7806,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa e saborosa para seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7799,7 +7819,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação completa e saborosa para seu gato.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7812,7 +7832,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mistura de sementes completa para sua calopsita.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7825,7 +7845,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mistura de sementes completa para sua calopsita.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7839,7 +7859,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     Descricao = "Mistura de sementes completa para sua calopsita.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
 
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7852,7 +7872,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mistura de sementes completa para seu periquito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7865,7 +7885,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mistura de sementes completa para seu periquito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7878,7 +7898,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mistura de sementes completa para seu periquito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7891,7 +7911,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mistura de sementes completa para seu periquito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7904,7 +7924,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mistura de sementes completa para seu periquito.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7917,7 +7937,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para jabutis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
 
                 _context.Produto.Add(new Produto()
@@ -7931,7 +7951,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para jabutis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7944,7 +7964,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para jabutis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7957,7 +7977,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para jabutis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7970,7 +7990,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para jabutis.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7983,7 +8003,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para tartarugas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -7996,7 +8016,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para tartarugas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8009,7 +8029,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para tartarugas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8022,7 +8042,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para tartarugas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8035,7 +8055,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração granulada para tartarugas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8048,7 +8068,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração completa e equilibrada para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8061,7 +8081,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração completa e equilibrada para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8074,7 +8094,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração completa e equilibrada para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8087,7 +8107,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração completa e equilibrada para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8100,7 +8120,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ração completa e equilibrada para seu coelho.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8113,7 +8133,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação para o dia a dia do seu peixe.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8126,7 +8146,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação para o dia a dia do seu peixe.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8139,7 +8159,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação para o dia a dia do seu peixe.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8152,7 +8172,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação para o dia a dia do seu peixe.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8165,7 +8185,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Alimentação para o dia a dia do seu peixe.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8178,7 +8198,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8191,7 +8211,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
 
                 _context.Produto.Add(new Produto()
@@ -8205,7 +8225,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8218,7 +8238,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8231,7 +8251,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8244,7 +8264,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8257,7 +8277,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8270,7 +8290,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8283,7 +8303,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8296,7 +8316,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Petisco delicioso para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8309,7 +8329,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8322,7 +8342,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8335,7 +8355,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8348,7 +8368,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8361,7 +8381,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8374,7 +8394,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8387,7 +8407,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8400,7 +8420,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu pet",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8413,7 +8433,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8426,7 +8446,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Antipulgas ou carrapatos perfeito para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8439,7 +8459,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8452,7 +8472,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8465,7 +8485,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8478,7 +8498,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8491,7 +8511,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8504,7 +8524,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8517,7 +8537,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8530,7 +8550,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8543,7 +8563,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8556,7 +8576,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio perfeito contra vermes para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8569,7 +8589,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8582,7 +8602,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8595,7 +8615,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8608,7 +8628,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8621,7 +8641,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8634,7 +8654,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8647,7 +8667,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8660,7 +8680,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8673,7 +8693,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8686,7 +8706,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Remédio que combate a intoxicação do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8699,7 +8719,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8712,7 +8732,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8725,7 +8745,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8738,7 +8758,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8751,7 +8771,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8764,7 +8784,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8777,7 +8797,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8790,7 +8810,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8803,7 +8823,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8816,7 +8836,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8829,7 +8849,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Previnir a colonização de bactérias patogênicas, melhorar a absorção de nutrientes e auxiliar na síntese de vitaminas e proteínas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8842,7 +8862,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8855,7 +8875,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8868,7 +8888,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8881,7 +8901,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8894,7 +8914,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8907,7 +8927,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8920,7 +8940,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8933,7 +8953,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8946,7 +8966,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8959,7 +8979,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8972,7 +8992,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8985,7 +9005,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -8998,7 +9018,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9011,7 +9031,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9024,7 +9044,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9037,7 +9057,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9050,7 +9070,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9063,7 +9083,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9076,7 +9096,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9089,7 +9109,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9102,7 +9122,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9115,7 +9135,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9128,7 +9148,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9141,7 +9161,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9154,7 +9174,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pomada para ajudar na cicatrização do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9167,7 +9187,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9180,7 +9200,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9193,7 +9213,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9206,7 +9226,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9219,7 +9239,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9232,7 +9252,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9245,7 +9265,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9258,7 +9278,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9271,7 +9291,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9284,7 +9304,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9297,7 +9317,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9310,7 +9330,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9323,7 +9343,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9336,7 +9356,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9349,7 +9369,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9362,7 +9382,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9375,7 +9395,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9388,7 +9408,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9401,7 +9421,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9414,7 +9434,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9427,7 +9447,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9440,7 +9460,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9453,7 +9473,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9466,7 +9486,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9479,7 +9499,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Vitamina e Suplementos para seu pet ficar forte.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9492,7 +9512,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9505,7 +9525,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9518,7 +9538,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9531,7 +9551,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9544,7 +9564,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tapete higiênico para seu amigo pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9557,7 +9577,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9570,7 +9590,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9583,7 +9603,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9596,7 +9616,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9609,7 +9629,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9622,7 +9642,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9635,7 +9655,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9648,7 +9668,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9661,7 +9681,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9674,7 +9694,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Banheiro para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
  
                 _context.Produto.Add(new Produto()
                 {
@@ -9687,7 +9707,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9700,7 +9720,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9713,7 +9733,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9726,7 +9746,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9739,7 +9759,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coletor de fezes para deixar o ambiete agradável para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9752,7 +9772,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9765,7 +9785,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9778,7 +9798,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9791,7 +9811,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9804,7 +9824,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Shampoo para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9817,7 +9837,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9830,7 +9850,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9843,7 +9863,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9856,7 +9876,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9869,7 +9889,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
  
                 _context.Produto.Add(new Produto()
                 {
@@ -9882,7 +9902,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9895,7 +9915,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9908,7 +9928,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9921,7 +9941,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9934,7 +9954,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cortador de unhas para seu pet ficar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9947,7 +9967,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9960,7 +9980,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9973,7 +9993,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9985,8 +10005,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
-                }); ;
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -9999,7 +10019,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10012,7 +10032,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10025,7 +10045,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10038,7 +10058,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10050,8 +10070,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 125,
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitao@adaspet.com.br").First()
-                }); ;
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10064,7 +10084,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Sabonete para seu pet ficar cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10077,7 +10097,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10090,7 +10110,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10103,7 +10123,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10116,7 +10136,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10129,7 +10149,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10142,7 +10162,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10155,7 +10175,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10168,7 +10188,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10181,7 +10201,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10194,7 +10214,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escova para o pelo do seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10207,7 +10227,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10220,7 +10240,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10233,7 +10253,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10246,7 +10266,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10259,7 +10279,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Caixa de areia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10272,7 +10292,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10285,7 +10305,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10298,7 +10318,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10311,7 +10331,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10324,7 +10344,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Areia para seu pet fazer as necessidades.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10337,7 +10357,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pazinha para coletar as fezes do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10350,7 +10370,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pazinha para coletar as fezes do seu pet",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10363,7 +10383,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pazinha para coletar as fezes do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10376,7 +10396,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pazinha para coletar as fezes do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10389,7 +10409,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pazinha para coletar as fezes do seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10402,7 +10422,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10415,7 +10435,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10428,7 +10448,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10441,7 +10461,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10454,7 +10474,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pó de Banho para seu pet ficar seguro e cheiroso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10467,7 +10487,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10480,7 +10500,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10493,7 +10513,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10506,7 +10526,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10519,7 +10539,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Bolinhas para seu cachorro se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10532,7 +10552,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10545,7 +10565,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10558,7 +10578,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10571,7 +10591,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10584,7 +10604,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ossinhos para seu cachorro se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10597,7 +10617,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10610,7 +10630,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10623,7 +10643,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10636,7 +10656,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10649,7 +10669,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ratinho para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10662,7 +10682,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10675,7 +10695,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10688,7 +10708,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10701,7 +10721,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10714,7 +10734,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Varinhas para seu pet se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10727,7 +10747,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10740,7 +10760,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10753,7 +10773,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10766,7 +10786,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10779,7 +10799,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Arranhadores para seu pet se divertir e relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10792,7 +10812,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10805,7 +10825,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10818,7 +10838,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
   
                 _context.Produto.Add(new Produto()
                 {
@@ -10831,7 +10851,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10844,7 +10864,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10857,7 +10877,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10870,7 +10890,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10883,7 +10903,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10896,7 +10916,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10909,7 +10929,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pelúcia fofa para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10922,7 +10942,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10935,7 +10955,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10948,7 +10968,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10961,7 +10981,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10974,7 +10994,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Mordedor para seu cachorro relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -10987,7 +11007,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11000,7 +11020,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11013,7 +11033,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11026,7 +11046,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11039,7 +11059,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Balanços para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11052,7 +11072,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Trapézios para seu pássaro brincar",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11065,7 +11085,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Trapézios para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11078,7 +11098,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Trapézios para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11091,7 +11111,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Trapézios para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11104,7 +11124,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Trapézios para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11117,7 +11137,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11130,7 +11150,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11143,7 +11163,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11156,7 +11176,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11169,7 +11189,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Escada para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11182,7 +11202,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11195,7 +11215,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11208,7 +11228,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11221,7 +11241,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11234,7 +11254,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Argolas para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11247,7 +11267,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cabana para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11260,7 +11280,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cabana para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11273,7 +11293,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cabana para seu pássaro brincar",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11286,7 +11306,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cabana para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11299,7 +11319,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Cabana para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11312,7 +11332,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11325,7 +11345,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11338,7 +11358,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11351,7 +11371,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11364,7 +11384,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Espiral para seu pássaro brincar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11377,7 +11397,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11390,7 +11410,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11403,7 +11423,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11416,7 +11436,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11429,7 +11449,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roda para seu Roedor se exercitar e se manter saudável e em forma.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11442,7 +11462,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11455,7 +11475,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11468,7 +11488,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11481,7 +11501,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11494,7 +11514,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu pet relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11507,7 +11527,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu coelhiho relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11520,7 +11540,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu coelhiho relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11533,7 +11553,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu coelhiho relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11546,7 +11566,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedo para seu coelhiho relaxar",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11559,7 +11579,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Roedor para seu coelhiho relaxar.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11572,7 +11592,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet ",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11585,7 +11605,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11598,7 +11618,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11611,7 +11631,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11624,7 +11644,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11637,7 +11657,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11650,7 +11670,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11663,7 +11683,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11676,7 +11696,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11689,7 +11709,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11702,7 +11722,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11715,7 +11735,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11728,7 +11748,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11741,7 +11761,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11754,7 +11774,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pedra mineral para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11767,7 +11787,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11780,7 +11800,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11793,7 +11813,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11806,7 +11826,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11819,7 +11839,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11832,7 +11852,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11845,7 +11865,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11858,7 +11878,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11871,7 +11891,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11884,7 +11904,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Túnel para seu coelho se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11897,7 +11917,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11909,8 +11929,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 32,
                     PrecisaDeCarro = false,
                     Descricao = "Tubo para seu Roedor se divertir.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigiopet@adaspet.com.br").First()
-                }); ;
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11923,7 +11943,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11936,7 +11956,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11949,7 +11969,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Tubo para seu Roedor se divertir.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
     
                 _context.Produto.Add(new Produto()
                 {
@@ -11962,7 +11982,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11975,7 +11995,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -11988,7 +12008,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12001,7 +12021,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12014,7 +12034,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
  
                 _context.Produto.Add(new Produto()
                 {
@@ -12027,7 +12047,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12040,7 +12060,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12053,7 +12073,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12066,7 +12086,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12079,7 +12099,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12092,7 +12112,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12105,7 +12125,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12118,7 +12138,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12131,7 +12151,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12144,7 +12164,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para passear com seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12157,7 +12177,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12170,7 +12190,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12183,7 +12203,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12196,7 +12216,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12209,7 +12229,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12222,7 +12242,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12235,7 +12255,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12248,7 +12268,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12261,7 +12281,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
  
                 _context.Produto.Add(new Produto()
                 {
@@ -12274,7 +12294,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Coleira para seu pet ficar estiloso.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12287,7 +12307,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12300,7 +12320,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12313,7 +12333,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12326,7 +12346,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12339,7 +12359,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Focinheira para manter as pessoas seguras.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12352,7 +12372,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12365,7 +12385,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12378,7 +12398,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12391,7 +12411,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12404,7 +12424,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12417,7 +12437,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12430,7 +12450,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12443,7 +12463,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12456,7 +12476,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12469,7 +12489,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12482,7 +12502,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12495,7 +12515,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12508,7 +12528,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12521,7 +12541,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12534,7 +12554,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
  
                 _context.Produto.Add(new Produto()
                 {
@@ -12547,7 +12567,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12560,7 +12580,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12573,7 +12593,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12586,7 +12606,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12599,7 +12619,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para você passear com mais praticidade com seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12612,7 +12632,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12625,7 +12645,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12638,7 +12658,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12651,7 +12671,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12664,7 +12684,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12677,7 +12697,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12690,7 +12710,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12703,7 +12723,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12716,7 +12736,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12729,7 +12749,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12742,7 +12762,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12755,7 +12775,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12768,7 +12788,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12781,7 +12801,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12794,7 +12814,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para seu pet descansar confortável.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12807,7 +12827,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12820,7 +12840,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12833,7 +12853,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12846,7 +12866,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12859,7 +12879,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12872,7 +12892,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12885,7 +12905,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12898,7 +12918,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12910,8 +12930,8 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     QtdEmEstoque = 200,
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
-                    ContaCadastro = _context.Users.Where(o => o.UserName == "capiaopet@adaspet.com.br").First()
-                }); ;
+                    ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12924,7 +12944,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Melhora a qualidade da água de seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12937,7 +12957,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12950,7 +12970,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12963,7 +12983,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12976,7 +12996,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -12989,7 +13009,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Substrato para decorar o fundo do seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13002,7 +13022,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13015,7 +13035,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13028,7 +13048,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13041,7 +13061,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13054,7 +13074,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13067,7 +13087,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13080,7 +13100,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13093,7 +13113,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13106,7 +13126,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13119,7 +13139,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = true,
                     Descricao = "Aquário para seu pet aquático.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13132,7 +13152,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13145,7 +13165,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13158,7 +13178,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13171,7 +13191,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13184,7 +13204,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para lâmpadas aquáticas.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13197,7 +13217,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Aquecer seu Aquário e manter uma temperatura constante.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13210,7 +13230,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Aquecer seu Aquário e manter uma temperatura constante.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13223,7 +13243,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Aquecer seu Aquário e manter uma temperatura constante.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13236,7 +13256,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Aquecer seu Aquário e manter uma temperatura constante.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13249,7 +13269,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13262,7 +13282,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13275,7 +13295,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13288,7 +13308,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13301,7 +13321,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13314,7 +13334,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13327,7 +13347,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13340,7 +13360,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13353,7 +13373,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13366,7 +13386,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13379,7 +13399,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13392,7 +13412,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13405,7 +13425,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13418,7 +13438,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13431,7 +13451,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13444,7 +13464,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13457,7 +13477,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13470,7 +13490,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13483,7 +13503,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13496,7 +13516,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13509,7 +13529,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13522,7 +13542,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13535,7 +13555,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13548,7 +13568,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13561,7 +13581,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Para decorar seu ambiente.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13574,7 +13594,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13587,7 +13607,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13600,7 +13620,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13613,7 +13633,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13626,7 +13646,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13639,7 +13659,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13652,7 +13672,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13665,7 +13685,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13678,7 +13698,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13691,7 +13711,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a limpar o substrato do Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13704,7 +13724,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13717,7 +13737,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13730,7 +13750,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13743,7 +13763,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13756,7 +13776,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtrar o Aquário.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13769,7 +13789,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13782,7 +13802,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13795,7 +13815,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água ",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13808,7 +13828,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13821,7 +13841,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a manter um cheiro agradável e melhora a qualidade da água.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13834,7 +13854,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13847,7 +13867,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13860,7 +13880,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13873,7 +13893,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13886,7 +13906,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13899,7 +13919,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13912,7 +13932,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13925,7 +13945,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13938,7 +13958,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13951,7 +13971,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Ajuda a filtragem de resíduos maiores.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13964,7 +13984,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13977,7 +13997,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -13990,7 +14010,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14003,7 +14023,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14016,7 +14036,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14029,7 +14049,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14042,7 +14062,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14055,7 +14075,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14068,7 +14088,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14081,7 +14101,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Gaiola para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14094,7 +14114,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Puleiro para seu pássaro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14107,7 +14127,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14120,7 +14140,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14133,7 +14153,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14146,7 +14166,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14159,7 +14179,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu cachorro.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14172,7 +14192,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "apolo@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14185,7 +14205,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "amigopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14198,7 +14218,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "kittypets@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14211,7 +14231,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "capitaopet@adaspet.com.br").First()
-                }); ;
+                });
 
                 _context.Produto.Add(new Produto()
                 {
@@ -14224,7 +14244,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     PrecisaDeCarro = false,
                     Descricao = "Pote para seu pet.",
                     ContaCadastro = _context.Users.Where(o => o.UserName == "thom@adaspet.com.br").First()
-                }); ;
+                });
 
 
 
