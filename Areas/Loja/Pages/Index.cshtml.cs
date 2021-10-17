@@ -15,7 +15,7 @@ namespace AdasPet.Areas.Loja.Pages
     {
         private readonly ApplicationDbContext _context;
 
-        public IndexModel( ApplicationDbContext context)
+        public IndexModel(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -74,6 +74,7 @@ namespace AdasPet.Areas.Loja.Pages
         /// </summary>
         /// <param name="animal">Animal</param>
         /// <param name="categoria">Categoria</param>
+
         /// <returns>Retorna resultado da pagina, se o animal e/ou categoria não for encontrada, retornara NotFound</returns>
         private IActionResult GetProdutos(string animal,string categoria)
         {
