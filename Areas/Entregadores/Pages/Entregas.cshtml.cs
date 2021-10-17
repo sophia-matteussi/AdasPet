@@ -31,10 +31,11 @@ namespace AdasPet.Areas.Entregadores.Pages
 
         public void OnGet()
         {
-            var userName = User.Identity.Name;
-            Pedidos = _context.Pedido.Where(p => p.StatusDoPedido.Equals(PedidoStatus.Aceito) || p.Entregador.ContaCadastro.UserName == userName).Include(p => p.Endereco).ToList();
+            var userName = User.Identity.Name; //Usar o username
+            Pedidos = _context.Pedido.Where(p => p.StatusDoPedido.Equals(PedidoStatus.Aceito) || p.Entregador.ContaCadastro.UserName == userName).Include(p => p.Endereco).ToList(); //mostra os pedidos novos para entrega e os antigos que ele quem entregou
         }
 
+        //pega todos os enderecos dos fornecedores para retirar os produtos
         public IEnumerable<Endereco> GetPedidoFornecedoresEnderecos(Pedido pedido)
         {
             var fornecedoresId = _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID)).Select(o => o.Produto.ContaCadastro.Id).Distinct();
@@ -42,6 +43,7 @@ namespace AdasPet.Areas.Entregadores.Pages
             return enderecos;
         }
 
+        //Retorna uma string do endereco de forma bonita = formatado
         public string GetEnderecoPretty(Pedido pedido)
         {
             _context.Entry(pedido)
@@ -50,6 +52,7 @@ namespace AdasPet.Areas.Entregadores.Pages
             return $"{pedido.Endereco.Rua},{pedido.Endereco.NumeroCasa} - {pedido.Endereco.Complemento}";
         }
         
+        //quando o entregador aceita a entrega
         public async Task<IActionResult> OnPostAceitarAsync(string pedidoId)
         {
             UserID = _userManager.GetUserId(User);
@@ -57,8 +60,8 @@ namespace AdasPet.Areas.Entregadores.Pages
 
             if (pedido.StatusDoPedido.Equals(PedidoStatus.Aceito))
             {
-                pedido.StatusDoPedido = PedidoStatus.Entregando;
-                pedido.Entregador = _context.Entregador.Where(e => e.ContaCadastro.Id.Equals(UserID)).Single();
+                pedido.StatusDoPedido = PedidoStatus.Entregando; //status do pedido: entregando
+                pedido.Entregador = _context.Entregador.Where(e => e.ContaCadastro.Id.Equals(UserID)).Single(); //retorna da conta que está logada no momento
 
                 await _context.SaveChangesAsync();
             }
@@ -66,6 +69,7 @@ namespace AdasPet.Areas.Entregadores.Pages
             return Redirect("./Entregas");
         }
 
+        //coloca status de finalizado e data final ao pedido
         public async Task<IActionResult> OnPostFinalizarAsync(string pedidoId)
         {
             UserID = _userManager.GetUserId(User);

@@ -66,14 +66,14 @@ namespace AdasPet
             services.AddControllersWithViews();
 
             // Adiciona o Google como forma de login
-            /*
+            
             services.AddAuthentication()
                 .AddGoogle("Google", options =>
                 {
                     options.ClientId = "12407940964-80rvesf0pcdqoo9strhe1tjh77qj6a1k.apps.googleusercontent.com";
                     options.ClientSecret = Configuration["GoogleClientSecret"];
                 });
-            */
+            
 
             // Adiciona nossa classe de mandar email
             services.AddTransient<IEmailSender, EmailSender>();

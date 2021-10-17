@@ -26,32 +26,37 @@ namespace AdasPet.Areas.Loja.Pages.Testes
             "apolo" , "amigopet" , "kittypets", "capitaopet", "thom"
         };
 
+       //Lista de entregadores cadastrados
         private List<string> Entregadores { get; } = new List<string>()
         {
             "oscar", "cleber", "djalma"
         };
 
+        //lista de CEP
         private List<string> CEPs { get; }= new List<string>()
         {
             "89052440", "89036450", "89046445", "89074740", "89045460", "89040200", "89042342", "89035250", "89035401", "89072070", "89031582", "89045060", "89010902", "89056488", "89066140" 
         };
 
+        //lista de roles existentes
         private List<string> Roles { get; } = new List<string>
         {
             "fornecedor","cliente","entregador"
         };
 
+        //construtor
         public CriarProdutosModel(ApplicationDbContext context, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager, ILogger<CriarProdutosModel> logger)
         {
             _context = context;
             _userManager = userManager;
             _roleManager = roleManager;
-            _logger = logger;
+            _logger = logger; //usar logs
         }
         public void OnGet()
         {
         }
 
+        //cria roles
         public async Task OnPostCriarRolesAsync()
         {
             foreach (var item in Roles)
@@ -97,6 +102,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
 
         }
 
+        //cria entregadores
         public async Task<IActionResult> OnPostCriarEntregadoresAsync()
         {
             foreach (var item in Entregadores)

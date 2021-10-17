@@ -29,13 +29,13 @@ namespace AdasPet.Areas.Lojista.Pages
             _context = context;
         }
 
-        public void OnGet()
+        public void OnGet() //pega id do user e pedidos
         {
             UserID = _userManager.GetUserId(User);
             Pedidos = QueryPedidosDoUser(User).OrderByDescending(p => p.DataInicio).ToList();
         }
 
-
+        //chamado pelo razor page, para mostrar os status dos produtos deste fornecedor em um determinado pedido
         public PedidoStatus GetStatusProdutosFornecedor(Pedido pedido, string userId)
         {
             var produtosFornecedor = GetUsersPedidoProdutoinPedido(pedido, userId).ToList();
@@ -46,9 +46,10 @@ namespace AdasPet.Areas.Lojista.Pages
                     return item;
                 }
             }
-            throw new Exception($"Nem todos os produtos do fornecedor {userId} tem o mesmo status");
+            throw new Exception($"Nem todos os produtos do fornecedor {userId} tem o mesmo status"); //todos os produtos devem sempre ter o mesmo status, se não tem, retorna a exception
         }
 
+        //JavaScript irá chamar essa função para checar se existem novos pedidos
         public IActionResult OnGetNovosPedidos()
         {
             List<Pedido> novosPedidos = QueryPedidosDoUser(User).Where(p => p.StatusDoPedido.Equals(PedidoStatus.Novo)).ToList();
@@ -56,21 +57,20 @@ namespace AdasPet.Areas.Lojista.Pages
             {
                 return Content("Novos Pedidos");
             }
-            //return Content("Nenhum novo Pedido");
-            return new OkResult();
+            
+            return new OkResult(); //se nao tem, retorna "ok vazio"
         }
 
-
+        //retorna uma lista de string com nome e marca dos produtos
         public List<string> GetNomeProdutos(Pedido pedido)
         {
             var produtos = _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID)).Select(o => o.Produto)
             .Where(p => p.ContaCadastro.Id == UserID)
                 .Select(p => p.Nome + " " + p.Marca);
             return produtos.ToList();
-
-            //return produtos.ToList();
         }
 
+        //retorna todos os pedidos do user
         private IQueryable<Pedido> QueryPedidosDoUser(ClaimsPrincipal user)
         {
             string userId = _userManager.GetUserId(user);
@@ -80,6 +80,7 @@ namespace AdasPet.Areas.Lojista.Pages
                 .Contains(userId));
         } 
 
+        //pega todos os produtos ref. ao fornecedor e pedido
         private IQueryable<PedidoProduto> GetUsersPedidoProdutoinPedido(Pedido pedido, string userId)
         {
             var pedidoProdutos = _context.PedidoProduto.Where(o => 
@@ -88,19 +89,24 @@ namespace AdasPet.Areas.Lojista.Pages
             return pedidoProdutos;
         }
         
+        //quando o pedido é aceito
         public async Task<IActionResult> OnPostAceitarAsync(string pedidoId)
         {
             UserID = _userManager.GetUserId(User);
             Pedido pedido = _context.Pedido.Find(new Guid(pedidoId));
-            var meusProdutos = _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID) && o.Produto.ContaCadastro.Id.Equals(UserID)).ToList();
 
+            //retorna produtos ref. ao pedido
+            var meusProdutos = GetUsersPedidoProdutoinPedido(pedido,UserID).ToList();
+
+            //coloca status de aceito em todos os produtos deste user e retira quantidade do estoque
             foreach (var produto in meusProdutos)
             {
                 produto.Status = PedidoStatus.Aceito;
                 _context.Produto.Find(produto.ProdutoID).QtdEmEstoque -= 1;
             } 
 
-            if (GetUsersPedidoProdutoinPedido(pedido, UserID).ToList().All(p => p.Status == PedidoStatus.Aceito))
+            //verifica se todos produtos do pedido foram aceitos e coloca status de aceito
+            if (_context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID)).All(p => p.Status == PedidoStatus.Aceito))
             {
                 pedido.StatusDoPedido = PedidoStatus.Aceito;
             }
@@ -110,19 +116,23 @@ namespace AdasPet.Areas.Lojista.Pages
             return Redirect("./Vendas");
         }
 
+        //quando o pedido é recusado
         public async Task<IActionResult> OnPostRejeitarAsync(string pedidoId)
         {
             UserID = _userManager.GetUserId(User);
             Pedido pedido = _context.Pedido.Find(new Guid(pedidoId));
 
-            var meusProdutos = _context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID) && o.Produto.ContaCadastro.Id.Equals(UserID)).ToList();
+            //retorna produtos ref. ao pedido
+            var meusProdutos = GetUsersPedidoProdutoinPedido(pedido,UserID).ToList();
 
+            //coloca status de recusado em todos os produtos deste user 
             foreach (var produto in meusProdutos)
             {
                 produto.Status = PedidoStatus.Recusado;
             } 
 
-            if (GetUsersPedidoProdutoinPedido(pedido, UserID).All(p => p.Status.Equals(PedidoStatus.Recusado)))
+            //verifica se todos produtos do pedido foram recusados e coloca o status do pedido como recusado + data fim
+            if (_context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID)).All(p => p.Status.Equals(PedidoStatus.Recusado)))
             {
                 pedido.StatusDoPedido = PedidoStatus.Recusado;
                 pedido.DataFim = DateTime.Now;

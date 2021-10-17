@@ -58,6 +58,7 @@ namespace AdasPet.Areas.Loja.Pages
 
             var enderecos = _context.Endereco.Where(end => end.Cliente.ID == cliente.First().ID);
 
+            //pega os enderecos daquele user, se ele nao tiver nenhum endereco cadastrado, redireciona para a completar o cadastro
             try
             {
                 Enderecos = enderecos.Select(end => new SelectListItem
@@ -72,7 +73,7 @@ namespace AdasPet.Areas.Loja.Pages
                 return Redirect("~/Identity/Account/CadastroCompleto");
             }
 
-            Produtos = GetProdutosCarrinho(HttpContext.Session);
+            Produtos = GetProdutosCarrinho(HttpContext.Session); //manda a sessao
 
             Preco = ValorTotal();
 
@@ -112,9 +113,10 @@ namespace AdasPet.Areas.Loja.Pages
             return dicionario;
         }
 
+
         public IActionResult OnPost()
         {
-            string Pagamento;
+            string Pagamento; //confere forma de pgto e fornmata para mandar para o DB
             if (Input.FormaPgto == "Cartao")
             {
                 Pagamento = Input.FormaPgto + " " + Input.CartaoTipo + " " + Input.Bandeira;
@@ -126,9 +128,7 @@ namespace AdasPet.Areas.Loja.Pages
             Produtos = GetProdutosCarrinho(HttpContext.Session);
 
             Pedido pedido = Input.Pedido;
-
-            //pedido.ID = new Guid();
-            //pedido.StatusDoPedido = "Novo";
+           
             pedido.Endereco = _context.Endereco.Find(new Guid(Input.EnderecoId));
             pedido.DataInicio = DateTime.Now;
             pedido.Preco = ValorTotal();
@@ -136,6 +136,7 @@ namespace AdasPet.Areas.Loja.Pages
             var userId = _userManager.GetUserId(User);
             pedido.Cliente = _context.Cliente.Where(c => c.ContaCadastro.Id == userId).First();
 
+            //cria um pedidoProduto para cada produto
             foreach (var produto in Produtos)
             {
                 _context.PedidoProduto.Add(
@@ -145,6 +146,7 @@ namespace AdasPet.Areas.Loja.Pages
                     }
                 );
             }
+
 
             _context.Pedido.Add(pedido);
 
