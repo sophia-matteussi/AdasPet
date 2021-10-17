@@ -7,10 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Areas\Lojista\Pages\teste\**" />
-    <Content Remove="Areas\Lojista\Pages\teste\**" />
-    <EmbeddedResource Remove="Areas\Lojista\Pages\teste\**" />
-    <None Remove="Areas\Lojista\Pages\teste\**" />
+    <Content Remove="wwwroot\ImagemSobreNos\dog.jpeg" />
   </ItemGroup>
 
   <ItemGroup>
