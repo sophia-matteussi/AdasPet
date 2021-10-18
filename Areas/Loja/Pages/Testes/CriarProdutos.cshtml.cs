@@ -110,7 +110,7 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                 string nome = item + "@entregador.adaspet.com.br";
                 await _userManager.CreateAsync(new IdentityUser { UserName = nome, Email = nome }, "1Ad@s2");
                 var user = await _userManager.FindByNameAsync(nome);
-                var addRoleTask = _userManager.AddToRoleAsync(user, "entregador");
+                await _userManager.AddToRoleAsync(user, "entregador");
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                 var confirmTask =  _userManager.ConfirmEmailAsync(user, code);
 
@@ -126,7 +126,6 @@ namespace AdasPet.Areas.Loja.Pages.Testes
                     TipoVeiculo = "Carro"
                 });
 
-                await addRoleTask;
                 await confirmTask;
             }
             await _context.SaveChangesAsync();
