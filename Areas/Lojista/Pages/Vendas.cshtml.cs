@@ -105,6 +105,8 @@ namespace AdasPet.Areas.Lojista.Pages
                 _context.Produto.Find(produto.ProdutoID).QtdEmEstoque -= 1;
             } 
 
+            await _context.SaveChangesAsync();
+
             //verifica se todos produtos do pedido foram aceitos e coloca status de aceito
             if (_context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID)).All(p => p.Status == PedidoStatus.Aceito))
             {
@@ -130,6 +132,8 @@ namespace AdasPet.Areas.Lojista.Pages
             {
                 produto.Status = PedidoStatus.Recusado;
             } 
+
+            await _context.SaveChangesAsync();
 
             //verifica se todos produtos do pedido foram recusados e coloca o status do pedido como recusado + data fim
             if (_context.PedidoProduto.Where(o => o.PedidoID.Equals(pedido.ID)).All(p => p.Status.Equals(PedidoStatus.Recusado)))
